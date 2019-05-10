@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="48px" viewBox="0 0 49 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>revers@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.330033%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.996711),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F7F7F7" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="46.9831397%" y1="130.217479%" x2="58.3481636%" y2="-8.98079135%" id="linearGradient-2">
+            <stop stop-color="#FFE000" offset="0%"></stop>
+            <stop stop-color="#FFCC00" offset="22.1405306%"></stop>
+            <stop stop-color="#FFBD00" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MEME-SWIPING" transform="translate(-19.000000, -595.000000)">
+            <g id="Buttons3" transform="translate(19.000000, 587.000000)">
+                <g id="revers" transform="translate(0.657895, 8.000000)">
+                    <ellipse id="Oval" fill="url(#radialGradient-1)" cx="23.9210526" cy="24" rx="23.9210526" ry="24"></ellipse>
+                    <path d="M13.7267722,25.0703486 C13.7267722,30.462727 18.1048733,34.8341133 23.5055346,34.8341133 C28.906196,34.8341133 33.284297,30.462727 33.284297,25.0703486 C33.284297,19.6779703 28.906196,15.3065839 23.5055346,15.3065839" id="Oval-2" stroke="url(#linearGradient-2)" stroke-width="4.9875" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.1789881,14.0126325 L22.5187333,9.59419137 C24.2059443,8.02265297 25.0495497,8.42098958 25.0495497,10.7892012 C25.0495497,13.1574128 25.0495497,16.2018422 25.0495497,19.9224893 C25.0495497,22.0483761 24.3416877,22.5427209 22.9259637,21.4055236 C19.9397075,19.0067776 18.0606223,17.4291788 17.2822049,16.6774053 C16.3329877,15.7606783 16.2985821,14.8724207 17.1789881,14.0126325 Z" id="Triangle" fill="#FFBD00"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Share@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.330033%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.996711),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F7F7F7" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="39.6044155%" y1="1.09261996%" x2="60.3955845%" y2="98.90738%" id="linearGradient-2">
+            <stop stop-color="#D374FF" offset="0%"></stop>
+            <stop stop-color="#A840FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MEME-SWIPING" transform="translate(-307.000000, -595.000000)">
+            <g id="Buttons3" transform="translate(19.000000, 587.000000)">
+                <g id="Share" transform="translate(288.000000, 8.000000)">
+                    <ellipse id="Oval-Copy-3" fill="url(#radialGradient-1)" cx="23.9210526" cy="24" rx="23.9210526" ry="24"></ellipse>
+                    <g id="Airlplane" transform="translate(13.000000, 14.000000)" fill="url(#linearGradient-2)">
+                        <path d="M11.1578947,10.1610381 C7.67782915,11.1650133 5.41059117,14.6221804 5.99043711,18.2831836 C6.20588805,19.6434873 5.27780149,20.9208889 3.91749776,21.1363398 C2.55719402,21.3517908 1.27979246,20.4237042 1.06434151,19.0634005 C0.0110339337,12.4130782 4.52448716,6.16627382 11.1578947,5.05493702 L11.1578947,2.57751074 C11.1578947,0.4516239 11.8657567,-0.0427208844 13.2814808,1.09447639 C16.2677369,3.49322244 18.1468221,5.07082125 18.9252396,5.8225947 C19.8744567,6.73932167 19.9088623,7.62757928 19.0284564,8.48736754 L13.6887112,12.9058086 C12.0015002,14.477347 11.1578947,14.0790104 11.1578947,11.7107988 L11.1578947,10.1610381 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

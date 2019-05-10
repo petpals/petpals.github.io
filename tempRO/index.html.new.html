@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>.async-hide { opacity: 0 !important} </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetPals</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="corner-title">
+
+      </div>
+      <div class="nav">
+        <div class="l1 nav-link" style="color:black;">Home</div>
+        <div class="l2 nav-link">About</div>
+        <div class="l3 nav-link">Support</div>
+        <div class="l4 nav-link">Program</div>
+        <div class="l5 nav-link">Contact</div>
+
+        <div class="container-x">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+      </div>
+      <div class="large-text">pet care at your place.
+      </div>
+      <div class="subtext">
+        We bring compassionate care for your pets right to <br><br> your door.
+      </div>
+      <div class="subtext-m">
+        Memestacks consolidates all the best <br><br>meme pages into one place.
+      </div>
+
+        <script>
+        var rbounce = null
+
+        $(document).ready(function() {
+            rbounce = setInterval(function() {
+
+                $('#rightButton').effect('bounce',600, function() {
+                  $('#leftButton').effect('bounce',600)
+                })
+
+            }, 1200);
+          });
+        </script>
+
+        <script>
+        var slideIndex = 1;
+
+        function help(n) {
+          if (n == 1) {
+            $('#rightButton').effect('bounce', {
+                            times: 1,
+                            distance: 8
+                         },200)
+                         //$('#rightButton').animateCss('pulse');
+            $(".mySlides[style*='block']").css({ fontSize: 0 }).animate({
+    fontSize: 45
+},{
+    duration: 400,
+    easing: "swing",
+    step: function(t, fx){
+        var a = t / 17.296;
+        var x = 300 + Math.cos(a) * -300;
+        var y = 0 + Math.sin(a) * -100;
+        $(this).css({ marginLeft: x, marginTop: y });
+    },
+    done: function(){
+      plusDivs(1);
+    }
+});
+ //.animateCss('slideOutRight', function (){plusDivs(1)});
+} else if (n == 0) {
+  $('#backButton').effect('bounce', {
+                  times: 1,
+                  distance: 8
+               },200)
+               //$('#backButton').animateCss('pulse');
+  plusDivs(-1);
+} else {
+  $('#leftButton').effect('bounce', {
+                  times: 1,
+                  distance: 8
+               },200)
+               //$('#leftButton').animateCss('pulse');
+            $(".mySlides[style*='block']").css({ fontSize: 0 }).animate({
+    fontSize: 45
+},{
+    duration: 400,
+    easing: "swing",
+    step: function(t, fx){
+        var a = t / 17.296;
+        var x = -300 + Math.cos(a) * 300;
+        var y = 0 + Math.sin(a) * -100;
+        $(this).css({ marginLeft: x, marginTop: y });
+    },
+    done: function(){
+      plusDivs(1);
+    }
+});
+          }
+        }
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;var x = document.getElementsByClassName("mySlides");if (n > x.length) {slideIndex = 1}if (n < 1) {slideIndex = x.length}for (i = 0; i < x.length; i++) {x[i].style.display = "none";x[i].style.marginTop = "-1.2vw";x[i].style.marginLeft = 0;x[i].style.zIndex = 1000;}x[slideIndex].style.display = "inline";x[slideIndex].style.marginTop = "-0.7vw";x[slideIndex-1].style.display = "block";x[slideIndex].style.zIndex = 0;x[slideIndex-1].style.zIndex = 1000;x[slideIndex].style.position = "absolute";x[slideIndex-1].style.position = "relative";
+        }
+        $.getJSON("https://www.reddit.com/r/meirl/.json?jsonp=?&limit=69", function(data) {$.each(data.data.children, function(i,item){ var ext = String(item.data.url).substr(String(item.data.url).length - 4); if ( ext == ".png" || ext == ".jpg" || ext == "jpeg" || ext == ".gif") {
+              $("<div/>").css('background-image', 'url(\''+item.data.url+'\')').attr("class","mySlides").appendTo("#images");
+              //$("<div/>").attr("style", "background-image:\""+item.data.url+"\"").attr("class","mySlides").appendTo("#images");
+            }
+          });
+            showDivs(slideIndex);
+         });
+      </script>
+      </div>
+
+
+
+      <img src="footer.svg" class="angleCon">
+      <img src="footer-m.svg" class="angleCon-m">
+      <img src="footer-t.svg" class="angleCon-t">
+
+      <div class="iconContainer">
+      <a href="http://reddit.com/" class="socialIcons reddit">
+        <img src="icons/reddit.svg" class="socialIcons reddit">
+      </a>
+
+      <a href="http://instagram.com/" class="socialIcons instagram">
+        <img src="icons/instagram.svg" class="socialIcons instagram">
+      </a>
+
+      <a href="http://youtube.com/" class="socialIcons youtube">
+        <img src="icons/youtube.svg" class="socialIcons youtube">
+      </a>
+
+      <a href="http://facebook.com/" class="socialIcons facebook">
+        <img src="icons/facebook.svg" class="socialIcons facebook">
+      </a>
+
+      <a href="#" class="socialIcons pornhub">
+        <img src="icons/pornhub.svg" class="socialIcons pornhub">
+      </a>
+
+
+      <img src="icons/jk.svg" class="socialIcons jk">
+
+    </div>
+
+      <span class="bottomNav bottomTitle">Memestacks.</span>
+
+      <span class="bottomNav linkHead">Please help us we're like dying</span>
+
+            <span class="bottomLinks blleft">
+              <a href="#">Patreon</a><br>
+              <a href="mailto:contact@memestacks.com">contact@memestacks.com</a><br>
+              <a href="mailto:invest@memestacks.com">invest@memestacks.com</a><br>
+              <a href="mailto:advertise@memestacks.com">advertise@memestacks.com</a><br>
+              <a href="#">Report bug</a><br>
+            </span>
+
+            <span class="bottomNav quickLinks">Quick links</span>
+
+            <span class="bottomLinks blright">
+              <a href="#">Home</a><br>
+              <a href="#">About</a><br>
+              <a href="#">Support</a><br>
+              <a href="#">Program</a><br>
+              <a href="#">Contact</a><br>
+            </span>
+
+            <span class="bottomText">Created by us, cuz we're cheap 2018. Apex Design LLC</span>
+            <script>
+
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+
+            $.fn.extend({
+              animateCss: function(animationName, callback) {
+                var animationEnd = (function(el) {
+                  var animations = {
+                    animation: 'animationend',
+                    OAnimation: 'oAnimationEnd',
+                    MozAnimation: 'mozAnimationEnd',
+                    WebkitAnimation: 'webkitAnimationEnd',
+                  };
+
+                  for (var t in animations) {
+                    if (el.style[t] !== undefined) {
+                      return animations[t];
+                    }
+                  }
+                })(document.createElement('div'));
+
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                  $(this).removeClass('animated ' + animationName);
+
+                  if (typeof callback === 'function') callback();
+                });
+
+                return this;
+              },
+            });
+            </script>
+
+    </body>
+</html>

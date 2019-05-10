@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="48px" viewBox="0 0 49 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>save@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="100.330033%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.996711),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F7F7F7" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="-34.6775288%" x2="30.7148093%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#32A0FF" offset="0%"></stop>
+            <stop stop-color="#24ADFF" offset="36.6569479%"></stop>
+            <stop stop-color="#00E1FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MEME-SWIPING" transform="translate(-163.000000, -595.000000)">
+            <g id="Buttons3" transform="translate(19.000000, 587.000000)">
+                <g id="save" transform="translate(144.578947, 8.000000)">
+                    <ellipse id="Oval" fill="url(#radialGradient-1)" cx="23.9210526" cy="24" rx="23.9210526" ry="24"></ellipse>
+                    <path d="M23.9210526,30.5 L18.0945156,33.5733013 C17.6072418,33.8303218 17.0038721,33.6436646 16.7468517,33.1563908 C16.6443756,32.962111 16.6088903,32.7394394 16.6459023,32.5229306 L17.7595204,26.0086105 L13.0391396,21.3921908 C12.6452786,21.0070042 12.6382467,20.3754613 13.0234333,19.9816003 C13.1763113,19.8252795 13.3763166,19.72352 13.5926794,19.6919769 L20.1130163,18.7413895 L23.0259825,12.8195957 C23.2691482,12.3252621 23.8670095,12.1216503 24.3613431,12.364816 C24.5589901,12.4620398 24.718899,12.6219487 24.8161228,12.8195957 L27.729089,18.7413895 L34.2494259,19.6919769 C34.7945671,19.771452 35.1720641,20.2778035 35.092589,20.8229448 C35.0610459,21.0393076 34.9592864,21.2393129 34.8029656,21.3921908 L30.0825849,26.0086105 L31.1962029,32.5229306 C31.2890329,33.0659571 30.9240765,33.5814207 30.3810499,33.6742507 C30.1645411,33.7112627 29.9418694,33.6757773 29.7475897,33.5733013 L23.9210526,30.5 Z" id="Star" fill="url(#linearGradient-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
