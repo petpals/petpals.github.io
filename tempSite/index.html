@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <!-- Sorry for my lazy programming ;) -->
+    <!-- Link CSS files -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="template-style.css">
+    <link rel="stylesheet" type="text/css" href="s1.css">
+    <link rel="stylesheet" type="text/css" href="s2.css">
+    <link rel="stylesheet" type="text/css" href="s3.css">
+
+    <!-- Link Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <!--Link carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+
+
+    <!-- Set basic website info-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set Website Title -->
+    <title>Pet Pals</title>
+  </head>
+
+  <body>
+    <!-- Container will contain everything on this page and establishes the flex (responsive design) -->
+    <div class="container" style="overflow:hidden !important;">
+      <!-- Sections are the basic unit of the site you can have as many sections as you need -->
+      <div class="section" id="section-1">
+        <!-- style="background-repeat: no-repeat;background-size: contain;background-image:url('https://mail.google.com/mail/u/0?ui=2&ik=ba739f09b4&attid=0.1&permmsgid=msg-f:1628088443287442787&th=169821d02d111563&view=fimg&disp=thd&attbid=ANGjdJ-3rsMK-zUE-wRSeY-69X-pygHJlqSjHjcmiUOxK64H50gYEtE0PrJMNZZ8vRSIxPPsAh0ojeRH-oaCIsin4ene17hA2bVNrae_3VYiuz8mzzGiTYd_P8Yd5UQ&ats=2524608000000&sz=w1280-h666');"-->
+        <div class="top">
+          <!-- Nav Container: contains the navigation links -->
+
+
+          <!-- logo -->
+          <div class="logo"></div>
+
+
+          <div class="text-section">
+            <div class="header-text"> pet care at your place. </div>
+              <div class="body-text"><br> We bring compassionate care for your pets right to <br>your door.</div>
+              <div class="create-account">
+                <input type="email" class="email-input" placeholder="Email"></input>
+                <div style="width:10px;height:10px;"></div>
+                <!--<div class="plus">+</div>
+                <input type="password" class="pass-input" placeholder="Password"></input>-->
+                <input type="submit" class="submit" value="Get in touch"></input>
+                <div class="call-us" style="margin-top:30px;margin-left:40px;font-family: 'manrope', sans-serif;font-size: 15pt;color:#d2d2d2;" >Or call 207-542-8654</div>
+              </div>
+          </div>
+
+          <div class="subscription-top">
+            <div class="subscription-tile"><div class="white-top"><br>New<br>Site<br>Coming<br>Soon<img style="width:240px;margin-top:-12.5vh;" src="petpals-s3.svg"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer conainer: contains the footer -->
+      <div class="footer-container"> </div>
+
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.service-slider').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        });
+      });
+
+    </script>
+  </body>
+</html>

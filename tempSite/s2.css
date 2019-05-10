@@ -1,0 +1,42 @@
+#section-2 {
+  background-color: white;
+  height: 120vh !important;
+  /*background-image: url('about-3.png');*/
+}
+.s2-header {
+  font-size: 38pt;
+  /*38pt*/
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-family: 'manrope', sans-serif;
+  grid-column: 2/19;
+  grid-row: 2;
+  margin-left: 1.6vw;
+  margin-top:-3.3vh;
+}
+
+.s2-text {
+  font-size: 35px;
+  color:#d2d2d2;
+  /*color:red;*/
+  font-family: Helvetica, Sans-Serif;
+  font-weight: 300;
+  grid-column: 2/15;
+  grid-row:4;
+  margin-left: 1.5vw;
+  margin-top: -48.5vh;
+  line-height: 45px;
+}
+
+.s2-image {
+  grid-column: 15/20;
+  grid-row:4;
+  margin-top: -15vh;
+  margin-left: 2vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('petpals-s2.svg');
+  width:24vw;
+  height:80vh;
+}
