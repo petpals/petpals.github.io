@@ -6,8 +6,8 @@
      display: none;
    }
    .header-text {
-     font-size: 38px;
-     margin-top: 12vh !important;
+     font-size: 33px;
+     margin-top: 6vh !important;
    }
    .subscription-top {
      display:none;
@@ -18,8 +18,9 @@
      margin-left: 2vw;
    }
    .body-text {
-     font-size: 27px;
+     font-size: 23px;
      line-height: 35px;
+     margin-top: -7vh;
    }
    #desk {
      display: none;
@@ -28,6 +29,6 @@
      display: block;
    }
    .submit {
-     
+
    }
 }
