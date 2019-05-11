@@ -1,5 +1,33 @@
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
+   .nav-link {
+     display: none;
+   }
+   .nav-link-space {
+     display: none;
+   }
+   .header-text {
+     font-size: 38px;
+     margin-top: 12vh !important;
+   }
+   .subscription-top {
+     display:none;
+   }
+   .logo {
+     width:80vw;
+     margin-top:10vh;
+     margin-left: 2vw;
+   }
+   .body-text {
+     font-size: 27px;
+     line-height: 35px;
+   }
+   #desk {
+     display: none;
+   }
+   #mobile {
+     display: block;
+   }
+   .submit {
+     
+   }
 }

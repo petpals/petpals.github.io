@@ -4,6 +4,9 @@
   height: 100vh !important;
 }
 
+#mobile {
+  display: none;
+}
 
 .nav-Container {
   margin-top: 2.5vh;
@@ -38,7 +41,7 @@ font-size: 11pt;
   margin-left: 3.5vw;
 }
 .logo {
-  background-image: url("/reallyold/logo.svg");
+  background-image: url("logo.svg");
   margin-top: -2.5vh;
 }
 .text-section {
