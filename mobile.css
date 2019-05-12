@@ -6,21 +6,23 @@
      display: none;
    }
    .header-text {
-     font-size: 33px;
-     margin-top: 6vh !important;
+     font-size: 35px;
+     margin-top: 10vh !important;
+     margin-left: 2vw;
    }
    .subscription-top {
      display:none;
    }
    .logo {
      width:80vw;
-     margin-top:10vh;
-     margin-left: 2vw;
+     margin-top:11vh;
+     margin-left: 0vw;
    }
    .body-text {
-     font-size: 23px;
-     line-height: 35px;
-     margin-top: -7vh;
+     font-size: 26px;
+    line-height: 33px;
+    margin-top: -6vh;
+    margin-left: 2vw;
    }
    #desk {
      display: none;
@@ -29,6 +31,18 @@
      display: block;
    }
    .submit {
+
+   }
+   body {
+     background-image: url('mobile.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   .section {
+
+   }
+   .container {
+     opacity: 0.5;
 
    }
 }
