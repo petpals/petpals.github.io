@@ -6,9 +6,9 @@
      display: none;
    }
    .header-text {
-     font-size: 35px;
-     margin-top: 10vh !important;
-     margin-left: 2vw;
+     font-size: 28px;
+     margin-top: 9vh !important;
+     margin-left: 1vw;
    }
    .subscription-top {
      display:none;
@@ -19,10 +19,11 @@
      margin-left: 0vw;
    }
    .body-text {
-     font-size: 26px;
-    line-height: 33px;
+    font-size: 21px;
+    line-height: 26px;
     margin-top: -6vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
+    width: 280px;
    }
    #desk {
      display: none;
