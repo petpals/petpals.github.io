@@ -111,3 +111,12 @@ width: 44vw;
     line-height: 76px;
    }
 }
+.actual-card {
+  width: 75vw;
+      height: 78vw;
+      margin-top: 4vh;
+      background-color: white;
+      box-shadow: 5px 5px 10px #aaa;
+      border-radius: 2.5vw;
+
+}

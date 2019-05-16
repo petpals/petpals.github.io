@@ -77,7 +77,9 @@
 
       <div class="section" id="section-3">
         <div class="section-container">
+
           <div class="s3-header">Our Services</div>
+
           <div class="service-slider">
             <div class="service-card"><center><div class="actual-card"><div class="card-top">Pet Sitting</div><div class="card-bot"><br>$74.99*</div></div></center></div>
             <div class="service-card"><center><div class="actual-card"><div class="card-top">Nail Trimming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
@@ -100,13 +102,20 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
       $(document).ready(function(){
-        $('.service-slider').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
+        if ($(window).width() > 600) {
+          $('.service-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+          });
+        } else {
+          $('.service-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          });
+        }
       });
-
     </script>
   </body>
 </html>
