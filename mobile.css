@@ -120,3 +120,10 @@ width: 44vw;
       border-radius: 2.5vw;
 
 }
+.service-slider {
+  background-color: purple;
+    width: 100vw;
+    height: 50vh;
+    grid-column: 1/20;
+    grid-row: 4;
+}
