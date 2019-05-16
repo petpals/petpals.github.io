@@ -123,7 +123,24 @@ width: 44vw;
 .service-slider {
   background-color: purple;
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     grid-column: 1/20;
     grid-row: 4;
+}
+input[type="submit"] {
+    background-color: #ff3a3a;
+    color: #fff;
+    box-sizing: initial!important;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
+    border-color: rgba(0,0,0,.0);
+    border: none!important;
+    font-size: 5vw;
+    width: 50vw;
+    height: 4vw;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: left;
+    box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
+    transition: box-shadow 0.5s ease-in-out;
 }
