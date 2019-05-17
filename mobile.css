@@ -112,20 +112,34 @@ width: 44vw;
    }
 }
 .actual-card {
-  width: 75vw;
-      height: 78vw;
-      margin-top: 4vh;
-      background-color: white;
-      box-shadow: 5px 5px 10px #aaa;
-      border-radius: 2.5vw;
+  width: 87vw;
+height: 100vw;
+margin-top: 2vh;
+background-color: white;
+box-shadow: 5px 5px 10px #aaa;
+border-radius: 2.5vw;
 
+}
+.card-bot {
+    width: 100%;
+    height: 30%;
+    background-color: #1c9bff;
+    border-bottom-left-radius: 2.5vw;
+    border-bottom-right-radius: 2.5vw;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    font-size: 20pt;
+    font-family: 'manrope', sans-serif;
+    padding-left: 0px;
 }
 .service-slider {
   background-color: purple;
-    width: 100vw;
-    height: 60vh;
-    grid-column: 1/20;
-    grid-row: 4;
+      width: 100vw;
+      height: 80vh;
+      grid-column: 1/20;
+      grid-row: 4;
+      margin-top: -14vw;
 }
 input[type="submit"] {
     background-color: #ff3a3a;
