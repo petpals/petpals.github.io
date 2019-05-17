@@ -1,0 +1,10 @@
+.s4-image {
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(heart.svg);
+    width: 15.9vw;
+    height: 20vw;
+    position: absolute;
+    margin-left: 74.3vw;
+    margin-top: -36vw;
+}
