@@ -57,7 +57,7 @@
 
    }
    .container {
-     opacity: 1;/*0.5*/
+     opacity: 0.5;/*0.5*/
 
    }
    .s2-header {
@@ -143,4 +143,24 @@ input[type="submit"] {
     text-align: left;
     box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
     transition: box-shadow 0.5s ease-in-out;
+}
+.s4-header {
+  width: 80vw;
+font-family: 'manrope', sans-serif;
+font-size: 23.4pt;
+color: #1c9bff;
+font-weight: bold;
+margin-top: -63vw;
+margin-left: 6vw;
+line-height: 11vw;
+}
+.s4-text {
+  width: 95vw;
+font-family: 'manrope', sans-serif;
+color: #d2d2d2;
+font-size: 14.5pt;
+grid-row: 2;
+margin-left: 6.5vw;
+line-height: 7.3vw;
+margin-top: -9.1vh;
 }
