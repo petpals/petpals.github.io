@@ -218,14 +218,15 @@ margin-top: -9.1vh;
   border-color: rgba(0,0,0,.0);
   border: none!important;
   font-size: 10vw;
-  width: 90vw;
-  height: 20vw;
-  z-index: 100;
-  text-align: left;
-  box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
-  grid-column: 2/19;
-  grid-row: 5;
-  margin-top:-20vh;
+  width: 88vw;
+    height: 25vw;
+    z-index: 100;
+    text-align: left;
+    box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
+    grid-column: 2/19;
+    grid-row: 5;
+    margin-top: -25.6vh;
+    margin-left: 1.5vw;
 }
 .rating {
   height:10vw;
