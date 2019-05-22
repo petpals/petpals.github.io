@@ -110,7 +110,6 @@ width: 44vw;
     margin-top: -24.3vh;
     line-height: 76px;
    }
-}
 .actual-card {
   width: 87vw;
 height: 100vw;
@@ -239,4 +238,24 @@ margin-top: -9.1vh;
   height:10vw;
   display: inline-block;
   margin-top:20vw;
+}
+#m {
+  display:block;
+}
+.subscription-tile {
+    font-family: 'manrope', sans-serif;
+    border-radius: 3vw;
+    background-color: white;
+    box-shadow: 0vw 0.23vw 0.85vw rgba(0,0,0,.2);
+    width: 87.5vw;
+    height: 108.5vw;
+    margin-top: 6vh;
+    margin-left: 0.4vw;
+}
+
+.subscription-top {
+    grid-column: 2/15;
+    grid-row: 3;
+}
+
 }
