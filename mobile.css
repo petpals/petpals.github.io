@@ -134,7 +134,7 @@ border-radius: 2.5vw;
     padding-left: 0px;
 }
 .service-slider {
-  background-color: purple;
+  background-color: white;
       width: 100vw;
       height: 80vh;
       grid-column: 1/20;
@@ -157,6 +157,7 @@ input[type="submit"] {
     text-align: left;
     box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
     transition: box-shadow 0.5s ease-in-out;
+       -webkit-appearance: none;
 }
 .s4-header {
   width: 80vw;
@@ -207,4 +208,34 @@ grid-row: 2;
 margin-left: 6.5vw;
 line-height: 7.3vw;
 margin-top: -9.1vh;
+}
+.s3-button {
+  background-color: #ff3a3a;
+  color: #fff;
+  box-sizing: initial!important;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  border-color: rgba(0,0,0,.0);
+  border: none!important;
+  font-size: 10vw;
+  width: 90vw;
+  height: 20vw;
+  z-index: 100;
+  text-align: left;
+  box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
+  grid-column: 2/19;
+  grid-row: 5;
+  margin-top:-20vh;
+}
+.rating {
+  height:10vw;
+  width:80vw;
+}
+.star {
+  background-image: url('star.svg');
+  background-repeat: no-repeat;
+  width:10vw;
+  height:10vw;
+  display: inline-block;
+  margin-top:20vw;
 }
