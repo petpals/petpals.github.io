@@ -178,6 +178,17 @@ margin-left: 6.5vw;
 line-height: 7.3vw;
 margin-top: -9.1vh;
 }
+.s4-image {
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(heart.svg);
+    width: 15.9vw;
+    height: 20vw;
+    position: absolute;
+    margin-left: 74.3vw;
+    margin-top: -36vw;
+}
+
 .s5-header {
   width: 80vw;
 font-family: 'manrope', sans-serif;
@@ -209,6 +220,7 @@ line-height: 7.3vw;
 margin-top: -9.1vh;
 }
 .s3-button {
+  display:block;
   background-color: #ff3a3a;
   color: #fff;
   box-sizing: initial!important;
