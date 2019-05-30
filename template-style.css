@@ -183,6 +183,13 @@ input[type="submit"]:hover {
   width:4vw;
   height:4vw;
 }
+.blue-arrow {
+  background-image: url("blue-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:4vw;
+  height:4vw;
+}
 .left-arrow {
   transform: rotate(90deg);
   background-image: url("down.svg");
