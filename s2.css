@@ -40,3 +40,9 @@
   width:24vw;
   height:80vh;
 }
+#s2-da {
+  grid-column: 10/19;
+  grid-row: 6;
+  margin-top: -36vh;
+  margin-left:3vw;
+}

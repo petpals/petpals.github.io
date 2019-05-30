@@ -1,7 +1,7 @@
 /* Add your CSS here */
 #section-1 {
   background-color: white;
-  height: 100vh !important;
+  height: 120vh !important;
 }
 
 #mobile {
@@ -34,11 +34,13 @@ font-size: 11pt;
   height:57px !important;
 }
 .submit {
-  margin-top:0.2vh !important;
+  margin-top:2.5vh !important;
   /*11.2vh -- 2.3vh*/
-  width: 572px !important;
+  width: 45vw !important;
   height:57px !important;
-  margin-left: 3.5vw;
+  margin-left: 3.3vw;
+  z-index: 100;
+  position: relative;
 }
 .logo {
   background-image: url("logo.svg");
@@ -142,4 +144,20 @@ padding-left: 0px;
 }
 #m {
   display:none;
+}
+.person-sitting {
+  height:32vw;
+  width:32vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("subscription.svg");
+  margin-left: -5vw;
+  margin-top: -3vw;
+}
+
+#s1-da {
+  grid-column: 10/19;
+  grid-row: 4;
+  margin-top: -28vh;
+  margin-left:3vw;
 }

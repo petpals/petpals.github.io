@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="36px" viewBox="0 0 60 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Down Arrow@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Desktop-HD-Copy-2" transform="translate(-690.000000, -818.000000)" stroke="#FF3A3A" stroke-width="11.25">
+            <g id="Down-Arrow" transform="translate(720.455844, 824.455844) rotate(-45.000000) translate(-720.455844, -824.455844) translate(702.455844, 806.455844)">
+                <path d="M0.75,0.392045455 L0.75,34.1079545" id="Line"></path>
+                <path d="M18,17.6420455 L18,51.3579545" id="Line" transform="translate(18.000000, 34.500000) rotate(90.000000) translate(-18.000000, -34.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

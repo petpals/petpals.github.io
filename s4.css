@@ -2,11 +2,11 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(heart.svg);
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
-  margin-left: 74.3vw;
-  margin-top: 35px;
+  width: 5vw;
+  height: 5vw;
+  grid-column: 14/19;
+  grid-row: 2;
+  margin-top:4vw;
 }
 .s4-header {
   font-size: 38pt;
@@ -17,18 +17,18 @@
   font-family: 'manrope', sans-serif;
   grid-column: 2/19;
   grid-row: 2;
-  margin-left: 1.6vw;
-  margin-top:-19.3vh;
+  margin-left: 5vw;
+  margin-top:4vw;
 }
 .s4-text {
   font-size: 35px;
   color:#d2d2d2;
   /*color:red;*/
-  font-family: Helvetica, Sans-Serif;
-  font-weight: 300;
-  grid-column: 2/19;
+  font-family: 'manrope', sans-serif;
+  font-weight: normal;
+  grid-column: 2/15;
   grid-row:6;
-  margin-left: 1.5vw;
+  margin-left: 5vw;
   margin-top: -48.5vh;
   line-height: 45px;
 }

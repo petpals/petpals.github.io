@@ -131,6 +131,7 @@ input[type="submit"]:hover {
 
 @font-face {
     font-family: manrope;
+    font-weight: normal;
     src: url("manrope/manrope-regular.ttf");
 }
 

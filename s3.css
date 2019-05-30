@@ -17,9 +17,10 @@
 .service-slider {
   background-color: white;
   width:auto;
-  height:50vh;
-  grid-column: 2/20;
+  height:90vh;
+  grid-column: 1/21;
   grid-row:4;
+  margin-top:-5vw;
 }
 
 .service-card {
@@ -27,8 +28,8 @@
   background-color:white;
 }
 .actual-card {
-  width:20vw;
-  height:23vw;
+  width:23vw;
+  height:27vw;
   margin-top:4vh;
   background-color: white;
   box-shadow: 5px 5px 10px #aaa;
@@ -57,4 +58,32 @@
 }
 .s3-button {
   display:none;
+}
+
+#s3-da {
+  margin-top: -31vh;
+  margin-left: 3vw;
+  grid-column: 10/19;
+  grid-row: 7;
+  z-index: 150;
+}
+.left-arrow {
+  /*grid-column: 1/19;
+  grid-row: 4;
+  margin-top:-5vw;
+  margin-left: 2vw;*/
+  margin-top: 9vw;
+  margin-left: -1vw;
+  position: absolute;
+  z-index: 200;
+}
+.right-arrow {
+  /*grid-column: 20/20;
+  grid-row:4;
+  margin-top: -5vw;
+  margin-left:-0.7vw;*/
+  margin-top: -17vw;
+  margin-left: 96vw;
+  position: absolute;
+  z-index: 200;
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="386px" height="512px" viewBox="0 0 386 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Base Monthly Price Card@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10,-5.68434189e-14 L137.526902,-5.68434189e-14 L290,-5.68434189e-14 C295.522847,-5.78579495e-14 300,4.4771525 300,10 L300,364 C300,369.522847 295.522847,374 290,374 L10,374 C4.4771525,374 6.76353751e-16,369.522847 0,364 L0,10 C-6.76353751e-16,4.4771525 4.4771525,-5.58288882e-14 10,-5.68434189e-14 Z" id="path-1"></path>
+        <filter x="-25.8%" y="-13.8%" width="151.7%" height="141.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="26" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="21.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.17111014 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M0,260.352564 L300,260.352564 L300,365.352564 C300,370.875412 295.522847,375.352564 290,375.352564 L10,375.352564 C4.4771525,375.352564 6.76353751e-16,370.875412 0,365.352564 L0,260.352564 Z" id="path-4"></path>
+        <filter x="-2.3%" y="-4.3%" width="104.7%" height="112.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.22745098   0 0 0 0 0.22745098  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-2" transform="translate(-972.000000, -166.000000)">
+            <g id="Top" transform="translate(50.000000, 11.000000)">
+                <g id="Base-Monthly-Price-Card" transform="translate(965.000000, 172.000000)">
+                    <g id="Group-6">
+                        <g id="Group-4">
+                            <g id="dogs-1190015">
+                                <g id="Bronze-Member">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="Mask">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                    </g>
+                                    <g id="Rectangle" mask="url(#mask-2)">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                        <use fill="#FF3A3A" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                    </g>
+                                    <text id="$9.99/m" mask="url(#mask-2)" font-family="ProductSans-Bold, Product Sans" font-size="40" font-weight="bold" fill="#FFFFFF">
+                                        <tspan x="72" y="332">$9.99/m</tspan>
+                                    </text>
+                                    <text id="Coming-Soon-Dogs-Cat" mask="url(#mask-2)" font-family="ProductSans-Bold, Product Sans" font-size="40" font-weight="bold" fill="#CFCFCF">
+                                        <tspan x="12" y="50">Coming Soon </tspan>
+                                        <tspan x="12" y="98">Dogs</tspan>
+                                        <tspan x="12" y="146">Cats</tspan>
+                                        <tspan x="12" y="194">Birds</tspan>
+                                        <tspan x="12" y="242">Critters</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                        <text id="Save-with-Subscripti" font-family="ProductSans-Bold, Product Sans" font-size="40" font-weight="bold" fill="#FF3A3A">
+                            <tspan x="0" y="438">Save with</tspan>
+                            <tspan x="0" y="486">Subscription.</tspan>
+                        </text>
+                    </g>
+                    <text id="Base-monthly-price-@" font-family="ProductSans-Regular, Product Sans" font-size="15" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="71" y="286">Base monthly price @</tspan>
+                    </text>
+                    <text id="Base-monthly-price-@" font-family="ProductSans-Regular, Product Sans" font-size="15" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="71" y="286">Base monthly price @</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

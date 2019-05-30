@@ -9,6 +9,14 @@
   /*justify-content: center;*/
   align-items: center;
 }
+html {
+    background-image: url("desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body {
+  opacity: 0.5;
+}
 
 .section {
   width: 100vw;
@@ -16,6 +24,7 @@
   grid-column: 1/21;
   /*justify-content: center;*/
   align-items: center;
+  overflow: hidden;
 }
 
 .nav-container {
@@ -146,7 +155,7 @@ input[type="submit"]:hover {
   box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
   transition: box-shadow 0.5s ease-in-out;
      -webkit-appearance: none;
-     
+
 }
 .submit:hover {
   box-shadow: 0vw 0.23vw 0.85vw 0.2vw rgba(255, 40, 40, 0.3);
@@ -161,4 +170,32 @@ input[type="submit"]:hover {
     font-family: manrope;
     font-weight: bold;
     src: url("manrope/manrope-bold.ttf");
+}
+
+.spacer {
+  width:auto;
+  height:10vw;
+}
+.down-arrow {
+  background-image: url("down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:4vw;
+  height:4vw;
+}
+.left-arrow {
+  transform: rotate(90deg);
+  background-image: url("down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:4vw;
+  height:4vw;
+}
+.right-arrow {
+  transform: rotate(270deg);
+  background-image: url("down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:4vw;
+  height:4vw;
 }
