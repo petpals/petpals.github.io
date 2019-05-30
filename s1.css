@@ -90,7 +90,8 @@ font-size: 11pt;
 .subscription-top {
   grid-column: 15/20;
   grid-row: 3;
-  margin-top:-25vh;
+  margin-top: -43vh;
+  margin-left: 2vw;
 }
 .subscription-tile {
   font-family: 'manrope', sans-serif;
