@@ -18,7 +18,7 @@
   background-color: white;
   width:auto;
   height:90vh;
-  grid-column: 1/21;
+  grid-column: 2/20;
   grid-row:4;
   margin-top:-5vw;
 }
@@ -72,8 +72,8 @@
   grid-row: 4;
   margin-top:-5vw;
   margin-left: 2vw;*/
-  margin-top: 9vw;
-  margin-left: -1vw;
+  margin-top: 12vw;
+  margin-left: -4vw;
   position: absolute;
   z-index: 200;
 }
@@ -82,8 +82,8 @@
   grid-row:4;
   margin-top: -5vw;
   margin-left:-0.7vw;*/
-  margin-top: -17vw;
-  margin-left: 96vw;
+  margin-top: -34vw;
+  margin-left: 89vw;
   position: absolute;
   z-index: 200;
 }
