@@ -158,6 +158,9 @@ padding-left: 0px;
 #m {
   display:none;
 }
+#d {
+  display: block;
+}
 .person-sitting {
   height:28vw;
   width:28vw;

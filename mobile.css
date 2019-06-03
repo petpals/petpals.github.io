@@ -254,6 +254,9 @@ margin-top: -9.1vh;
 #m {
   display:block;
 }
+#d {
+  display: none;
+}
 .subscription-tile {
     font-family: 'manrope', sans-serif;
     border-radius: 2.5vw;
@@ -272,6 +275,20 @@ margin-top: -9.1vh;
 .subscription-top {
     grid-column: 2/15;
     grid-row: 3;
+}
+#section-1 {
+  height: 100vh !important;
+}
+#section-2 {
+  height: 100vh !important;
+}
+#section-3 {
+  padding-top:20vh;
+  height: 100vh !important;
+}
+#section-4 {
+  height: 100vh !important;
+  padding-top:20vh;
 }
 
 }
