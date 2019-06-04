@@ -159,7 +159,7 @@ padding-left: 0px;
   display:none;
 }
 #d {
-  display: block;
+  display: inline-block;
 }
 .person-sitting {
   height:28vw;
