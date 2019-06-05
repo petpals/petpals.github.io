@@ -115,7 +115,7 @@ width: 44vw;
 height: 100vw;
 margin-top: 2vh;
 background-color: white;
-box-shadow: 5px 5px 10px #aaa;
+box-shadow: 5px 5px 10px 2px #eee;
 border-radius: 2.5vw;
 
 }
@@ -225,23 +225,24 @@ margin-top: -4.1vh;
 grid-column: 2;
 }
 .s3-button {
-  display:block;
-  background-color: #ff3a3a;
-  color: #fff;
-  box-sizing: initial!important;
-  font-family: 'Open Sans', sans-serif;
-  border-radius: 8px;
-  border-color: rgba(0,0,0,.0);
-  border: none!important;
-  font-size: 10vw;
-  width: 88vw;
-    height: 25vw;
+  display: block;
+    background-color: #ff3a3a;
+    color: #fff;
+    box-sizing: initial!important;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px;
+    border-color: rgba(0,0,0,.0);
+    border: none!important;
+    font-size: 8vw;
+    width: 88vw;
+    height: 22vw;
     z-index: 100;
-    text-align: left;
+    text-align: center;
     box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
     grid-column: 2/19;
     grid-row: 5;
-    margin-top: -16.6vh;
+    margin-top: -22.6vh;
+    margin-top: -17.6vh;
     margin-left: 1.5vw;
 }
 .rating {
@@ -310,6 +311,10 @@ grid-column: 2;
 #s1-da {
 margin-top:-20vh;
 margin-left: -2vw;
+}
+
+#s3-da {
+  display: none;
 }
 .mobile-nav {
 width:10vw;
