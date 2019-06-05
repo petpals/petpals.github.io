@@ -308,5 +308,18 @@ margin-top: -4.1vh;
 margin-top:-20vh;
 margin-left: -2vw;
 }
+.mobile-nav {
+width:10vw;
+height:10vw;
+grid-column: 18/19;
+grid-row: 2;
+margin-top: -15vw;
+}
+.bar-nav {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
 
 }
