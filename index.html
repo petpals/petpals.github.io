@@ -87,14 +87,14 @@
 
           <div class="s3-header">Our Services</div>
           <div class="service-slider">
-            <div class="service-card"><center><div class="actual-card"><div class="card-top">Pet Sitting</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top">Nail Trimming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top">Grooming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(1)"><div class="card-top">Pet Sitting</div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(2)"><div class="card-top">Nail Trimming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(3)"><div class="card-top">Grooming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(4)"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(5)"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(6)"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(7)"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(8)"><div class="card-top"></div><div class="card-bot"><br>$74.99*</div></div></center></div>
           </div>
           <div class="s3-button">Slide to see more</div>
           <div class="down-arrow" id="s3-da"></div>
@@ -105,7 +105,7 @@
           <div class="s4-header">Small business, big hearts</div>
           <div class="s4-image"></div>
           <div class="s4-text" id="m">Family run and from Mid Coast<br>Maine, we know the benefits of<br>being a part of a close knit community,<br>and we strive to extend the same<br>comfort and connection throughout<br>our extended family of PetPals<br>and pet owners.</div>
-          <div class="s4-text">Family run and from Mid Coast Maine, we know the benefits of being a part of a close knit community, and we strive to extend the same comfort and connection throughout our extended family of PetPals and pet owners.</div>
+          <div class="s4-text" id="d">Family run and from Mid Coast Maine, we know the benefits of being a part of a close knit community, and we strive to extend the same comfort and connection throughout our extended family of PetPals and pet owners.</div>
         </div>
       </div>
       <div class="section" id="section-5">
@@ -151,7 +151,7 @@
 
       <!-- Footer conainer: contains the footer -->
       <div class="footer-container section"> </div>
-
+      <div class="popup scale-in-center" id="popup"><div id="exit" onclick="hidePop()">X</div><div id="popText"></div></div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -175,6 +175,21 @@
         }
 
       });
+    </script>
+    <script>
+    function showPop(number) {
+      document.getElementById('popup').style.display = 'block';
+      if (number == 1) {
+        document.getElementById('popText').innerHTML = "Pet Sitting text that we can write. This will say stuff."
+      } else if (number == 2) {
+        document.getElementById('popText').innerHTML = "Nail trimming. See this is different."
+      } else {
+        document.getElementById('popText').innerHTML = "Temporary text."
+      }
+    }
+    function hidePop() {
+      document.getElementById('popup').style.display = 'none';
+    }
     </script>
   </body>
 </html>
