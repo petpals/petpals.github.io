@@ -165,7 +165,7 @@ font-size: 23.4pt;
 color: #1c9bff;
 font-weight: bold;
 margin-top: -63vw;
-margin-left: 6vw;
+margin-left: 1.5vw; /*6vw*/
 line-height: 11vw;
 grid-row: 1;
 }
@@ -175,7 +175,7 @@ font-family: 'manrope', sans-serif;
 color: #d2d2d2;
 font-size: 14.5pt;
 grid-row: 2;
-margin-left: 6.5vw;
+margin-left: 1.5vw; /*6.5vw*/
 line-height: 7.3vw;
 margin-top: -9.1vh;
 }
@@ -196,9 +196,10 @@ font-family: 'manrope', sans-serif;
 font-size: 23.4pt;
 color: #1c9bff;
 font-weight: bold;
-margin-left: 6vw;
+margin-left: 1.5vw;
 line-height: 11vw;
 grid-row: 1;
+grid-column: 2;
 }
 .s6-header {
   width: 80vw;
@@ -218,9 +219,10 @@ font-family: 'manrope', sans-serif;
 color: #d2d2d2;
 font-size: 14.5pt;
 grid-row: 2;
-margin-left: 6.5vw;
+margin-left: 1.5vw;
 line-height: 7.3vw;
 margin-top: -4.1vh;
+grid-column: 2;
 }
 .s3-button {
   display:block;
@@ -245,8 +247,9 @@ margin-top: -4.1vh;
 .rating {
   height:10vw;
   width:80vw;
-  grid-column: 6/19;
+  grid-column: 2/19;
   grid-row: 3;
+  margin-left: 1.5vw;
 }
 .star {
   background-image: url('star.svg');

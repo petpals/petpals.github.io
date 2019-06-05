@@ -116,7 +116,7 @@
       <div class="section" id="section-5">
         <div class="section-container">
           <div class="s5-header"> Words from our members</div>
-          <div class="s5-review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.</div>
+          <div class="s5-review" id="review"></div>
           <div class="rating"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
         </div>
       </div>
@@ -182,16 +182,35 @@
       });
     </script>
     <script>
+    var petsit = "Pet Sitting text that we can write. This will say stuff.";
+    var nailtrim = "Nail trimming. See this is different.";
+    var temp = "Temporary text.";
+    var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.";
+
+    function getReview() {
+      document.getElementById('review').innerHTML = lorem;
+    }
+
+    $( document ).ready(function() {
+      getReview();
+    });
+
     function showPop(number) {
       document.getElementById('popup').style.display = 'block';
       if (number == 1) {
-        document.getElementById('popText').innerHTML = "Pet Sitting text that we can write. This will say stuff."
+        document.getElementById('popText').innerHTML = petsit;
       } else if (number == 2) {
-        document.getElementById('popText').innerHTML = "Nail trimming. See this is different."
+        document.getElementById('popText').innerHTML = nailtrim;
       } else {
-        document.getElementById('popText').innerHTML = "Temporary text."
+        document.getElementById('popText').innerHTML = temp;
       }
     }
+
+    function showPopString(text) {
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('popText').innerHTML = text;
+    }
+
     function hidePop() {
       document.getElementById('popup').style.display = 'none';
     }
