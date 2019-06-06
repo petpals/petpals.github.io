@@ -92,8 +92,8 @@
 }
 #cImg4 {
   background-repeat: no-repeat;
-  background-size: 65%;
-  background-position: bottom right;/*50%;
+  background-size: 55%;
+  background-position: center right;/*50%;
   background-position: 85% 200%;*/
   background-image: url("serv4.svg");
 }
