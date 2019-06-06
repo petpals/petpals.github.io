@@ -1,0 +1,43 @@
+.footer-container {
+  height: 45vh !important;
+  background-color: white;
+}
+
+.fContact {
+  font-size: 22pt;
+  color: #d2d2d2;
+  font-weight: 700;
+  font-family: 'manrope', sans-serif;
+  grid-row: 2;
+  grid-column: 2/10;
+}
+
+.things {
+  grid-row: 2;
+  grid-column: 15/19;
+}
+
+.psi {
+  background-image: url('http://www.choicespetsitters.com/wp-content/uploads/2017/02/PSI-Logo-GARPS-Tagline-Color.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:10vw;
+  height:10vw;
+  float: right;
+}
+.bic {
+  background-image: url('http://s.cfluent.com/dog-trainers/pet-sitters/index/1/bic-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:10vw;
+  height:10vw;
+  float:left
+}
+#copyright {
+  color: #d2d2d2;
+  font-family: 'manrope', sans-serif;
+  text-align: center;
+  grid-row: 3;
+  grid-column: 1/20;
+  font-size: 12pt;
+}
