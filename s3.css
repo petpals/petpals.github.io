@@ -72,25 +72,29 @@
 #cImg1 {
   background-repeat: no-repeat;
   background-size: 90%;
-  background-position: 85% -200%;
+  background-position: right; /*90%;
+  background-position: 85% -200%;*/
   background-image: url("top-person.svg");
 }
 #cImg2 {
   background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: 85% -350%;
+  background-size: 90%;
+  background-position: bottom right;/*80%;
+  background-position: 85% -350%;*/
   background-image: url("serv2.svg");
 }
 #cImg3 {
   background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: 85% -600%;
+  background-size: 80%;
+  background-position: bottom right; /*70%;
+  background-position: 85% -600%;*/
   background-image: url("serv3.svg");
 }
 #cImg4 {
   background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 85% 200%;
+  background-size: 65%;
+  background-position: bottom right;/*50%;
+  background-position: 85% 200%;*/
   background-image: url("serv4.svg");
 }
 
