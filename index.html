@@ -171,6 +171,26 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCzCJqFzUvanoKIyQwTcmXaYMXig1T1Oy8",
+    authDomain: "crittr-web.firebaseapp.com",
+    databaseURL: "https://crittr-web.firebaseio.com",
+    projectId: "crittr-web",
+    storageBucket: "crittr-web.appspot.com",
+    messagingSenderId: "715324045920",
+    appId: "1:715324045920:web:4a2d7294c7e2e93e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     <script>
       $(document).ready(function(){
         if ($(window).width() > 600) {
