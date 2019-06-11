@@ -21,6 +21,7 @@
   grid-column: 2/20;
   grid-row:4;
   margin-top:-5vw;
+  padding-top: 10px;
 }
 
 .service-card {
