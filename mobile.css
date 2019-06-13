@@ -266,6 +266,8 @@ grid-column: 2;
 #d {
   display: none;
 }
+.m {display:block;}
+.d {display:none;}
 .subscription-tile {
     font-family: 'manrope', sans-serif;
     border-radius: 2.5vw;

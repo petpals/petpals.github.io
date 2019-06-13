@@ -13,6 +13,7 @@ html {
     background-image: url("desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 20% -12%;
 }
 body {
   //opacity: 0.5;

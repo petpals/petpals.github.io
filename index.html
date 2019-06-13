@@ -60,12 +60,12 @@
             <div class="header-text"> pet care at your place. </div>
               <div class="body-text" id="desk"><br> We bring compassionate care for your pets right to <br>your door.</div>
               <div class="body-text" id="mobile"><br> We bring compassionate care for your pets right to your door.</div>
-              <div class="create-account">
-                <input type="email" class="email-input" id="d" placeholder="Email"></input>
+              <form class="create-account" id="create-account" method="POST">
+                <input type="email" class="email-input d" id="email-input" placeholder="Email" name="email"></input>
                 <div class="plus" id="d"><div class="plus-image"></div></div>
-                <input type="tel" class="pass-input" placeholder="Phone" id="d"></input>
-                <input type="submit" class="submit" value="Get Started"> <div class="phone"></div></input>
-              </div>
+                <input type="tel" class="pass-input d" placeholder="Phone" name="phone" id="pass-input"></input>
+                <input type="submit" class="submit" value="Get Started" id="saveForm"> <div class="phone"></div></input>
+              </form>
           </div>
 
           <div class="subscription-top">
@@ -93,14 +93,14 @@
 
           <div class="s3-header">Our Services</div>
           <div class="service-slider">
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(1)" id="cImg1"><div class="card-top">Pet Sitting</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(2)" id="cImg2"><div class="card-top">Nail Trimming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(3)" id="cImg3"><div class="card-top">Grooming</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(4)" id="cImg4"><div class="card-top">Service</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(5)" id="cImg1"><div class="card-top">Service</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(6)" id="cImg2"><div class="card-top">Service</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(7)" id="cImg3"><div class="card-top">Service</div><div class="card-bot"><br>$74.99*</div></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(8)" id="cImg4"><div class="card-top">Service</div><div class="card-bot"><br>$74.99*</div></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(1)" id="cImg1"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(2)" id="cImg2"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(3)" id="cImg3"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(4)" id="cImg4"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(5)" id="cImg5"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(6)" id="cImg6"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(7)" id="cImg7"></div></center></div>
+            <div class="service-card"><center><div class="actual-card" onclick="showPop(8)" id="cImg8"></div></center></div>
           </div>
           <div class="s3-button"><br>Slide to see more</div>
           <div class="down-arrow" id="s3-da"></div>
@@ -173,6 +173,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
@@ -190,6 +192,29 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  var database = firebase.database();
+
+  function writeUserData(email, phone) {
+    var formKey = firebase.database().ref().child('form').push().key;
+    firebase.database().ref('form/' + formKey).set({
+      email: email,
+      phone: phone
+    });
+  }
+
+  $(function() { //shorthand document.ready function
+    $('#create-account').on('submit', function(e) { //use on if jQuery 1.7+
+        e.preventDefault();  //prevent form from submitting
+        var data = $("#create-account :input").serializeArray();
+        console.log(data); //use the console for debugging, F12 in Chrome, not alerts
+        writeUserData(data[0], data[1])
+        return false;
+    });
+});
+
+
+
 </script>
     <script>
       $(document).ready(function(){
@@ -221,11 +246,7 @@
       document.getElementById('review').innerHTML = lorem;
     }
 
-    $( document ).ready(function() {
-      getReview();
-      var year = new Date().getFullYear();
-      document.getElementById('copyright').innerHTML = "©"+year+" PetPals"
-    });
+
 
     function showPop(number) {
       document.getElementById('popup').style.display = 'block';
@@ -246,6 +267,31 @@
     function hidePop() {
       document.getElementById('popup').style.display = 'none';
     }
+
+    //Service card code
+
+    var partOne = '<div class=\"card-top\">';
+    var service = ['Pet Sitting', 'Nail Trim', 'Grooming', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service'];
+    var partTwo = '</div><div class=\"card-bot\"><br>';
+    var price = ['$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*'];
+    var partThree = '</div>';
+    var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4', 'cImg5', 'cImg6', 'cImg7', 'cImg8'];
+
+    for(var i=0; i<8; i++) {
+      var id = idList[i];
+      var element = document.getElementById(id);
+      if(element) {
+          element.innerHTML = partOne+service[i]+partTwo+price[i]+partThree;
+      }
+    }
+
+    // Fire when ready
+
+    $( document ).ready(function() {
+      getReview();
+      var year = new Date().getFullYear();
+      document.getElementById('copyright').innerHTML = "©"+year+" PetPals"
+    });
     </script>
   </body>
 </html>
