@@ -26,6 +26,17 @@
 
     <!-- Set Website Title -->
     <title>Pet Pals</title>
+    <style>
+      .text-section {
+        grid-column: 6/20;
+      }
+      .email-input {
+        margin-left: 0px;
+      }
+      .submit {
+        margin-left: 0px;
+      }
+    </style>
   </head>
 
   <body>
@@ -57,102 +68,25 @@
 
 
           <div class="text-section">
-            <div class="header-text"> pet care at your place. </div>
-              <div class="body-text" id="desk"><br> We bring compassionate care for your pets right to <br>your door.</div>
-              <div class="body-text" id="mobile"><br> We bring compassionate care for your pets right to your door.</div>
               <form class="create-account" id="create-account" method="POST">
-                <input type="email" class="email-input d" id="email-input" placeholder="Email" name="email"></input>
-                <div class="plus" id="d"><div class="plus-image"></div></div>
-                <input type="tel" class="pass-input d" placeholder="Phone" name="phone" id="pass-input"></input>
-                <input type="submit" class="submit" value="Get Started" id="saveForm"> <div class="phone"></div></input>
+                <input type="text" class="email-input d" id="email-input" placeholder="First Name" name="fname" style="width:22vw;"></input>
+                <input type="text" class="pass-input d" placeholder="Last Name" name="lname" id="pass-input" style="width:22vw;"></input>
+                <input type="text" class="pass-input d" placeholder="Address" name="addr" id="pass-input" style="width:22vw;"></input>
+                <input type="text" class="pass-input d" placeholder="City" name="city" id="pass-input" style="width:22vw;"></input>
+                <input type="text" class="pass-input d" placeholder="State" name="state" id="pass-input" style="width:22vw;"></input>
+                <input type="number" class="pass-input d" placeholder="Zip" name="zip" id="pass-input" style="width:22vw;"></input>
+                <input type="text" class="pass-input d" placeholder="What service(s) are you most interested in?" name="service" id="pass-input" style="width:45.4vw;"></input>
+                <input type="submit" class="submit" value="Send" id="saveForm"> <div class="phone"></div></input>
               </form>
           </div>
-
-          <div class="subscription-top">
-            <div class="person-sitting"></div>
-            <!--<div class="subscription-tile"><div class="white-top"><br>Dogs<br>Cats<br>Birds<br>Critters</div><div class="red-bottom"><br>$9.99/m</div></div>
-            <div class="subscription-text">sign up, <br>first month is free.</div>-->
-          </div>
-          <div class="blue-arrow" id="s1-da"></div>
-
-        </div>
-      </div>
-      <div class="spacer"></div>
-      <div class="section" id="section-2">
-        <div class="section-container">
-          <div class="s2-header">A different type of pet care service. </div>
-          <div class="s2-text">We understand the bond between you<br>and your pet and we want to honor that by<br>being the most compassionate and professional<br>pet care service available.</div>
-          <div class="s2-text">We understand the bond between you<br>and your pet and we want to honor that by<br>being the most compassionate and professional<br>pet care service available.</div>
-          <div class="s2-image"></div>
-          <div class="down-arrow" id="s2-da"></div>
-        </div>
-      </div>
-
-      <div class="section" id="section-3">
-        <div class="section-container">
-
-          <div class="s3-header">Our Services</div>
-          <div class="service-slider">
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(1)" id="cImg1"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(2)" id="cImg2"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(3)" id="cImg3"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(4)" id="cImg4"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(5)" id="cImg5"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(6)" id="cImg6"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(7)" id="cImg7"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(8)" id="cImg8"></div></center></div>
-          </div>
-          <div class="s3-button"><br>Slide to see more</div>
-          <div class="down-arrow" id="s3-da"></div>
-        </div>
-      </div>
-      <div class="section" id="section-4">
-        <div class="section-container">
-          <div class="s4-header">Small business, big hearts</div>
-          <div class="s4-image"></div>
-          <div class="s4-text" id="m">Family run and from Mid Coast<br>Maine, we know the benefits of<br>being a part of a close knit community,<br>and we strive to extend the same<br>comfort and connection throughout<br>our extended family of PetPals<br>and pet owners.</div>
-          <div class="s4-text" id="d">Family run and from Mid Coast Maine, we know the benefits of being a part of a close knit community, and we strive to extend the same comfort and connection throughout our extended family of PetPals and pet owners.</div>
-        </div>
-      </div>
-      <div class="section" id="section-5">
-        <div class="section-container">
-          <div class="s5-header"> Words from our members</div>
-          <div class="s5-review" id="review"></div>
-          <div class="rating"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-        </div>
-      </div>
-      <div class="section" style="display:none;" id="section-6">
-        <div class="section-container">
-          <div class="s6-header" id="m">Save with subscription</div>
-          <div class="subscription-top" id="m">
-            <div class="subscription-tile" id="m"><div class="white-top"><br>Dogs<br>Cats<br>Birds<br>Critters</div><div class="red-bottom"><br>$9.99/m</div></div>
-            <div class="subscription-text" id="m">sign up, <br>first month is free.</div>
-          </div>
-        </div>
-      </div>
-      <div class="section" id="section-7">
-        <div class="section-container">
-        <div class="logo"></div>
+<!--
+First name
+Last name
 
 
-        <div class="text-section">
-          <div class="header-text"> pet care at your place. </div>
-            <div class="body-text" id="desk"><br> We bring compassionate care for your pets right to <br>your door.</div>
-            <div class="body-text" id="mobile"><br> We bring compassionate care for your pets right to your door.</div>
-            <div class="create-account">
-              <input type="email" id="d" class="email-input" placeholder="Email"></input>
-              <div class="plus" id="d"><div class="plus-image"></div></div>
-              <input type="tel" id="d" class="pass-input" placeholder="Phone"></input>
-              <input type="submit" class="submit" value="Get Started"> <div class="phone"></div></input>
-            </div>
-        </div>
 
-        <div class="subscription-top">
-          <div class="person-sitting"></div>
-          <!--<div class="subscription-tile"><div class="white-top"><br>Dogs<br>Cats<br>Birds<br>Critters</div><div class="red-bottom"><br>$9.99/m</div></div>
-          <div class="subscription-text">sign up, <br>first month is free.</div>-->
+-->
         </div>
-      </div>
       </div>
 
       <!-- Footer conainer: contains the footer -->
@@ -208,8 +142,7 @@
         e.preventDefault();  //prevent form from submitting
         var data = $("#create-account :input").serializeArray();
         console.log(data);
-        writeUserData(data[0], data[1]);
-        window.location.assign("form.html");
+        writeUserData(data[0], data[1])
         return false;
     });
 });
