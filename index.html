@@ -206,10 +206,16 @@
   $(function() { //shorthand document.ready function
     $('#create-account').on('submit', function(e) { //use on if jQuery 1.7+
         e.preventDefault();  //prevent form from submitting
-        var data = $("#create-account :input").serializeArray();
-        console.log(data);
-        writeUserData(data[0], data[1]);
-        window.location.assign("form.html");
+        var x = document.getElementById("email-input");
+        if (window.getComputedStyle(x).display === "none") {
+          console.log("Mobile");
+          window.location.assign("tel:207-975-3143");
+        } else {
+          var data = $("#create-account :input").serializeArray();
+          console.log(data);
+          writeUserData(data[0], data[1]);
+          window.location.assign("form.html");
+        }
         return false;
     });
 });
