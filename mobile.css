@@ -248,7 +248,7 @@ grid-column: 2;
 .rating {
   height:10vw;
   width:80vw;
-  grid-column: 2/19;
+  grid-column: 9/19;
   grid-row: 3;
   margin-left: 1.5vw;
 }
@@ -330,6 +330,7 @@ margin-top: -15vw;
   height: 5px;
   background-color: black;
   margin: 6px 0;
+  display: none;
 }
 
 }
