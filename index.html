@@ -324,7 +324,17 @@
     //Service card code
 
     var partOne = '<div class=\"card-top\" style=\"background-image:url(\'';
-    var bgImg = ['top-person.svg\');background-repeat: no-repeat; background-size: 90%;background-position: right;background-position: 125% -70%;', 'serv2.svg\');background-repeat: no-repeat;background-size: 90%;background-position: bottom right;background-position: 15% -70%;', 'serv3.svg\');background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 15% -70%;', 'serv4.svg\');background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 50% -90%;'];
+    var bgImg = ['top-person.svg\');', 'serv2.svg\');', 'serv3.svg\');', 'serv4.svg\');', 'serv5.svg\');', 'serv6.svg\');'];
+    var bgIns =
+    [
+      'background-repeat: no-repeat;background-size: 90%;background-position: right;background-position: 130% -75%;',
+      'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 25% -150%;',
+      'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 80% 500%;',
+      'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 70% 120%;',
+      'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -300%;',
+      'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 90% -70%;'
+     ]
+
     var partOneClose = '\">';
 
     var serviceOLD = ['Ear Cleaning', 'Weight Check', 'Gland Expression', 'Consultation', 'Flea and tick application', 'Dog walking', 'Pet sitting', 'Delivery', 'Overnight', '24 Hour Care', 'Cat Comb Out', 'Cat Belly Shave', 'Cat Sanitary Trim', 'Cat Nail Trim', 'Cat Paw Trim', 'Cat Full Shave', 'Cat Bath', 'Dog Ear Flush', 'Small Dog Full Shave', 'Large Dog Full Shave', 'Dog Nail Trim', 'Dog Paw Trim', 'Dog Teeth Brushing', 'Dog Sanitary Trim', 'Small Dog Bath', 'Large Dog Bath'];
@@ -358,7 +368,7 @@
       var id = idList[i];
       var element = document.getElementById(id);
       if(element) {
-          element.innerHTML = partOne+bgImg[i%4]+partOneClose+service[i]+partTwo+price[i]+partThree;
+          element.innerHTML = partOne+bgImg[i%6]+bgIns[i%6]+partOneClose+service[i]+partTwo+price[i]+partThree;
       }
     }
 
