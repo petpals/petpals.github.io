@@ -73,61 +73,61 @@
   margin-left: 15%;
 }
 #cImg1 {
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-size: 90%;
   background-position: right; /*90%;
-  background-position: 85% -200%;*/
-  background-image: url("top-person.svg");
+  background-position: 85% -200%;
+  background-image: url("top-person.svg");*/
 }
 #cImg2 {
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-size: 90%;
   background-position: bottom right;/*80%;
-  background-position: 85% -350%;*/
-  background-image: url("serv2.svg");
+  background-position: 85% -350%;
+  background-image: url("serv2.svg");*/
 }
 #cImg3 {
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-size: 80%;
   background-position: bottom right; /*70%;
-  background-position: 85% -600%;*/
-  background-image: url("serv3.svg");
+  background-position: 85% -600%;
+  background-image: url("serv3.svg");*/
 }
 #cImg4 {
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;
   background-size: 55%;
   background-position: top right;/*50%;
-  background-position: 85% 200%;*/
-  background-image: url("serv4.svg");
+  background-position: 85% 200%;
+  background-image: url("serv4.svg");*/
 }
-#cImg5 {
+/*#cImg5 {
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: right; /*90%;
-  background-position: 85% -200%;*/
+  background-position: 85% -200%;
   background-image: url("top-person.svg");
 }
 #cImg6 {
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: bottom right;/*80%;
-  background-position: 85% -350%;*/
+  background-position: 85% -350%;
   background-image: url("serv2.svg");
 }
 #cImg7 {
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: bottom right; /*70%;
-  background-position: 85% -600%;*/
+  background-position: 85% -600%;
   background-image: url("serv3.svg");
 }
 #cImg8 {
   background-repeat: no-repeat;
   background-size: 55%;
   background-position: top right;/*50%;
-  background-position: 85% 200%;*/
+  background-position: 85% 200%;
   background-image: url("serv4.svg");
-}
+}*/
 
 #s3-da {
   margin-top: -31vh;
@@ -151,7 +151,7 @@
   grid-row:4;
   margin-top: -5vw;
   margin-left:-0.7vw;*/
-  margin-top: -33.2vw;
+  margin-top: -35.3vw;
   margin-left: 89.5vw;
   position: absolute;
   z-index: 200;

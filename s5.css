@@ -7,14 +7,25 @@
   font-family: 'manrope', sans-serif;
   grid-column: 3/9;
   grid-row: 3;
-  margin-top:-19.3vh;
+  /*margin-top:-9.3vh;*/
+  z-index: 1000;
+  position: relative;
 }
-
+.quote-slider {
+  background-color: white;
+  width:auto;
+  height:90vh;
+  grid-column: 2/20;
+  grid-row:4;
+  margin-top:-5vw;
+  padding-top: 10px;
+}
 .rating {
   height:20vw;
   width:80vw;
-  grid-column: 14/19;
-  grid-row: 6;
+  position:absolute;
+  margin-top:32vw;
+  margin-left:65vw;
 }
 .star {
   background-image: url('star.svg');
@@ -25,10 +36,12 @@
   display: inline-block;
 }
 .s5-review {
-font-family: 'manrope', sans-serif;
+font-family: Helvetica, sans-serif;
+text-align: center;
 color: #d2d2d2;
+line-height: 2.2vw;
 font-size: 14.5pt;
-grid-row: 4;
-grid-column: 3/19;
-margin-top: 9vh;
+grid-column: 2/18;
+margin-top: 15vh;
+grid-row:1;
 }

@@ -92,15 +92,7 @@
         <div class="section-container">
 
           <div class="s3-header">Our Services</div>
-          <div class="service-slider">
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(1)" id="cImg1"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(2)" id="cImg2"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(3)" id="cImg3"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(4)" id="cImg4"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(5)" id="cImg5"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(6)" id="cImg6"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(7)" id="cImg7"></div></center></div>
-            <div class="service-card"><center><div class="actual-card" onclick="showPop(8)" id="cImg8"></div></center></div>
+          <div class="service-slider" id="service-slider">
           </div>
           <div class="s3-button"><br>Slide to see more</div>
           <div class="down-arrow" id="s3-da"></div>
@@ -117,8 +109,38 @@
       <div class="section" id="section-5">
         <div class="section-container">
           <div class="s5-header"> Words from our members</div>
-          <div class="s5-review" id="review"></div>
-          <div class="rating"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+          <div class="quote-slider">
+            <div class="quote" id="quote1">
+              <div class="section-container">
+                <div class="s5-review" id="review"></div>
+                <div class="rating" id="rating1"></div>
+              </div>
+            </div>
+            <div class="quote" id="quote2">
+              <div class="section-container">
+                <div class="s5-review" id="review2"></div>
+                <div class="rating" id="rating2"></div>
+              </div>
+            </div>
+            <div class="quote" id="quote3">
+              <div class="section-container">
+                <div class="s5-review" id="review3"></div>
+                <div class="rating" id="rating3"></div>
+              </div>
+            </div>
+            <div class="quote" id="quote4">
+              <div class="section-container">
+                <div class="s5-review" id="review4"></div>
+                <div class="rating" id="rating4"></div>
+              </div>
+            </div>
+            <div class="quote" id="quote5">
+              <div class="section-container">
+                <div class="s5-review" id="review5"></div>
+                <div class="rating" id="rating5"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section" style="display:none;" id="section-6">
@@ -139,12 +161,12 @@
           <div class="header-text"> pet care at your place. </div>
             <div class="body-text" id="desk"><br> We bring compassionate care for your pets right to <br>your door.</div>
             <div class="body-text" id="mobile"><br> We bring compassionate care for your pets right to your door.</div>
-            <div class="create-account">
-              <input type="email" id="d" class="email-input" placeholder="Email"></input>
+            <form class="create-account" id="create-account" method="POST">
+              <input type="email" class="email-input d" id="email-input" placeholder="Email" name="email"></input>
               <div class="plus" id="d"><div class="plus-image"></div></div>
-              <input type="tel" id="d" class="pass-input" placeholder="Phone"></input>
-              <input type="submit" class="submit" value="Get Started"> <div class="phone"></div></input>
-            </div>
+              <input type="tel" class="pass-input d" placeholder="Phone" name="phone" id="pass-input"></input>
+              <input type="submit" class="submit" value="Get Started" id="saveForm"> <div class="phone"></div></input>
+            </form>
         </div>
 
         <div class="subscription-top">
@@ -158,7 +180,7 @@
       <!-- Footer conainer: contains the footer -->
       <div class="footer-container section">
         <div class="section-container">
-          <div class="fContact">Contact us:<br>Phone - 207-542-8654<br>Email - contact@petpals.io</div>
+          <div class="fContact">207-542-8654<br>contact@petpals.io</div>
           <div class="things">
             <div class="bic"></div>
             <div class="psi"></div>
@@ -240,6 +262,13 @@
             slidesToScroll: 1
           });
         }
+        $('.quote-slider').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: "<div class=\"left-arrow\"></div>",
+          nextArrow: "<div class=\"right-arrow\"></div>"
+        });
 
       });
     </script>
@@ -247,13 +276,30 @@
     var petsit = "Pet Sitting text that we can write. This will say stuff.";
     var nailtrim = "Nail trimming. See this is different.";
     var temp = "Temporary text.";
-    var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.";
+    var quote1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.";
+    var quote2 = "this service is really great!!"
+    var quote3 = "we really love this service! we hire them all the time!"
+    var quote4 = "we really love this service! we hire them all the time!"
+    var quote5 = "we really love this service! we hire them all the time!"
+
+    var star = "<div class=\"star\"></div>";
+
+    var qmark = "\""
+
 
     function getReview() {
-      document.getElementById('review').innerHTML = lorem;
+      document.getElementById('review').innerHTML = qmark+quote1+qmark;
+      document.getElementById('review2').innerHTML = qmark+quote2+qmark;
+      document.getElementById('review3').innerHTML = qmark+quote3+qmark;
+      document.getElementById('review4').innerHTML = qmark+quote4+qmark;
+      document.getElementById('review5').innerHTML = qmark+quote5+qmark;
+
+      document.getElementById('rating1').innerHTML = star+star+star+star+star;
+      document.getElementById('rating2').innerHTML = star+star+star+star+star;
+      document.getElementById('rating3').innerHTML = star+star+star+star+star;
+      document.getElementById('rating4').innerHTML = star+star+star+star+star;
+      document.getElementById('rating5').innerHTML = star+star+star+star+star;
     }
-
-
 
     function showPop(number) {
       document.getElementById('popup').style.display = 'block';
@@ -277,18 +323,42 @@
 
     //Service card code
 
-    var partOne = '<div class=\"card-top\">';
-    var service = ['Pet Sitting', 'Nail Trim', 'Grooming', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service', 'Service'];
-    var partTwo = '</div><div class=\"card-bot\"><br>';
-    var price = ['$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*', '$74.99*'];
-    var partThree = '</div>';
-    var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4', 'cImg5', 'cImg6', 'cImg7', 'cImg8'];
+    var partOne = '<div class=\"card-top\" style=\"background-image:url(\'';
+    var bgImg = ['top-person.svg\');background-repeat: no-repeat; background-size: 90%;background-position: right;background-position: 125% -70%;', 'serv2.svg\');background-repeat: no-repeat;background-size: 90%;background-position: bottom right;background-position: 15% -70%;', 'serv3.svg\');background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 15% -70%;', 'serv4.svg\');background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 50% -90%;'];
+    var partOneClose = '\">';
 
-    for(var i=0; i<8; i++) {
+    var serviceOLD = ['Ear Cleaning', 'Weight Check', 'Gland Expression', 'Consultation', 'Flea and tick application', 'Dog walking', 'Pet sitting', 'Delivery', 'Overnight', '24 Hour Care', 'Cat Comb Out', 'Cat Belly Shave', 'Cat Sanitary Trim', 'Cat Nail Trim', 'Cat Paw Trim', 'Cat Full Shave', 'Cat Bath', 'Dog Ear Flush', 'Small Dog Full Shave', 'Large Dog Full Shave', 'Dog Nail Trim', 'Dog Paw Trim', 'Dog Teeth Brushing', 'Dog Sanitary Trim', 'Small Dog Bath', 'Large Dog Bath'];
+    var service = ['Ear Cleaning', 'Weight Check', 'Gland Expression', 'Consultation', 'Flea and tick application', 'Dog walking', 'Pet sitting', 'Delivery', '24 Hour Care', 'Teeth Brushing', 'Bath', 'Grooming'];
+
+    var partTwo = '</div><div class=\"card-bot\"><div style=\"width:auto;height:3.1vw;\"></div>';
+
+    var priceOLD = ['$10.00','$10.00','$25.00','$30.00','$10.00','$25.00*','$45.00*','$25.00','$85.00*','$150.00*','$20.00','$15.00','$10.00','$10.00','$10.00','$45.00','$20.00','$10.00','$45.00','$65.00','$10.00','$10.00','$15.00','$10.00','$20.00','$35.00'];
+    var price = ['$10.00','$10.00','$25.00','$30.00','$10.00','$25.00*','From $45.00*','$25.00','$150.00', '$15.00', '$20.00*', "$45.00*"];
+
+    var partThree = '</div>';
+    var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4', 'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9', 'cImg10', 'cImg11', 'cImg12', 'cImg13', 'cImg14', 'cImg15', 'cImg16','cImg17', 'cImg18', 'cImg19', 'cImg20', 'cImg21', 'cImg22', 'cImg23', 'cImg24','cImg25', 'cImg26'];
+
+    var serviceLength = service.length;
+
+    var card1 = "<div class=\"service-card\"><center><div class=\"actual-card\" onclick=\"showPop(";
+
+    var card2 = ")\" id=\"cImg";
+
+    var card3 = "\"></div></center></div>";
+
+    var innerSlider;
+
+    for(var i=1; i<serviceLength+1; i++) {
+      innerSlider = innerSlider+card1+i+card2+i+card3;
+    }
+
+    document.getElementById('service-slider').innerHTML = innerSlider;
+
+    for(var i=0; i<serviceLength; i++) {
       var id = idList[i];
       var element = document.getElementById(id);
       if(element) {
-          element.innerHTML = partOne+service[i]+partTwo+price[i]+partThree;
+          element.innerHTML = partOne+bgImg[i%4]+partOneClose+service[i]+partTwo+price[i]+partThree;
       }
     }
 
@@ -296,6 +366,7 @@
 
     $( document ).ready(function() {
       getReview();
+
       var year = new Date().getFullYear();
       document.getElementById('copyright').innerHTML = "©"+year+" PetPals"
     });
