@@ -136,11 +136,16 @@ Last name
 
   var database = firebase.database();
 
-  function writeUserData(email, phone) {
+  function writeUserData(fname, lname, addr, city, state, zip, service) {
     var formKey = firebase.database().ref().child('form').push().key;
     firebase.database().ref('form/' + formKey).set({
-      email: email,
-      phone: phone
+      fname: fname,
+      lname: lname,
+      address: addr,
+      city: city,
+      state: state,
+      zip: zip,
+      service: service
     });
   }
 
