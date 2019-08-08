@@ -241,6 +241,7 @@
 </script>
     <script>
       $(document).ready(function(){
+
         if ($(window).width() > 600) {
           $('.service-slider').slick({
             infinite: true,
@@ -256,14 +257,25 @@
             slidesToScroll: 1
           });
         }
-        $('.quote-slider').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          prevArrow: "<div class=\"left-arrow\"></div>",
-          nextArrow: "<div class=\"right-arrow\"></div>",
-          arrows:false
-        });
+
+        if ($(window).width() > 600) {
+          $('.quote-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: "<div class=\"left-arrow\"></div>",
+            nextArrow: "<div class=\"right-arrow\"></div>"
+          });
+        } else {
+          $('.quote-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: "<div class=\"left-arrow\"></div>",
+            nextArrow: "<div class=\"right-arrow\"></div>",
+            arrows:false
+          });
+        }
 
       });
     </script>

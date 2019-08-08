@@ -2,6 +2,9 @@
   height: 45vh !important;
   background-color: white;
 }
+a {
+  color: #d2d2d2;
+}
 
 .fContact {
   font-size: 14pt;
