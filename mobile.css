@@ -50,9 +50,9 @@
      margin-left: 2.5vw;
    }
    body {
-     background-image: url('mobile.jpg');
+     /*background-image: url('mobile.jpg');
      background-repeat: no-repeat;
-     background-size: cover;
+     background-size: cover;*/
    }
    .section {
 
