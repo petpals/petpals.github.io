@@ -178,7 +178,8 @@
           <div id="copyright"></div>
         </div>
       </div>
-      <div class="popup scale-in-center" id="popup"><div id="exit" onclick="hidePop()">X</div><div id="popText"></div></div>
+      <div class="overlay" id="overlay"></div>
+      <div class="popup scale-in-center" id="popup"><div id="exit" onclick="hidePop()">X</div><div id="popText"></div><div id="popParagraph"></div><div id="popPic"></div><div id="popPrice"></div><div id="popButton"></div></div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -310,8 +311,13 @@
     }
 
     function showPop(number) {
+      var n = number-1;
+      document.getElementById('overlay').style.display = 'block';
       document.getElementById('popup').style.display = 'block';
-      document.getElementById('popText').innerHTML = serviceList[number-1].name;
+      document.getElementById('popText').innerHTML = serviceList[n].name;
+      document.getElementById('popParagraph').innerHTML = serviceList[n].description;
+      document.getElementById('popPic').innerHTML = "<div style=\"width:30vw;height:30vw;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
+      document.getElementById('popPrice').innerHTML = serviceList[n].price;
     }
 
     function showPopString(text) {
@@ -321,6 +327,7 @@
 
     function hidePop() {
       document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
     }
 
     //Service card code
@@ -344,51 +351,63 @@
 
     var ears = {
       name:"Ear Cleaning",
-      price:"$10.00"
+      price:"$10.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var weight = {
       name:"Weight Check",
-      price:"$10.00"
+      price:"$10.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var glands = {
       name:"Gland Expression",
-      price:"$25.00"
+      price:"$25.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var consult = {
       name:"Consultation",
-      price:"$30.00"
+      price:"$30.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var fleatick = {
       name:"Flea and Tick application",
-      price:"$10.00"
+      price:"$10.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var walk = {
       name:"Dog Walking",
-      price:"$25.00*"
+      price:"$25.00*",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var sit = {
       name:"Pet Sitting",
-      price:"From $45.00*"
+      price:"From $45.00*",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var deliver = {
       name:"Delivery",
-      price:"$25.00"
+      price:"$25.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var fulltime = {
       name:"24 Hour Care",
-      price:"$150.00"
+      price:"$150.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var teeth = {
       name:"Teeth Brushing",
-      price:"$15.00"
+      price:"$15.00",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var bath = {
       name:"Bath",
-      price:"$20.00*"
+      price:"$20.00*",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
     var groom = {
       name:"Grooming",
-      price:"$45.00*"
+      price:"$45.00*",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
 
     var serviceList = [walk, sit, bath, ears, weight, teeth, groom, fulltime, deliver, glands, consult, fleatick];
@@ -432,6 +451,7 @@
       var year = new Date().getFullYear();
       document.getElementById('copyright').innerHTML = "©"+year+" PetPals"
     });
+
     </script>
   </body>
 </html>

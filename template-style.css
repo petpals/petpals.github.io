@@ -268,6 +268,15 @@ input[type="submit"]:hover {
   width:4vw;
   height:4vw;
 }
+.overlay {
+  position: fixed;
+  background-color: #000;
+  opacity: 0.4;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1999;
+  display: none;
+}
 .popup {
   width:90vw;
   height:90vh;
@@ -289,13 +298,52 @@ input[type="submit"]:hover {
   font-size: 28pt;
 }
 #popText {
-  text-align:center;
+  text-align:left;
   width:80vw;
-  margin-left:10vw;
+  margin-left:2vw;
   height:80vh;
-  margin-top: 10vh;
-  font-size: 25pt;
+  margin-top: 4vh;
   position: absolute;
+  font-size: 39pt;
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+}
+#popParagraph {
+  text-align:left;
+  width:50vw;
+  margin-left:2vw;
+  height:80vh;
+  margin-top: 15vh;
+  position: absolute;
+  font-size: 15pt;
+  color:#d2d2d2;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+}
+#popPic {
+width:20vw;
+height:20vw;
+margin-left:60vw;
+//overflow: hidden;
+position: absolute;
+}
+#popButton {
+
+}
+#popPrice {
+  text-align:left;
+  width:20vw;
+  margin-left:2vw;
+  height:80vh;
+  margin-top: 40vh;
+  position: absolute;
+  font-size: 33pt;
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
 }
 .scale-in-center {
 	-webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
