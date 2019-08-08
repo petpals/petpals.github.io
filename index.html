@@ -409,6 +409,15 @@
       'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -300%;',
       'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 90% -80%;'
      ]
+     var bgInsM =
+     [
+       'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 97% -800%;',
+       'background-repeat: no-repeat;background-size: 90%;background-position: right;background-position: 130% -75%;',
+       'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 25% -150%;',
+       'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 70% 120%;',
+       'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -138%;',
+       'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 80% -60%;'
+      ]
 
     var ears = {
       name:"Ear Cleaning",
@@ -505,7 +514,11 @@
       var id = idList[i];
       var element = document.getElementById(id);
       if(element) {
+        if ($(window).width() > 600){
           element.innerHTML = serviceCard.p1+bgImg[i%6]+bgIns[i%6]+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+        } else {
+          element.innerHTML = serviceCard.p1+bgImg[i%6]+bgInsM[i%6]+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+        }
       }
     }
 
