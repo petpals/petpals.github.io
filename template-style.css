@@ -292,20 +292,23 @@ input[type="submit"]:hover {
 }
 #exit {
   background-color: rgba(0,0,0,0.0);
-  width: 5vw;
-  height:5vw;
+  width: 3vw;
+  height:3vw;
   border-radius: 2vw;
   font-size: 28pt;
   position: fixed;
   z-index: 3000;
+  background-image: url('x.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 #popText {
   text-align:left;
   width:80vw;
   margin-left:2vw;
-  height:80vh;
-  margin-top: 4vh;
-  position: absolute;
+  margin-top:10vh;
+  height:auto;
+  position: relative;
   font-size: 39pt;
   color: #1c9bff;
   font-weight: 700;
@@ -316,9 +319,9 @@ input[type="submit"]:hover {
   text-align:left;
   width:50vw;
   margin-left:2vw;
-  height:80vh;
-  margin-top: 15vh;
-  position: absolute;
+  margin-top:6vh;
+  height:auto;
+  position: relative;
   font-size: 15pt;
   color:#d2d2d2;
   letter-spacing: 1px;
@@ -328,9 +331,10 @@ input[type="submit"]:hover {
 width:32vw;
 height:30vw;
 overflow: hidden;
-margin-left:58vw;
-margin-top: 14vw;
-position: absolute;
+position: fixed;
+bottom:0;
+right:0;
+border-bottom-right-radius: 0.5vw;
 }
 #popButton {
 
@@ -339,15 +343,23 @@ position: absolute;
   text-align:left;
   width:20vw;
   margin-left:2vw;
-  height:80vh;
-  margin-top: 40vh;
-  position: absolute;
+  height:auto;
+  margin-top:6vh;
+  position: relative;
   font-size: 33pt;
   color: #1c9bff;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'manrope', sans-serif;
 }
+#popContain {
+  width:100%;
+  height:99%;
+  position: absolute;
+  top:0;
+  overflow-y:scroll;
+}
+
 .scale-in-center {
 	-webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
