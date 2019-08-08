@@ -63,7 +63,7 @@
               <form class="create-account" id="create-account" method="POST">
                 <input type="email" class="email-input d" id="email-input" placeholder="Email" name="email"></input>
                 <div class="plus" id="d"><div class="plus-image"></div></div>
-                <input type="tel" class="pass-input d" placeholder="Phone" name="phone" id="pass-input"></input>
+                <input type="tel" class="pass-input d" placeholder="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="pass-input"></input>
                 <input type="submit" class="submit" value="Get Started" id="saveForm"> <div class="phone"></div></input>
               </form>
           </div>
@@ -126,18 +126,6 @@
               <div class="section-container">
                 <div class="s5-review" id="review3"></div>
                 <div class="rating" id="rating3"></div>
-              </div>
-            </div>
-            <div class="quote" id="quote4">
-              <div class="section-container">
-                <div class="s5-review" id="review4"></div>
-                <div class="rating" id="rating4"></div>
-              </div>
-            </div>
-            <div class="quote" id="quote5">
-              <div class="section-container">
-                <div class="s5-review" id="review5"></div>
-                <div class="rating" id="rating5"></div>
               </div>
             </div>
           </div>
@@ -280,9 +268,9 @@
 
     var quote = {
       qmark:"\"",
-      q1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.",
-      q2:"this service is really great!!",
-      q3:"we really love this service! we hire them all the time!"
+      q1:"I was relieved and delighted to learn of the establishment of PetPals - a new, local pet care service. During a recent holiday getaway, I left my beloved, badly spoiled Maine Coon Cat, Meeka, in the hands of the PetPals folks. The experience proved highly positive for pet owner and pet. I returned home to a very contented kitty who has obviously bonded with her temporary caregiver. What a comfort and relief!",
+      q2:"We had PetPals over to trim my elderly Newfoundland's nails because she can no longer get into the car to go to a groomer. Very happy with the service and the pricing, and we look forward to seeing her again in the future.",
+      q3:"Wonderful service! Careful and knowledgeable in every way."
     }
 
     var starCode = "<div class=\"star\"></div>";
@@ -300,14 +288,10 @@
       document.getElementById('review').innerHTML = quote.qmark+quote.q1+quote.qmark;
       document.getElementById('review2').innerHTML = quote.qmark+quote.q2+quote.qmark;
       document.getElementById('review3').innerHTML = quote.qmark+quote.q3+quote.qmark;
-      document.getElementById('review4').innerHTML = quote.qmark+quote.q3+quote.qmark;
-      document.getElementById('review5').innerHTML = quote.qmark+quote.q3+quote.qmark;
 
       document.getElementById('rating1').innerHTML = star.five;
       document.getElementById('rating2').innerHTML = star.five;
       document.getElementById('rating3').innerHTML = star.five;
-      document.getElementById('rating4').innerHTML = star.five;
-      document.getElementById('rating5').innerHTML = star.five;
     }
 
     function showPop(number) {
