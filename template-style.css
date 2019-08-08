@@ -8,6 +8,11 @@
 	z-index: -1000;
   /*justify-content: center;*/
   align-items: center;
+
+  scroll-snap-type: y proximity;
+  /* Reserve space for header plus some extra space for sneak peeking. */
+  scroll-padding-top: 15vh;
+  overflow-y: scroll;
 }
 html {
     background-image: url("desktop.jpg");
@@ -28,6 +33,7 @@ body {
   /*justify-content: center;*/
   align-items: center;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .nav-container {
@@ -288,7 +294,7 @@ input[type="submit"]:hover {
   background-color: white;
   display: none;
   text-align: center;
-  box-shadow: 0vw 1vw 4vw 0vw #eee;
+  box-shadow: 0vw 1vw 4vw 0vw #666;
   border-radius:0.5vw;
   margin-left: 5vw;
   margin-top: 5vh;
