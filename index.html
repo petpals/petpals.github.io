@@ -316,7 +316,7 @@
       document.getElementById('popup').style.display = 'block';
       document.getElementById('popText').innerHTML = serviceList[n].name;
       document.getElementById('popParagraph').innerHTML = serviceList[n].description;
-      document.getElementById('popPic').innerHTML = "<div style=\"width:30vw;height:30vw;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
+      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
       document.getElementById('popPrice').innerHTML = serviceList[n].price;
     }
 

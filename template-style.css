@@ -323,10 +323,11 @@ input[type="submit"]:hover {
   font-family: 'manrope', sans-serif;
 }
 #popPic {
-width:20vw;
-height:20vw;
-margin-left:60vw;
-//overflow: hidden;
+width:32vw;
+height:30vw;
+overflow: hidden;
+margin-left:58vw;
+margin-top: 14vw;
 position: absolute;
 }
 #popButton {
