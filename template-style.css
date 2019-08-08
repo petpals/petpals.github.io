@@ -278,6 +278,7 @@ input[type="submit"]:hover {
   height: 100vh;
   z-index: 1999;
   display: none;
+  overflow:hidden;
 }
 .popup {
   width:90vw;
