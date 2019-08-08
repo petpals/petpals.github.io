@@ -110,7 +110,9 @@
       <div class="section" id="section-5">
         <div class="section-container">
           <div class="s5-header"> Words from our members</div>
+
           <div class="quote-slider">
+
             <div class="quote" id="quote1">
               <div class="section-container">
                 <div class="s5-review" id="review"></div>
@@ -129,6 +131,7 @@
                 <div class="rating" id="rating3"></div>
               </div>
             </div>
+
           </div>
           <!--<div class="s3-button" style="margin-top:-32vh;"><br>Slide to see more</div>-->
         </div>
@@ -178,18 +181,42 @@
           <div id="copyright"></div>
         </div>
       </div>
+
       <div class="overlay" id="overlay" onclick="hidePop()"></div>
-      <div class="popup scale-in-center" id="popup">
+
+      <div class="popup scale-in-left" id="popup">
         <div id="popContain">
-          <div id="popPic"></div>
           <div id="popText"></div>
           <div id="popParagraph"></div>
-          <div id="popPic"></div>
           <div id="popPrice"></div>
+          <div id="popPic"></div>
           <div id="popButton"></div>
         </div>
         <div id="exit" onclick="hidePop()"></div>
       </div>
+
+      <div class="popup scale-in-center" id="popup">
+        <div id="popContain">
+          <div id="popText"></div>
+          <div id="popParagraph"></div>
+          <div id="popPrice"></div>
+          <div id="popPic"></div>
+          <div id="popButton"></div>
+        </div>
+        <div id="exit" onclick="hidePop()"></div>
+      </div>
+
+      <div class="popup scale-in-right" id="popup">
+        <div id="popContain">
+          <div id="popText"></div>
+          <div id="popParagraph"></div>
+          <div id="popPrice"></div>
+          <div id="popPic"></div>
+          <div id="popButton"></div>
+        </div>
+        <div id="exit" onclick="hidePop()"></div>
+      </div>
+
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -287,7 +314,6 @@
             arrows:false
           });
         }
-
       });
     </script>
     <script>
@@ -326,8 +352,8 @@
       document.getElementById('popup').style.display = 'block';
       document.getElementById('popText').innerHTML = serviceList[n].name;
       document.getElementById('popParagraph').innerHTML = serviceList[n].description;
-      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
       document.getElementById('popPrice').innerHTML = serviceList[n].price;
+      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
       document.getElementById('body').style.overflow = 'hidden';
       document.getElementById('container').style.overflow = 'hidden';
 
@@ -437,15 +463,20 @@
     var bath = {
       name:"Bath",
       price:"$20.00*",
-      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
+      description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around."
     }
     var groom = {
       name:"Grooming",
       price:"$45.00*",
       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius malesuada libero, ut interdum dui commodo nec. Duis justo felis, rutrum a aliquam non, pharetra eu turpis. Aenean tincidunt convallis mauris sit amet tincidunt. Aliquam id consequat ligula. Nam varius, velit a hendrerit gravida, risus nulla commodo sem, eu efficitur."
     }
+    var nails = {
+      name:"Nail Trimming",
+      price:"$10.00",
+      description:""
+    }
 
-    var serviceList = [walk, sit, bath, ears, weight, teeth, groom, fulltime, deliver, glands, consult, fleatick];
+    var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, fulltime, deliver, glands, consult, fleatick];
 
     var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4',
      'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9',

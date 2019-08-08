@@ -379,9 +379,8 @@ margin-top: -15vw;
   width:32vw;
   height:30vw;
   overflow: hidden;
-  position: fixed;
-  bottom:0;
-  right:0;
+  position: relative;
+  margin-left: 60%;
   border-bottom-right-radius: 2.5vw;
   z-index: 1000;
 }
@@ -403,7 +402,7 @@ margin-top: -15vw;
 }
 #popContain {
   width:100%;
-  height:99%;
+  height:100%;
   position: absolute;
   top:0;
   overflow-y:scroll;
@@ -417,6 +416,9 @@ margin-top: -15vw;
 #cSpacer {
   width:100%;
   height:25%;
+}
+.fContact {
+  text-align: center;
 }
 
 }
