@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Set Website Title -->
-    <title>Pet Pals</title>
+    <title>PetPals</title>
     <style>
       .text-section {
         grid-column: 6/20;
@@ -136,9 +136,11 @@ Last name
 
   var database = firebase.database();
 
-  function writeUserData(fname, lname, addr, city, state, zip, service) {
+  function writeUserData(email, phone, fname, lname, addr, city, state, zip, service) {
     var formKey = firebase.database().ref().child('form').push().key;
-    firebase.database().ref('form/' + formKey).set({
+    firebase.database().ref('form/' + lname+", "+fname+" "+formKey).set({
+      email: email,
+      phone: phone,
       fname: fname,
       lname: lname,
       address: addr,
@@ -154,7 +156,10 @@ Last name
         e.preventDefault();  //prevent form from submitting
         var data = $("#create-account :input").serializeArray();
         console.log(data);
-        writeUserData(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
+        if (data[0].value != "" && data[1].value != "" && data[2].value != "" && data[3].value != "" && data[4].value != "" && data[5].value != "" && data[6].value != "") {
+          writeUserData(window.sessionStorage.email, window.sessionStorage.phone, data[0].value, data[1].value, data[2].value, data[3].value, data[4].value, data[5].value, data[6].value);
+          window.location.assign("index.html");
+        }
         return false;
     });
 });

@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Set Website Title -->
-    <title>Pet Pals</title>
+    <title>PetPals</title>
   </head>
 
   <body>
@@ -180,7 +180,7 @@
       <!-- Footer conainer: contains the footer -->
       <div class="footer-container section">
         <div class="section-container">
-          <div class="fContact">207-542-8654<br>contact@petpals.io</div>
+          <div class="fContact">833-933-0770<br>207-542-8654<br>contact@petpals.io</div>
           <div class="things">
             <div class="bic"></div>
             <div class="psi"></div>
@@ -231,12 +231,16 @@
         var x = document.getElementById("email-input");
         if (window.getComputedStyle(x).display === "none") {
           console.log("Mobile");
-          window.location.assign("tel:207-975-3143");
+          window.location.assign("tel:833-933-0770");
         } else {
           var data = $("#create-account :input").serializeArray();
           console.log(data);
-          writeUserData(data[0], data[1]);
-          window.location.assign("form.html");
+          window.sessionStorage.setItem("email", data[0].value);
+          window.sessionStorage.setItem("phone", data[1].value);
+          //writeUserData(data[0], data[1]);
+          if (data[0].value != "" && data[1].value != "") {
+            window.location.assign("form.html");
+          }
         }
         return false;
     });
@@ -273,53 +277,42 @@
       });
     </script>
     <script>
-    var content1 = "Pet Sitting text that we can write. This will say stuff.";
-    var content2 = "Nail trimming. See this is different.";
-    var content3 = "Temporary text.";
-    var content4 = "";
-    var content5 = "";
-    var content6 = "";
-    var content7 = "";
-    var content8 = "";
-    var content9 = "";
-    var content10 = "";
-    var content11 = "";
-    var content12 = "";
 
-    var quote1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.";
-    var quote2 = "this service is really great!!"
-    var quote3 = "we really love this service! we hire them all the time!"
-    var quote4 = "we really love this service! we hire them all the time!"
-    var quote5 = "we really love this service! we hire them all the time!"
+    var quote = {
+      qmark:"\"",
+      q1:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl nulla, pharetra vel diam ut, tempor maximus diam. Nullam dignissim aliquet velit ac condimentum. Mauris feugiat at nunc quis faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus condimentum nunc dui, et ultrices est ornare eget. Vivamus aliquam tincidunt ante sit amet commodo. In sagittis lectus nec purus lacinia, eu vulputate dui mattis. Integer sed ultricies diam. Suspendisse velit erat, dictum at suscipit ac, tempor id lectus. Praesent feugiat at dolor sit amet vulputate. Nam et nisl quis risus faucibus luctus. Nam et dui vel purus varius convallis. Nulla tincidunt tristique congue.",
+      q2:"this service is really great!!",
+      q3:"we really love this service! we hire them all the time!"
+    }
 
-    var star = "<div class=\"star\"></div>";
+    var starCode = "<div class=\"star\"></div>";
 
-    var qmark = "\""
+    var star = {
+      one:starCode,
+      two:starCode+starCode,
+      three:starCode+starCode+starCode,
+      four:starCode+starCode+starCode+starCode,
+      five:starCode+starCode+starCode+starCode+starCode
+    }
 
 
     function getReview() {
-      document.getElementById('review').innerHTML = qmark+quote1+qmark;
-      document.getElementById('review2').innerHTML = qmark+quote2+qmark;
-      document.getElementById('review3').innerHTML = qmark+quote3+qmark;
-      document.getElementById('review4').innerHTML = qmark+quote4+qmark;
-      document.getElementById('review5').innerHTML = qmark+quote5+qmark;
+      document.getElementById('review').innerHTML = quote.qmark+quote.q1+quote.qmark;
+      document.getElementById('review2').innerHTML = quote.qmark+quote.q2+quote.qmark;
+      document.getElementById('review3').innerHTML = quote.qmark+quote.q3+quote.qmark;
+      document.getElementById('review4').innerHTML = quote.qmark+quote.q3+quote.qmark;
+      document.getElementById('review5').innerHTML = quote.qmark+quote.q3+quote.qmark;
 
-      document.getElementById('rating1').innerHTML = star+star+star+star+star;
-      document.getElementById('rating2').innerHTML = star+star+star+star+star;
-      document.getElementById('rating3').innerHTML = star+star+star+star+star;
-      document.getElementById('rating4').innerHTML = star+star+star+star+star;
-      document.getElementById('rating5').innerHTML = star+star+star+star+star;
+      document.getElementById('rating1').innerHTML = star.five;
+      document.getElementById('rating2').innerHTML = star.five;
+      document.getElementById('rating3').innerHTML = star.five;
+      document.getElementById('rating4').innerHTML = star.five;
+      document.getElementById('rating5').innerHTML = star.five;
     }
 
     function showPop(number) {
       document.getElementById('popup').style.display = 'block';
-      if (number == 1) {
-        document.getElementById('popText').innerHTML = petsit;
-      } else if (number == 2) {
-        document.getElementById('popText').innerHTML = content3;
-      } else {
-        document.getElementById('popText').innerHTML = content3;
-      }
+      document.getElementById('popText').innerHTML = serviceList[number-1].name;
     }
 
     function showPopString(text) {
@@ -332,8 +325,13 @@
     }
 
     //Service card code
+    var serviceCard = {
+      p1:'<div class=\"card-top\" style=\"background-image:url(\'',
+      p2:'\">',
+      p3:'</div><div class=\"card-bot\"><div style=\"width:auto;height:3.1vw;\"></div>',
+      p4:'</div>'
+    }
 
-    var partOne = '<div class=\"card-top\" style=\"background-image:url(\'';
     var bgImg = ['top-person.svg\');', 'serv2.svg\');', 'serv3.svg\');', 'serv4.svg\');', 'serv5.svg\');', 'serv6.svg\');'];
     var bgIns =
     [
@@ -345,31 +343,76 @@
       'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 90% -80%;'
      ]
 
-    var partOneClose = '\">';
+    var ears = {
+      name:"Ear Cleaning",
+      price:"$10.00"
+    }
+    var weight = {
+      name:"Weight Check",
+      price:"$10.00"
+    }
+    var glands = {
+      name:"Gland Expression",
+      price:"$25.00"
+    }
+    var consult = {
+      name:"Consultation",
+      price:"$30.00"
+    }
+    var fleatick = {
+      name:"Flea and Tick application",
+      price:"$10.00"
+    }
+    var walk = {
+      name:"Dog Walking",
+      price:"$25.00*"
+    }
+    var sit = {
+      name:"Pet Sitting",
+      price:"From $45.00*"
+    }
+    var deliver = {
+      name:"Delivery",
+      price:"$25.00"
+    }
+    var fulltime = {
+      name:"24 Hour Care",
+      price:"$150.00"
+    }
+    var teeth = {
+      name:"Teeth Brushing",
+      price:"$15.00"
+    }
+    var bath = {
+      name:"Bath",
+      price:"$20.00*"
+    }
+    var groom = {
+      name:"Grooming",
+      price:"$45.00*"
+    }
 
-    var serviceOLD = ['Ear Cleaning', 'Weight Check', 'Gland Expression', 'Consultation', 'Flea and tick application', 'Dog walking', 'Pet sitting', 'Delivery', 'Overnight', '24 Hour Care', 'Cat Comb Out', 'Cat Belly Shave', 'Cat Sanitary Trim', 'Cat Nail Trim', 'Cat Paw Trim', 'Cat Full Shave', 'Cat Bath', 'Dog Ear Flush', 'Small Dog Full Shave', 'Large Dog Full Shave', 'Dog Nail Trim', 'Dog Paw Trim', 'Dog Teeth Brushing', 'Dog Sanitary Trim', 'Small Dog Bath', 'Large Dog Bath'];
-    var service = ['Ear Cleaning', 'Weight Check', 'Gland Expression', 'Consultation', 'Flea and tick application', 'Dog walking', 'Pet sitting', 'Delivery', '24 Hour Care', 'Teeth Brushing', 'Bath', 'Grooming'];
+    var serviceList = [walk, sit, bath, ears, weight, teeth, groom, fulltime, deliver, glands, consult, fleatick];
 
-    var partTwo = '</div><div class=\"card-bot\"><div style=\"width:auto;height:3.1vw;\"></div>';
+    var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4',
+     'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9',
+      'cImg10', 'cImg11', 'cImg12', 'cImg13', 'cImg14',
+       'cImg15', 'cImg16','cImg17', 'cImg18', 'cImg19',
+        'cImg20', 'cImg21', 'cImg22', 'cImg23', 'cImg24',
+        'cImg25', 'cImg26'];
 
-    var priceOLD = ['$10.00','$10.00','$25.00','$30.00','$10.00','$25.00*','$45.00*','$25.00','$85.00*','$150.00*','$20.00','$15.00','$10.00','$10.00','$10.00','$45.00','$20.00','$10.00','$45.00','$65.00','$10.00','$10.00','$15.00','$10.00','$20.00','$35.00'];
-    var price = ['$10.00','$10.00','$25.00','$30.00','$10.00','$25.00*','From $45.00*','$25.00','$150.00', '$15.00', '$20.00*', "$45.00*"];
-
-    var partThree = '</div>';
-    var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4', 'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9', 'cImg10', 'cImg11', 'cImg12', 'cImg13', 'cImg14', 'cImg15', 'cImg16','cImg17', 'cImg18', 'cImg19', 'cImg20', 'cImg21', 'cImg22', 'cImg23', 'cImg24','cImg25', 'cImg26'];
-
-    var serviceLength = service.length;
-
-    var card1 = "<div class=\"service-card\"><center><div class=\"actual-card\" onclick=\"showPop(";
-
-    var card2 = ")\" id=\"cImg";
-
-    var card3 = "\"></div></center></div>";
+    var serviceLength = serviceList.length;
 
     var innerSlider;
 
+    var card = {
+      c1:"<div class=\"service-card\"><center><div class=\"actual-card\" onclick=\"showPop(",
+      c2:")\" id=\"cImg",
+      c3:"\"></div></center></div>"
+    }
+
     for(var i=1; i<serviceLength+1; i++) {
-      innerSlider = innerSlider+card1+i+card2+i+card3;
+      innerSlider = innerSlider+card.c1+i+card.c2+i+card.c3;
     }
 
     document.getElementById('service-slider').innerHTML = innerSlider;
@@ -378,7 +421,7 @@
       var id = idList[i];
       var element = document.getElementById(id);
       if(element) {
-          element.innerHTML = partOne+bgImg[i%6]+bgIns[i%6]+partOneClose+service[i]+partTwo+price[i]+partThree;
+          element.innerHTML = serviceCard.p1+bgImg[i%6]+bgIns[i%6]+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
       }
     }
 
