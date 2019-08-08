@@ -1,3 +1,7 @@
 #section-7 {
   height:120vh !important;
 }
+#girl {
+  background-image:url('girl.svg');
+  height:33vw;
+}
