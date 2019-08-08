@@ -248,12 +248,12 @@ grid-column: 2;
 .rating {
   height:10vw;
   width:80vw;
-  grid-column: 9/19;
+  grid-column: 1/19;
   grid-row: 3;
-  margin-left: 20vw;
+  margin-left: 17vw;
   position: absolute;
   margin-top: 50vh;
-  display: none;
+  //display: none;
 }
 .star {
   background-image: url('star.svg');
@@ -372,13 +372,13 @@ margin-top: -15vw;
   font-family: 'manrope', sans-serif;
 }
 #popPic {
-width:40vw;
-height:40vw;
-overflow: hidden;
-margin-left:25vw;
-margin-top: 6vw;
-position: relative;
-border-bottom-right-radius: none;
+  width:32vw;
+  height:30vw;
+  overflow: hidden;
+  position: fixed;
+  bottom:0;
+  right:0;
+  border-bottom-right-radius: 0.5vw;
 }
 #popButton {
 
@@ -388,7 +388,7 @@ border-bottom-right-radius: none;
   width:20vw;
   margin-left:2vw;
   height:auto;
-  margin-top: -20vh !important;
+  margin-top: 8vh !important;
   position: relative;
   font-size: 33pt;
   color: #1c9bff;
@@ -406,6 +406,12 @@ border-bottom-right-radius: none;
 #exit {
   width:6vw;
   height:6vw;
+}
+#cPrice {
+}
+#cSpacer {
+  width:100%;
+  height:25%;
 }
 
 }

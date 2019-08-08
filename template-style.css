@@ -297,6 +297,8 @@ input[type="submit"]:hover {
   border-radius: 2vw;
   font-size: 28pt;
   position: fixed;
+  margin-left: 0.5vw;
+  margin-top: 0.5vw;
   z-index: 3000;
   background-image: url('x.svg');
   background-size: contain;
