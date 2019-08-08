@@ -31,7 +31,7 @@
 
   <body id="body">
     <!-- Container will contain everything on this page and establishes the flex (responsive design) -->
-    <div class="container">
+    <div class="container" id="container">
       <!-- Sections are the basic unit of the site you can have as many sections as you need -->
       <div class="section" id="section-1">
         <!-- style="background-repeat: no-repeat;background-size: contain;background-image:url('https://mail.google.com/mail/u/0?ui=2&ik=ba739f09b4&attid=0.1&permmsgid=msg-f:1628088443287442787&th=169821d02d111563&view=fimg&disp=thd&attbid=ANGjdJ-3rsMK-zUE-wRSeY-69X-pygHJlqSjHjcmiUOxK64H50gYEtE0PrJMNZZ8vRSIxPPsAh0ojeRH-oaCIsin4ene17hA2bVNrae_3VYiuz8mzzGiTYd_P8Yd5UQ&ats=2524608000000&sz=w1280-h666');"-->
@@ -329,6 +329,7 @@
       document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%6]+"\"></div>";
       document.getElementById('popPrice').innerHTML = serviceList[n].price;
       document.getElementById('body').style.overflow = 'hidden';
+      document.getElementById('container').style.overflow = 'hidden';
     }
 
     function showPopString(text) {
@@ -340,6 +341,7 @@
       document.getElementById('popup').style.display = 'none';
       document.getElementById('overlay').style.display = 'none';
       document.getElementById('body').style.overflow = 'scroll';
+      document.getElementById('container').style.overflow = 'scroll';
     }
 
     //Service card code
