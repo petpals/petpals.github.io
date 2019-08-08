@@ -17,6 +17,8 @@ html {
 }
 body {
   //opacity: 0.5;
+  height:100%;
+  overflow:scroll;
 }
 
 .section {
