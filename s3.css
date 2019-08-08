@@ -141,8 +141,10 @@
   grid-row: 4;
   margin-top:-5vw;
   margin-left: 2vw;*/
-  margin-top: 13.34vw;
-  margin-left: -3.3vw;
+  //margin-top: 13.34vw;
+  //margin-left: -3.3vw;
+  right: 40;
+  top: 200;
   position: absolute;
   z-index: 200;
 }
@@ -151,8 +153,10 @@
   grid-row:4;
   margin-top: -5vw;
   margin-left:-0.7vw;*/
-  margin-top: -34.98vw;
-  margin-left: 89.5vw;
+  //margin-top: -34.98vw;
+  //margin-left: 89.5vw;
+  right: -40;
+  top: 200;
   position: absolute;
   z-index: 200;
 }
