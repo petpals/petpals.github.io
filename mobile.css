@@ -253,6 +253,7 @@ grid-column: 2;
   margin-left: 20vw;
   position: absolute;
   margin-top: 50vh;
+  display: none;
 }
 .star {
   background-image: url('star.svg');
@@ -332,6 +333,13 @@ margin-top: -15vw;
   height: 5px;
   background-color: black;
   margin: 6px 0;
+  display: none;
+}
+.fContact {
+  grid-column: 4/17 !important;
+  line-height: 10vw !important; 
+}
+.things {
   display: none;
 }
 
