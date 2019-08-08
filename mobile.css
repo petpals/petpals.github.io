@@ -345,6 +345,9 @@ margin-top: -15vw;
 .footer-container {
   height: 28vh !important;
 }
+#popup {
+  border-radius: 2.5vw;
+}
 
 #popText {
   text-align:left;
@@ -378,7 +381,7 @@ margin-top: -15vw;
   position: fixed;
   bottom:0;
   right:0;
-  border-bottom-right-radius: 0.5vw;
+  border-bottom-right-radius: 2.5vw;
 }
 #popButton {
 
