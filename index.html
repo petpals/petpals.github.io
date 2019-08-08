@@ -334,7 +334,7 @@
       document.getElementsByClassName('section')[0].style.display = "none";
       document.getElementsByClassName('section')[1].style.display = "none";
       document.getElementsByClassName('section')[2].style.display = "none";
-      document.getElementsByClassName('section')[3].style.filter = "blur(100px)";
+      document.getElementsByClassName('section')[3].style.display = "none";
       document.getElementsByClassName('section')[4].style.display = "none";
       document.getElementsByClassName('section')[5].style.display = "none";
       document.getElementsByClassName('section')[6].style.display = "none";
@@ -356,11 +356,13 @@
       document.getElementsByClassName('section')[0].style.display = "initial";
       document.getElementsByClassName('section')[1].style.display = "initial";
       document.getElementsByClassName('section')[2].style.display = "initial";
-      document.getElementsByClassName('section')[3].style.filter = "blur(0)";
+      document.getElementsByClassName('section')[3].style.display = "initial";
       document.getElementsByClassName('section')[4].style.display = "initial";
       document.getElementsByClassName('section')[5].style.display = "initial";
       document.getElementsByClassName('section')[6].style.display = "initial";
       document.getElementsByClassName('section')[7].style.display = "initial";
+
+      document.getElementById('section-3').scrollIntoView();
     }
 
     //Service card code
