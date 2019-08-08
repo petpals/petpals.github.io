@@ -337,10 +337,13 @@ margin-top: -15vw;
 }
 .fContact {
   grid-column: 4/17 !important;
-  line-height: 10vw !important; 
+  line-height: 10vw !important;
 }
 .things {
   display: none;
+}
+.footer-container {
+  height: 28vh !important;
 }
 
 }
