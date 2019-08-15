@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="2168px" height="2851px" viewBox="0 0 2168 2851" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
-    <title>Girl Sitting with corgi@1x</title>
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <filter x="-20.4%" y="-303.7%" width="140.8%" height="707.4%" filterUnits="objectBoundingBox" id="filter-1">
@@ -90,6 +90,14 @@
             <stop stop-color="#FFFFBC" offset="0%"></stop>
             <stop stop-color="#FFAFAF" offset="100%"></stop>
         </linearGradient>
+        <linearGradient x1="50%" y1="40.003054%" x2="34.750054%" y2="59.996946%" id="linearGradient-22">
+            <stop stop-color="#FFD7CA" offset="0%"></stop>
+            <stop stop-color="#FFAF9A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="42.9609247%" y1="78.3491521%" x2="37.5949027%" y2="37.7208444%" id="linearGradient-23">
+            <stop stop-color="#FFE3D9" offset="0%"></stop>
+            <stop stop-color="#FFB4A1" offset="100%"></stop>
+        </linearGradient>
     </defs>
     <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group-2" transform="translate(230.000000, 0.000000)">
@@ -138,6 +146,8 @@
                 </g>
                 <path d="M818.771148,764.07051 C846.533037,759.222107 850.823345,759.451152 867.22775,747.538748 C883.632163,735.626344 892.461633,723.927573 893.716178,712.442435" id="Path-76" stroke="#DF8989" stroke-width="12.9111837" stroke-linecap="round"></path>
             </g>
+            <path d="M1137.50373,2385.5283 C1126.84371,2377.88591 1116.09404,2378.75725 1105.25473,2388.1423 C1094.41543,2397.52735 1078.53173,2419.71611 1057.60364,2454.70859 C1219.40897,2529.12694 1332.78795,2562.71893 1397.74057,2555.48454 C1432.70014,2551.59076 1428.04112,2527.04566 1441.43485,2504.66695 C1465.36815,2464.67836 1485.87466,2415.13623 1458.53914,2385.50371 C1436.50674,2361.61992 1368.31385,2372.36481 1251.83077,2385.51954 C1229.30945,2388.06293 1191.20044,2388.06585 1137.50373,2385.5283 Z" id="Path-2" fill="url(#linearGradient-22)" transform="translate(1264.589591, 2463.893188) rotate(-15.000000) translate(-1264.589591, -2463.893188) "></path>
+            <path d="M519.689872,2464.39144 C516.696233,2465.34768 468.443952,2463.60743 429.731033,2472.1571 C418.187848,2474.70639 406.433386,2481.45423 394.467647,2492.40062 C535.031751,2534.95765 616.056796,2562.72639 637.542781,2575.70682 C673.056194,2597.1617 682.392963,2599.66348 693.717006,2598.31165 C715.986315,2595.6532 720.261794,2579.69689 721.219911,2557.9341 C721.62987,2548.62225 716.223355,2519.65292 717.224963,2510.57876 C719.648246,2488.6248 710.407666,2469.4102 691.320327,2470.82596 C666.488424,2472.6678 659.513136,2469.23803 591.175357,2467.8151 C568.614259,2467.34534 526.188738,2462.31554 519.689872,2464.39144 Z" id="Path-2" fill="url(#linearGradient-23)" transform="translate(557.854898, 2531.251470) scale(-1, 1) rotate(-15.000000) translate(-557.854898, -2531.251470) "></path>
         </g>
     </g>
 </svg>
