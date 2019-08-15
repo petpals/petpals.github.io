@@ -96,7 +96,7 @@
           <div class="service-slider" id="service-slider">
           </div>
           <div class="s3-button"><br>Slide to see more</div>
-          <div class="down-arrow" id="s3-da"></div>
+          <div class="down-arrow" style="z-index:2000;margin-top:-500px;" id="s2-da"></div>
         </div>
       </div>
       <div class="section" id="section-4">
@@ -105,6 +105,7 @@
           <div class="s4-image"></div>
           <div class="s4-text" id="m">Family run and from Mid Coast<br>Maine, we know the benefits of<br>being a part of a close knit community,<br>and we strive to extend the same<br>comfort and connection throughout<br>our extended family of PetPals<br>and pet owners.</div>
           <div class="s4-text" id="d">Family run and from Mid Coast Maine, we know the benefits of being a part of a close knit community, and we strive to extend the same comfort and connection throughout our extended family of PetPals and pet owners.</div>
+          <div class="down-arrow" style="margin-top:150px" id="s2-da"></div>
         </div>
       </div>
       <div class="section" id="section-5">
@@ -364,7 +365,6 @@
       document.getElementsByClassName('section')[4].style.display = "none";
       document.getElementsByClassName('section')[5].style.display = "none";
       document.getElementsByClassName('section')[6].style.display = "none";
-      document.getElementsByClassName('section')[7].style.display = "none";
 
     }
 
@@ -386,9 +386,9 @@
       document.getElementsByClassName('section')[4].style.display = "initial";
       document.getElementsByClassName('section')[5].style.display = "initial";
       document.getElementsByClassName('section')[6].style.display = "initial";
-      document.getElementsByClassName('section')[7].style.display = "initial";
 
       document.getElementById('section-3').scrollIntoView();
+      window.scrollBy(0, 40);
     }
 
     //Service card code
@@ -422,12 +422,12 @@
     var ears = {
       name:"Ear Cleaning",
       price:"$10.00",
-      description:"More info coming soon!"
+      description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early."
     }
     var weight = {
       name:"Weight Check",
       price:"$10.00",
-      description:"More info coming soon!"
+      description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet."
     }
     var glands = {
       name:"Gland Expression",
@@ -437,22 +437,22 @@
     var consult = {
       name:"Consultation",
       price:"$30.00",
-      description:"More info coming soon!"
+      description:"Have a question regarding your pet? Our pet care experts are ready to help!"
     }
     var fleatick = {
       name:"Flea and Tick application",
       price:"$10.00",
-      description:"More info coming soon!"
+      description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding."
     }
     var walk = {
       name:"Dog Walking",
       price:"$25.00*",
-      description:"More info coming soon!"
+      description:"Your pets exercise needs are based on your dog's age, breed, size, and overall health, but a good rule of thumb is for your dog to spend at least 30 minutes every day on physical activity. Younger dogs and dogs bred for sports or herding activities may need much more. "
     }
     var sit = {
       name:"Pet Sitting",
-      price:"From $45.00*",
-      description:"More info coming soon!"
+      price:"From $35.00*",
+      description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time."
     }
     var deliver = {
       name:"Delivery",
@@ -477,12 +477,12 @@
     var groom = {
       name:"Grooming",
       price:"$45.00*",
-      description:"More info coming soon!"
+      description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming."
     }
     var nails = {
       name:"Nail Trimming",
       price:"$10.00",
-      description:"More info coming soon!"
+      description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues."
     }
 
     var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, deliver, glands, consult, fleatick];

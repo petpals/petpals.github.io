@@ -320,6 +320,9 @@ grid-column: 2;
 margin-top:-133px;
 margin-left: -2vw;
 }
+#s2-da {
+  display: none;
+}
 
 #s3-da {
   display: none;
