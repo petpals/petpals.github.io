@@ -303,7 +303,6 @@ input[type="submit"]:hover {
   background-color: rgba(0,0,0,0.0);
   width: 3vw;
   height:3vw;
-  border-radius: 2vw;
   font-size: 28pt;
   position: fixed;
   margin-left: 0.5vw;
