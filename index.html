@@ -257,7 +257,7 @@
     $('#create-account').on('submit', function(e) { //use on if jQuery 1.7+
         e.preventDefault();  //prevent form from submitting
         var x = document.getElementById("email-input");
-        if (window.getComputedStyle(x).display === "none") {
+        if (window.getComputedStyle(x).display == "none") {
           console.log("Mobile");
           window.location.assign("tel:833-933-0770");
         } else {
@@ -485,7 +485,7 @@
       description:"More info coming soon!"
     }
 
-    var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, fulltime, deliver, glands, consult, fleatick];
+    var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, deliver, glands, consult, fleatick];
 
     var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4',
      'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9',
