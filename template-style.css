@@ -301,12 +301,12 @@ input[type="submit"]:hover {
 }
 #exit {
   background-color: rgba(0,0,0,0.0);
-  width: 1vw;
-  height:1vw;
+  width: 2vw;
+  height:2vw;
   font-size: 28pt;
   position: fixed;
-  margin-left: 0.5vw;
-  margin-top: 0.5vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
   z-index: 3000;
   background-image: url('x.svg');
   background-size: contain;
