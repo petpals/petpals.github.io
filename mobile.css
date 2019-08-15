@@ -123,8 +123,8 @@ border-radius: 10px;
 
 }
 .card-bot {
-    width: 100%;
-    height: 36%;
+    width: 375px;
+    height: 240px;
     background-color: #1c9bff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -404,8 +404,8 @@ margin-top: -15vw;
   font-family: 'manrope', sans-serif;
 }
 #popContain {
-  width:100%;
-  height:100%;
+  width:375px;
+  height:667px;
   position: absolute;
   top:0;
   overflow-y:scroll;
@@ -417,8 +417,8 @@ margin-top: -15vw;
 #cPrice {
 }
 #cSpacer {
-  width:100%;
-  height:25%;
+  width:375px;
+  height:166px;
 }
 .fContact {
   text-align: center;
