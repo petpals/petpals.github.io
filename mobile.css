@@ -346,7 +346,21 @@ margin-top: -15vw;
   line-height: 37px !important;
 }
 .things {
-  display: none;
+
+}
+.bic {
+  width:100px;
+  height:100px;
+  position: absolute;
+  margin-top:-40px;
+  margin-left:-245px;
+}
+.psi {
+  width:100px;
+  height:100px;
+  position: absolute;
+  margin-top:-30px;
+  margin-left:10px;
 }
 .footer-container {
   height: 186px !important;
