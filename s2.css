@@ -21,7 +21,8 @@
   color:#d2d2d2;
   /*color:red;*/
   font-family: Helvetica, Sans-Serif;
-  font-weight: 300;
+  /*font-weight: 300;*/
+  font-weight: normal;
   grid-column: 2/15;
   grid-row:4;
   margin-left: 1.5vw;

@@ -440,5 +440,15 @@ margin-top: -15vw;
 .fContact {
   text-align: center;
 }
+.facebook {
+  background-image: url('https://i.pinimg.com/originals/41/28/2b/41282b58cf85ddaf5d28df96ed91de98.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:20vw;
+  height:20vw;
+  position:absolute;
+  margin-top:-50px;
+  margin-left:136px;
+}
 
 }
