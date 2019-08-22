@@ -24,8 +24,8 @@
   font-size: 35px;
   color:#d2d2d2;
   /*color:red;*/
-  font-family: 'manrope', sans-serif;
-  font-weight: normal;
+  font-family: Helvetica, Sans-Serif;
+  font-weight: 300 !important;
   grid-column: 2/15;
   grid-row:6;
   margin-left: 5vw;

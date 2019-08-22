@@ -366,7 +366,9 @@
       document.getElementById('popText').innerHTML = serviceList[n].name;
       document.getElementById('popParagraph').innerHTML = serviceList[n].description;
       document.getElementById('popPrice').innerHTML = serviceList[n].price;
-      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+bgImg[n%imgMod]+"\"></div>";
+      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"\"></div>";
+      /* DISABLE LARGE IMAGE */
+      document.getElementById('popPic').style.display = "none";
       document.getElementById('body').style.overflow = 'hidden';
       document.getElementById('container').style.overflow = 'hidden';
 
@@ -411,40 +413,43 @@
       p4:'</div>'
     }
 
-    var im1 = {
+    var img1 = {
       url:'serv3.svg\');',
       desktop:'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 80% 700%;',
       mobile:'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 90% -800%;'
     }
-    var im2 = {
+    var img2 = {
       url:'bitmap2.svg\');',
       desktop:'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -305%;',
       mobile:'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -175%;'
     }
-    /*Change all card images to this format ^^^*/
-
-    var bgImg = ['serv3.svg\');', 'bitmap2.svg\');', 'serv2.svg\');', 'serv4.svg\');', 'serv5.svg\');', 'girl.svg\');', 'serv6.svg\');'];
-    var imgMod = bgImg.length;
-    var bgIns =
-    [
-      'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 80% 700%;',
-      'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -305%;',
-      'background-repeat: no-repeat;background-size: 85%;background-position: bottom right;background-position: 85% -150%;',
-      'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 150%;',
-      'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -300%;',
-      'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -100%;',
-      'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 70% -80%;'
-     ]
-     var bgInsM =
-     [
-       'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 90% -800%;',
-       'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -175%;',
-       'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -150%;',
-       'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 160%;',
-       'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -138%;',
-       'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -75%;',
-       'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 80% -60%;'
-      ]
+    var img3 = {
+      url:'serv2.svg\');',
+      desktop:'background-repeat: no-repeat;background-size: 85%;background-position: bottom right;background-position: 85% -150%;',
+      mobile:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -150%;'
+    }
+    var img4 = {
+      url:'serv4.svg\');',
+      desktop:'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 150%;',
+      mobile:'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 160%;'
+    }
+    var img5 = {
+      url:'serv5.svg\');',
+      desktop:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -300%;',
+      mobile:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -138%;'
+    }
+    var img6 = {
+      url:'girl.svg\');',
+      desktop:'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -110%;',
+      mobile:'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -75%;'
+    }
+    var img7 = {
+      url: 'serv6.svg\');',
+      desktop:'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 70% -80%;',
+      mobile:'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 80% -60%;'
+    }
+    var imgList = [img6, img2, img3, img4, img5, img1, img7];
+    var imgMod = imgList.length;
 
     var ears = {
       name:"Ear Cleaning",
@@ -542,9 +547,9 @@
       var element = document.getElementById(id);
       if(element) {
         if ($(window).width() > 600){
-          element.innerHTML = serviceCard.p1+bgImg[i%imgMod]+bgIns[i%imgMod]+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgList[i%imgMod].desktop+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
         } else {
-          element.innerHTML = serviceCard.p1+bgImg[i%imgMod]+bgInsM[i%imgMod]+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgList[i%imgMod].mobile+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
         }
       }
     }
