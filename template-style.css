@@ -369,6 +369,57 @@ border-bottom-right-radius: 0.5vw;
   top:0;
   overflow-y:scroll;
 }
+#topPop {
+  width:auto;
+  height:400px;
+}
+.popTitle {
+  font-size: 39pt;
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+}
+.popWords {
+  font-size: 15pt;
+  color:#d2d2d2;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+}
+.popPrice {
+  font-size: 33pt;
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+}
+.popButton {
+  background-color: #ff3a3a;
+  color: #fff;
+  box-sizing: initial!important;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  border-color: rgba(0,0,0,.0);
+  border: none!important;
+  font-size: 1.4vw;
+  width: 20vw;
+  height: 4vw;
+  margin-left: 380px;
+  margin-top:-50px;
+  text-align: center;
+  box-shadow: 0vw 0.23vw 0.85vw rgba(255, 40, 40, 0.3);
+  transition: box-shadow 0.5s ease-in-out;
+     -webkit-appearance: none;
+  user-select: none;
+  -moz-user-select: none;
+  display:none !important;
+}
+.popButton:hover {
+  box-shadow: 0vw 0.23vw 0.85vw 0.2vw rgba(255, 40, 40, 0.3);
+}
+#popButton2 {
+  display:none;
+}
 
 .scale-in-center {
 	-webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
