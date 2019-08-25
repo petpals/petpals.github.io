@@ -199,19 +199,23 @@
 
       <div class="popup scale-in-left" id="popup">
         <div id="popContain">
+          <div id="innerContainer">
           <div class="popSection" id="topPop">
             <div class="popTitle" id="popText"></div>
             <div class="popWords" id="popParagraph"></div>
             <div class="popPrice" id="popPrice"></div>
-            <div class="popButton" id="popButton"><br>Book Now</div>
+
           </div>
           <div class="popSection" id="sec2Pop">
             <div class="popTitle" id="popText2"></div>
             <div class="popWords" id="popParagraph2"></div>
             <div class="popPrice" id="popPrice2"></div>
-            <div class="popButton" id="popButton2"></div>
             <div id="popPic"></div>
           </div>
+          <div id="whiteBar">
+            <div class="popButton" id="popButton"><br>Book Now</div>
+          </div>
+        </div>
         </div>
         <div id="exit" onclick="hidePop()"></div>
       </div>
@@ -375,6 +379,7 @@
       document.getElementById('popParagraph').innerHTML = serviceList[n].description;
       document.getElementById('popPrice').innerHTML = serviceList[n].price;
       document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"\"></div>";
+      document.getElementById('popPic').style = "right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
       /* DISABLE LARGE IMAGE */
       //document.getElementById('popPic').style.display = "none";
       /* ^^^^^^^^^^^^^^^^^ */
@@ -421,41 +426,51 @@
       p3:'</div><div class=\"card-bot\"><div id="cSpacer"></div><div id="cPrice" style=\"width:auto;height:3.1vw;\"></div>',
       p4:'</div>'
     }
+    var imgPos1 = "background-repeat: no-repeat;background-size:";
+    var imgPos2 = ";background-position:";
+    var imgPos3 = ";";
 
     var img1 = {
       url:'serv3.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 80% 700%;',
-      mobile:'background-repeat: no-repeat;background-size: 60%;background-position: bottom right;background-position: 90% -800%;'
+      desktop: {size: "60%", pos: "80% 700%"},
+      mobile: {size: "60%", pos: "90% -800%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img2 = {
       url:'bitmap2.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -305%;',
-      mobile:'background-repeat: no-repeat;background-size: 80%;background-position: right;background-position: 80% -175%;'
+      desktop: {size: "80%", pos: "80% -305%"},
+      mobile: {size: "80%", pos: "80% -175%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img3 = {
       url:'serv2.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 85%;background-position: bottom right;background-position: 85% -150%;',
-      mobile:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -150%;'
+      desktop: {size: "85%", pos: "85% -150%"},
+      mobile: {size: "80%", pos: "85% -150%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img4 = {
       url:'serv4.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 150%;',
-      mobile:'background-repeat: no-repeat;background-size: 40%;background-position: top right;background-position: 85% 160%;'
+      desktop: {size: "40%", pos: "85% 150%"},
+      mobile: {size:"40%", pos: "85% 160%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img5 = {
       url:'serv5.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -300%;',
-      mobile:'background-repeat: no-repeat;background-size: 80%;background-position: bottom right;background-position: 85% -138%;'
+      desktop: {size: "80%", pos: "85% -300%"},
+      mobile: {size: "80%",pos: "85% -138%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img6 = {
       url:'girl.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -110%;',
-      mobile:'background-repeat: no-repeat;background-size: 70%;background-position: right;background-position: 100% -75%;'
+      desktop: {size: "70%", pos: "100% -110%"},
+      mobile: {size:"70%", pos:"100% -75%"},
+      popup: {right: "70", bottom: "80"}
     }
     var img7 = {
       url: 'serv6.svg\');',
-      desktop:'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 70% -80%;',
-      mobile:'background-repeat: no-repeat;background-size: 50%;background-position: top right;background-position: 80% -60%;'
+      desktop: {size:"50%",pos:"70% -80%"},
+      mobile: {size: "50%", pos: "80% -60%"},
+      popup: {right: "70", bottom: "80"}
     }
     var imgList = [img6, img2, img3, img4, img5, img1, img7];
     var imgMod = imgList.length;
@@ -556,9 +571,9 @@
       var element = document.getElementById(id);
       if(element) {
         if ($(window).width() > 600){
-          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgList[i%imgMod].desktop+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgPos1+imgList[i%imgMod].desktop.size+imgPos2+imgList[i%imgMod].desktop.pos+imgPos3+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
         } else {
-          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgList[i%imgMod].mobile+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
+          element.innerHTML = serviceCard.p1+imgList[i%imgMod].url+imgPos1+imgList[i%imgMod].mobile.size+imgPos2+imgList[i%imgMod].mobile.pos+imgPos3+serviceCard.p2+serviceList[i].name+serviceCard.p3+serviceList[i].price+serviceCard.p4;
         }
       }
     }
