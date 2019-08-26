@@ -12,7 +12,6 @@
   scroll-snap-type: y proximity;
   /* Reserve space for header plus some extra space for sneak peeking. */
   scroll-padding-top: 15vh;
-  overflow-y: scroll;
 }
 html {
     /*background-image: url("desktop.jpg");
@@ -23,7 +22,6 @@ html {
 body {
   //opacity: 0.5;
   height:100%;
-  overflow:scroll;
 }
 
 .section {
