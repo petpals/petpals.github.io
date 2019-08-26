@@ -210,37 +210,16 @@
             <div class="popTitle" id="popText2"></div>
             <div class="popWords" id="popParagraph2"></div>
             <div class="popPrice" id="popPrice2"></div>
-            <div id="popPic"></div>
           </div>
+
+        </div>
+        <div id="popPic"></div>
           <div id="whiteBar">
-            <div class="popButton" id="popButton"><br>Book Now</div>
+            <div class="popButton" onclick="hideToTop()" id="popButton"><br>Book Now</div>
           </div>
         </div>
-        </div>
         <div id="exit" onclick="hidePop()"></div>
       </div>
-
-      <!--<div class="popup scale-in-center" id="popup">
-        <div id="popContain">
-          <div id="popText"></div>
-          <div id="popParagraph"></div>
-          <div id="popPrice"></div>
-          <div id="popPic"></div>
-          <div id="popButton"></div>
-        </div>
-        <div id="exit" onclick="hidePop()"></div>
-      </div>
-
-      <div class="popup scale-in-right" id="popup">
-        <div id="popContain">
-          <div id="popText"></div>
-          <div id="popParagraph"></div>
-          <div id="popPrice"></div>
-          <div id="popPic"></div>
-          <div id="popButton"></div>
-        </div>
-        <div id="exit" onclick="hidePop()"></div>
-      </div>-->
 
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -373,27 +352,55 @@
 
     function showPop(number) {
       var n = number-1;
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('popup').style.display = 'block';
-      document.getElementById('popText').innerHTML = serviceList[n].name;
-      document.getElementById('popParagraph').innerHTML = serviceList[n].description;
-      document.getElementById('popPrice').innerHTML = serviceList[n].price;
-      document.getElementById('popPic').innerHTML = "<div style=\"width:40vw;height:40vw;background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"\"></div>";
-      document.getElementById('popPic').style = "right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
-      /* DISABLE LARGE IMAGE */
-      //document.getElementById('popPic').style.display = "none";
-      /* ^^^^^^^^^^^^^^^^^ */
+      var overlay = document.getElementById('overlay');
+      var popup = document.getElementById('popup');
+      var popText = document.getElementById('popText');
+      var popPara = document.getElementById('popParagraph');
+      var popPrice = document.getElementById('popPrice');
+      var popPic = document.getElementById('popPic');
+      var popContain = document.getElementById('popContain');
+      var section = document.getElementsByClassName('section');
+
+      localStorage.setItem("currentPop", n);
+      overlay.style.display = 'block';
+      popup.style.display = 'block';
+      popText.innerHTML = serviceList[n].name;
+      popPara.innerHTML = serviceList[n].description;
+      popPrice.innerHTML = serviceList[n].price;
+      popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
+      popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
+      popContain.scrollTop = 0;
+
       document.getElementById('body').style.overflow = 'hidden';
       document.getElementById('container').style.overflow = 'hidden';
 
-      document.getElementsByClassName('section')[0].style.display = "none";
-      document.getElementsByClassName('section')[1].style.display = "none";
-      document.getElementsByClassName('section')[2].style.display = "none";
-      document.getElementsByClassName('section')[3].style.display = "none";
-      document.getElementsByClassName('section')[4].style.display = "none";
-      document.getElementsByClassName('section')[5].style.display = "none";
-      document.getElementsByClassName('section')[6].style.display = "none";
+      section[0].style.display = "none";
+      section[1].style.display = "none";
+      section[2].style.display = "none";
+      section[3].style.display = "none";
+      section[4].style.display = "none";
+      section[5].style.display = "none";
+      section[6].style.display = "none";
+    }
+    function switchPop(number) {
+      var n = number;
+      if (n == -1) {
+        n = 11;
+      }
+      n = n%serviceList.length;
+      var popText = document.getElementById('popText');
+      var popPara = document.getElementById('popParagraph');
+      var popPrice = document.getElementById('popPrice');
+      var popPic = document.getElementById('popPic');
+      var popContain = document.getElementById('popContain');
 
+      localStorage.setItem("currentPop", n);
+      popText.innerHTML = serviceList[n].name;
+      popPara.innerHTML = serviceList[n].description;
+      popPrice.innerHTML = serviceList[n].price;
+      popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
+      popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
+      popContain.scrollTop = 0;
     }
 
     function showPopString(text) {
@@ -418,6 +425,20 @@
       document.getElementById('section-3').scrollIntoView();
       window.scrollBy(0, 40);
     }
+    function hideToTop() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('body').style.overflow = 'scroll';
+      document.getElementById('container').style.overflow = 'scroll';
+
+      document.getElementsByClassName('section')[0].style.display = "initial";
+      document.getElementsByClassName('section')[1].style.display = "initial";
+      document.getElementsByClassName('section')[2].style.display = "initial";
+      document.getElementsByClassName('section')[3].style.display = "initial";
+      document.getElementsByClassName('section')[4].style.display = "initial";
+      document.getElementsByClassName('section')[5].style.display = "initial";
+      document.getElementsByClassName('section')[6].style.display = "initial";
+    }
 
     //Service card code
     var serviceCard = {
@@ -434,43 +455,43 @@
       url:'serv3.svg\');',
       desktop: {size: "60%", pos: "80% 700%"},
       mobile: {size: "60%", pos: "90% -800%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-25", scroll: "hidden"}
     }
     var img2 = {
       url:'bitmap2.svg\');',
       desktop: {size: "80%", pos: "80% -305%"},
       mobile: {size: "80%", pos: "80% -175%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-20", scroll: "scroll"}
     }
     var img3 = {
       url:'serv2.svg\');',
       desktop: {size: "85%", pos: "85% -150%"},
       mobile: {size: "80%", pos: "85% -150%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-92px", scroll: "hidden"}
     }
     var img4 = {
       url:'serv4.svg\');',
       desktop: {size: "40%", pos: "85% 150%"},
       mobile: {size:"40%", pos: "85% 160%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-20px", scroll: "hidden"}
     }
     var img5 = {
       url:'serv5.svg\');',
       desktop: {size: "80%", pos: "85% -300%"},
       mobile: {size: "80%",pos: "85% -138%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "-30", bottom: "-50", scroll: "hidden"}
     }
     var img6 = {
       url:'girl.svg\');',
       desktop: {size: "70%", pos: "100% -110%"},
       mobile: {size:"70%", pos:"100% -75%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-10", scroll: "hidden"}
     }
     var img7 = {
       url: 'serv6.svg\');',
       desktop: {size:"50%",pos:"70% -80%"},
       mobile: {size: "50%", pos: "80% -60%"},
-      popup: {right: "70", bottom: "80"}
+      popup: {right: "0", bottom: "-40", scroll: "hidden"}
     }
     var imgList = [img6, img2, img3, img4, img5, img1, img7];
     var imgMod = imgList.length;
@@ -478,67 +499,80 @@
     var ears = {
       name:"Ear Cleaning",
       price:"$10.00",
-      description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early."
+      description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early.",
+      scroll: "hidden"
     }
     var weight = {
       name:"Weight Check",
       price:"$10.00",
-      description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet."
+      description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet.",
+      scroll: "hidden"
     }
     var glands = {
       name:"Gland Expression",
       price:"$25.00",
-      description:"Most pets anal glands express themselves naturally. Some dogs need their anal glands manually expressed a few times per year. Some pets require gland expression every month (or even more often), if they have been having recurring issues. Our pet care providers are ready when your pet is showing any signs."
+      description:"Most pets anal glands express themselves naturally. Some dogs need their anal glands manually expressed a few times per year. Some pets require gland expression every month (or even more often), if they have been having recurring issues. Our pet care providers are ready when your pet is showing any signs.",
+      scroll: "hidden"
     }
     var consult = {
       name:"Consultation",
       price:"$30.00",
-      description:"Have a question regarding your pet? Our pet care experts are ready to help!"
+      description:"Have a question regarding your pet? Our pet care experts are ready to help!",
+      scroll: "hidden"
     }
     var fleatick = {
       name:"Flea and Tick application",
       price:"$10.00",
-      description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding."
+      description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding.",
+      scroll: "hidden"
     }
     var walk = {
       name:"Dog Walking",
       price:"$25.00*",
-      description:"Your pets exercise needs are based on your dog's age, breed, size, and overall health, but a good rule of thumb is for your dog to spend at least 30 minutes every day on physical activity. Younger dogs and dogs bred for sports or herding activities may need much more. "
+      description:"Your pets exercise needs are based on your dog's age, breed, size, and overall health, but a good rule of thumb is for your dog to spend at least 30 minutes every day on physical activity. Younger dogs and dogs bred for sports or herding activities may need much more. ",
+      scroll: "hidden"
     }
     var sit = {
       name:"Pet Sitting",
       price:"$35.00*",
-      description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time."
+      description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time.",
+      scroll: "hidden"
     }
     var deliver = {
       name:"Delivery",
       price:"$25.00",
-      description:"More info coming soon!"
+      description:"More info coming soon!",
+      scroll: "hidden"
     }
     var fulltime = {
       name:"24 Hour Care",
       price:"$150.00",
-      description:"More info coming soon!"
+      description:"More info coming soon!",
+      scroll: "hidden"
     }
     var teeth = {
       name:"Teeth Brushing",
       price:"$15.00",
-      description:"More info coming soon!"
+      description:"More info coming soon!",
+      scroll: "hidden"
     }
     var bath = {
       name:"Bath",
       price:"$20.00*",
-      description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around."
+      description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around.",
+      scroll: "hidden"
     }
     var groom = {
       name:"Grooming",
       price:"$45.00*",
-      description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming."
+      description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming.",
+      scroll: "hidden"
     }
     var nails = {
       name:"Nail Trimming",
       price:"$10.00",
-      description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues."
+      description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues.",
+      scroll: "hidden"
     }
 
     var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, deliver, glands, consult, fleatick];
@@ -583,6 +617,36 @@
     $( document ).ready(function() {
       getReview();
 
+      document.onkeyup = function(event) {
+        if (event.key === "Escape"){
+
+        }
+      }
+      var back = localStorage.getItem("currentPop");
+      document.onkeydown = function (e) {
+        switch (e.key) {
+          case 'Escape':
+            hidePop();
+            break;
+          case 'ArrowLeft':
+            // left arrow
+            back = localStorage.getItem("currentPop");
+            back = parseInt(back);
+            console.log(back);
+            back = back-1;
+            localStorage.setItem("currentPop", back);
+            switchPop(back);
+            break;
+          case 'ArrowRight':
+            // right arrow
+            back = localStorage.getItem("currentPop");
+            back = parseInt(back);
+            back = back+1;
+            localStorage.setItem("currentPop", back);
+            switchPop(back);
+          }
+        };
+
       var year = new Date().getFullYear();
       document.getElementById('copyright').innerHTML = "©"+year+" PetPals"
     });
@@ -590,3 +654,14 @@
     </script>
   </body>
 </html>
+
+<!--
+TODO
+move price over and make smaller
+put text next to it that says what it's for
+put in new image of lady
+make button work
+finish implimentation of arrow navigation
+
+
+-->

@@ -338,9 +338,9 @@ input[type="submit"]:hover {
   font-family: 'manrope', sans-serif;
 }
 #popPic {
-width:32vw;
+width:30vw;
 height:30vw;
-overflow: visible;
+overflow: hidden;
 position: absolute;
 bottom:0;
 right:0;
@@ -362,17 +362,19 @@ z-index: -10;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'manrope', sans-serif;
+  margin-bottom: 20px;
 }
 #popContain {
   width:100%;
-  height:100%;
+  height:90%;
   position: absolute;
   top:0;
   overflow-y:scroll;
+  overflow-x:hidden;
 }
 #topPop {
   width:auto;
-  height:400px;
+  height:auto;
 }
 .popTitle {
   font-size: 39pt;
@@ -437,7 +439,16 @@ z-index: -10;
 #innerContainer {
   position: relative;
   width:90vw;
-  height:90vh;
+  height:auto;
+  overflow: hidden;
+}
+.popSection {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+#sec2Pop {
+  display:none;
 }
 
 .scale-in-center {
