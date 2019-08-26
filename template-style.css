@@ -333,7 +333,9 @@ input[type="submit"]:hover {
   font-size: 15pt;
   color:#d2d2d2;
   letter-spacing: 1px;
-  font-family: 'manrope', sans-serif;
+  font-family: Helvetica, Sans-Serif;
+  font-weight: normal;
+  line-height: 22px;
 }
 #popPic {
 width:30vw;
@@ -355,8 +357,8 @@ z-index: -10;
   height:20vw;
   margin-top:6vh;
   position: absolute;
-  font-size: 33pt;
-  color: #1c9bff;
+  font-size: 30pt;
+  color: #d2d2d2;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'manrope', sans-serif;
@@ -370,7 +372,7 @@ z-index: -10;
   height:auto;
   margin-top:6vh;
   position: relative;
-  font-size: 33pt;
+  font-size: 30pt;
   color: #1c9bff;
   font-weight: 700;
   letter-spacing: 1px;
@@ -403,7 +405,7 @@ z-index: -10;
   font-family: 'manrope', sans-serif;
 }
 .popPrice {
-  font-size: 33pt;
+  font-size: 30pt;
   color: #1c9bff;
   font-weight: 700;
   letter-spacing: 1px;

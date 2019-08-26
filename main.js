@@ -118,24 +118,28 @@ $(function() { //shorthand document.ready function
     var popContain = document.getElementById('popContain');
     var section = document.getElementsByClassName('section');
     var popExplain = document.getElementById('popExplain');
+    var object = serviceList[n];
+    var image = imgList[n%imgMod];
 
-    var otherLines = "";
+    var variants = "";
+    var vPrice = "";
 
     localStorage.setItem("currentPop", n);
     overlay.style.display = 'block';
     popup.style.display = 'block';
-    popText.innerHTML = serviceList[n].name;
-    popPara.innerHTML = serviceList[n].description;
-    popPrice.innerHTML = serviceList[n].price;
-    popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
-    popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
+    popText.innerHTML = object.name;
+    popPara.innerHTML = object.description;
+    popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
+    popContain.style.overflowY = image.popup.scroll;
     popContain.scrollTop = 0;
-    if (serviceList[n].variant.visitFee.applyed == "true") {
-      otherLines = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
-    } else if (serviceList[n].variant.regular.name == "One Dog"){
-      otherLines = serviceList[n].variant.twoDogs.name+" . . . . . . . . . ."+serviceList[n].variant.twoDogs.price+"<br>"+serviceList[n].variant.threeDogs.name+" . . . . . . . . "+serviceList[n].variant.threeDogs.price+"<br>"+serviceList[n].variant.moreDogs.name+"  . . . . . . "+serviceList[n].variant.moreDogs.price;
-    }
-    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+otherLines;
+
+    variants = "<br>"+object.variant.var1.name+"<br>"+object.variant.var2.name+"<br>"+object.variant.var3.name;
+
+    popExplain.innerHTML = object.variant.regular.name+variants;
+
+    vPrice = "<br>"+object.variant.var1.price+"<br>"+object.variant.var2.price+"<br>"+object.variant.var3.price;
+
+    popPrice.innerHTML = object.price+vPrice;
 
 
     document.getElementById('body').style.overflow = 'hidden';
@@ -161,22 +165,24 @@ $(function() { //shorthand document.ready function
     var popPic = document.getElementById('popPic');
     var popContain = document.getElementById('popContain');
     var popExplain = document.getElementById('popExplain');
+    var object = serviceList[n];
+    var image = imgList[n%imgMod];
 
-    var otherLines = "";
+    var variants = "";
 
     localStorage.setItem("currentPop", n);
-    popText.innerHTML = serviceList[n].name;
-    popPara.innerHTML = serviceList[n].description;
-    popPrice.innerHTML = serviceList[n].price;
-    popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+imgList[n%imgMod].url+"right:"+imgList[n%imgMod].popup.right+";bottom:"+imgList[n%imgMod].popup.bottom+";";
-    popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
+    popText.innerHTML = object.name;
+    popPara.innerHTML = object.description;
+    popPrice.innerHTML = object.price;
+    popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
+    popContain.style.overflowY = image.popup.scroll;
     popContain.scrollTop = 0;
-    if (serviceList[n].variant.visitFee.applyed == "true") {
-      otherLines = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
-    } else if (serviceList[n].variant.regular.name == "One Dog"){
-      otherLines = serviceList[n].variant.twoDogs.name+" . . . . . . . . . ."+serviceList[n].variant.twoDogs.price+"<br>"+serviceList[n].variant.threeDogs.name+" . . . . . . . . "+serviceList[n].variant.threeDogs.price+"<br>"+serviceList[n].variant.moreDogs.name+"  . . . . . . "+serviceList[n].variant.moreDogs.price;
+    if (object.variant.visitFee.applyed == "true") {
+      variants = object.variant.visitFee.name+" . . . . . . "+object.variant.visitFee.price;
+    } else if (object.variant.regular.name == "One Dog"){
+      variants = object.variant.var1.name+object.variant.var1.space+object.variant.var1.price+"<br>"+object.variant.var2.name+object.variant.var2.space+object.variant.var2.price+"<br>"+object.variant.var3.name+object.variant.var3.space+object.variant.var3.price;
     }
-    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+otherLines;
+    popExplain.innerHTML = object.variant.regular.name+" . . . . . . . . . . <br>"+variants;
 
   }
 
@@ -327,10 +333,10 @@ $(function() { //shorthand document.ready function
     description:"Your pets exercise needs are based on your dog's age, breed, size, and overall health, but a good rule of thumb is for your dog to spend at least 30 minutes every day on physical activity. Younger dogs and dogs bred for sports or herding activities may need much more. ",
     scroll: "hidden",
     variant: {
-      regular: {name:"One Dog", price: "$25.00"},
-      twoDogs: {name:"Two Dogs", price: "$35.00"},
-      threeDogs: {name:"Three Dogs", price: "$40.00"},
-      moreDogs: {name:"More Dogs", price: "Contact us"},
+      regular: {name:"One Dog", price: "$25.00", space: " . . . . . . . . . . <br>"},
+      var1: {name:"Two Dogs", price: "$35.00", space: " . . . . . . . . . ."},
+      var2: {name:"Three Dogs", price: "$40.00", space: " . . . . . . . . "},
+      var3: {name:"More Dogs", price: "Contact us", space: "  . . . . . . "},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
     }
   }
