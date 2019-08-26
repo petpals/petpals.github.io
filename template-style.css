@@ -348,10 +348,25 @@ z-index: -10;
 #popButton {
 
 }
+#popExplain {
+  text-align:left;
+  width:60vw;
+  margin-left:2%;
+  height:20vw;
+  margin-top:6vh;
+  position: absolute;
+  font-size: 33pt;
+  color: #1c9bff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'manrope', sans-serif;
+  margin-bottom: 50px;
+  z-index: 1000;
+}
 #popPrice {
   text-align:left;
   width:20vw;
-  margin-left:2vw;
+  margin-left:42%;
   height:auto;
   margin-top:6vh;
   position: relative;
@@ -437,7 +452,7 @@ z-index: -10;
 #innerContainer {
   position: relative;
   width:90vw;
-  height:auto;
+  height:102%;
   overflow: hidden;
 }
 .popSection {
