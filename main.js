@@ -119,7 +119,7 @@ $(function() { //shorthand document.ready function
     var section = document.getElementsByClassName('section');
     var popExplain = document.getElementById('popExplain');
 
-    var visitFee = "";
+    var otherLines = "";
 
     localStorage.setItem("currentPop", n);
     overlay.style.display = 'block';
@@ -131,9 +131,11 @@ $(function() { //shorthand document.ready function
     popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
     popContain.scrollTop = 0;
     if (serviceList[n].variant.visitFee.applyed == "true") {
-      visitFee = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
+      otherLines = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
+    } else if (serviceList[n].variant.regular.name == "One Dog"){
+      otherLines = serviceList[n].variant.twoDogs.name+" . . . . . . . . . ."+serviceList[n].variant.twoDogs.price+"<br>"+serviceList[n].variant.threeDogs.name+" . . . . . . . . "+serviceList[n].variant.threeDogs.price+"<br>"+serviceList[n].variant.moreDogs.name+"  . . . . . . "+serviceList[n].variant.moreDogs.price;
     }
-    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+visitFee;
+    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+otherLines;
 
 
     document.getElementById('body').style.overflow = 'hidden';
@@ -160,6 +162,8 @@ $(function() { //shorthand document.ready function
     var popContain = document.getElementById('popContain');
     var popExplain = document.getElementById('popExplain');
 
+    var otherLines = "";
+
     localStorage.setItem("currentPop", n);
     popText.innerHTML = serviceList[n].name;
     popPara.innerHTML = serviceList[n].description;
@@ -168,9 +172,11 @@ $(function() { //shorthand document.ready function
     popContain.style.overflowY = imgList[n%imgMod].popup.scroll;
     popContain.scrollTop = 0;
     if (serviceList[n].variant.visitFee.applyed == "true") {
-      visitFee = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
+      otherLines = serviceList[n].variant.visitFee.name+" . . . . . . "+serviceList[n].variant.visitFee.price;
+    } else if (serviceList[n].variant.regular.name == "One Dog"){
+      otherLines = serviceList[n].variant.twoDogs.name+" . . . . . . . . . ."+serviceList[n].variant.twoDogs.price+"<br>"+serviceList[n].variant.threeDogs.name+" . . . . . . . . "+serviceList[n].variant.threeDogs.price+"<br>"+serviceList[n].variant.moreDogs.name+"  . . . . . . "+serviceList[n].variant.moreDogs.price;
     }
-    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+visitFee;
+    popExplain.innerHTML = serviceList[n].variant.regular.name+" . . . . . . . . . . <br>"+otherLines;
 
   }
 
@@ -267,7 +273,7 @@ $(function() { //shorthand document.ready function
 
   var ears = {
     name:"Ear Cleaning",
-    price:"$10.00",
+    price:"$10.00*",
     description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early.",
     scroll: "hidden",
     variant: {
@@ -277,7 +283,7 @@ $(function() { //shorthand document.ready function
   }
   var weight = {
     name:"Weight Check",
-    price:"$10.00",
+    price:"$10.00*",
     description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet.",
     scroll: "hidden",
     variant: {
@@ -287,7 +293,7 @@ $(function() { //shorthand document.ready function
   }
   var glands = {
     name:"Gland Expression",
-    price:"$25.00",
+    price:"$25.00*",
     description:"Most pets anal glands express themselves naturally. Some dogs need their anal glands manually expressed a few times per year. Some pets require gland expression every month (or even more often), if they have been having recurring issues. Our pet care providers are ready when your pet is showing any signs.",
     scroll: "hidden",
     variant: {
@@ -297,7 +303,7 @@ $(function() { //shorthand document.ready function
   }
   var consult = {
     name:"Consultation",
-    price:"$30.00",
+    price:"$30.00*",
     description:"Have a question regarding your pet? Our pet care experts are ready to help!",
     scroll: "hidden",
     variant: {
@@ -307,7 +313,7 @@ $(function() { //shorthand document.ready function
   }
   var fleatick = {
     name:"Flea and Tick application",
-    price:"$10.00",
+    price:"$10.00*",
     description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding.",
     scroll: "hidden",
     variant: {
@@ -317,7 +323,7 @@ $(function() { //shorthand document.ready function
   }
   var walk = {
     name:"Dog Walking",
-    price:"$25.00*",
+    price:"$25.00",
     description:"Your pets exercise needs are based on your dog's age, breed, size, and overall health, but a good rule of thumb is for your dog to spend at least 30 minutes every day on physical activity. Younger dogs and dogs bred for sports or herding activities may need much more. ",
     scroll: "hidden",
     variant: {
@@ -330,7 +336,7 @@ $(function() { //shorthand document.ready function
   }
   var sit = {
     name:"Pet Sitting",
-    price:"$35.00*",
+    price:"$35.00",
     description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time.",
     scroll: "hidden",
     variant: {
@@ -340,7 +346,7 @@ $(function() { //shorthand document.ready function
   }
   var deliver = {
     name:"Delivery",
-    price:"$25.00",
+    price:"$25.00*",
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
@@ -360,7 +366,7 @@ $(function() { //shorthand document.ready function
   }
   var teeth = {
     name:"Teeth Brushing",
-    price:"$15.00",
+    price:"$15.00*",
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
@@ -390,7 +396,7 @@ $(function() { //shorthand document.ready function
   }
   var nails = {
     name:"Nail Trimming",
-    price:"$10.00",
+    price:"$10.00*",
     description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues.",
     scroll: "hidden",
     variant: {
