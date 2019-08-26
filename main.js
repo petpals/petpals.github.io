@@ -118,7 +118,7 @@ $(function() { //shorthand document.ready function
     var popContain = document.getElementById('popContain');
     var section = document.getElementsByClassName('section');
     var popExplain = document.getElementById('popExplain');
-    var object = serviceList[n];
+    var obj = serviceList[n];
     var image = imgList[n%imgMod];
 
     var variants = "";
@@ -127,19 +127,26 @@ $(function() { //shorthand document.ready function
     localStorage.setItem("currentPop", n);
     overlay.style.display = 'block';
     popup.style.display = 'block';
-    popText.innerHTML = object.name;
-    popPara.innerHTML = object.description;
+    popText.innerHTML = obj.name;
+    popPara.innerHTML = obj.description;
     popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
     popContain.style.overflowY = image.popup.scroll;
     popContain.scrollTop = 0;
 
-    variants = "<br>"+object.variant.var1.name+"<br>"+object.variant.var2.name+"<br>"+object.variant.var3.name;
+    if (typeof obj.variant.var1 === 'undefined') {
+      variants = "";
+    } else {
+      variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
+    }
+    popExplain.innerHTML = obj.variant.regular.name+variants;
 
-    popExplain.innerHTML = object.variant.regular.name+variants;
+    if (typeof obj.variant.var1 === 'undefined') {
+      vPrice = "";
+    } else {
+      vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
+    }
 
-    vPrice = "<br>"+object.variant.var1.price+"<br>"+object.variant.var2.price+"<br>"+object.variant.var3.price;
-
-    popPrice.innerHTML = object.price+vPrice;
+    popPrice.innerHTML = obj.price+vPrice;
 
 
     document.getElementById('body').style.overflow = 'hidden';
@@ -153,6 +160,7 @@ $(function() { //shorthand document.ready function
     section[5].style.display = "none";
     section[6].style.display = "none";
   }
+
   function switchPop(number) {
     var n = number;
     if (n == -1) {
@@ -165,25 +173,32 @@ $(function() { //shorthand document.ready function
     var popPic = document.getElementById('popPic');
     var popContain = document.getElementById('popContain');
     var popExplain = document.getElementById('popExplain');
-    var object = serviceList[n];
+    var obj = serviceList[n];
     var image = imgList[n%imgMod];
 
+    var vPrice = "";
     var variants = "";
 
     localStorage.setItem("currentPop", n);
-    popText.innerHTML = object.name;
-    popPara.innerHTML = object.description;
-    popPrice.innerHTML = object.price;
+    popText.innerHTML = obj.name;
+    popPara.innerHTML = obj.description;
+    popPrice.innerHTML = obj.price;
     popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
     popContain.style.overflowY = image.popup.scroll;
     popContain.scrollTop = 0;
-    if (object.variant.visitFee.applyed == "true") {
-      variants = object.variant.visitFee.name+" . . . . . . "+object.variant.visitFee.price;
-    } else if (object.variant.regular.name == "One Dog"){
-      variants = object.variant.var1.name+object.variant.var1.space+object.variant.var1.price+"<br>"+object.variant.var2.name+object.variant.var2.space+object.variant.var2.price+"<br>"+object.variant.var3.name+object.variant.var3.space+object.variant.var3.price;
-    }
-    popExplain.innerHTML = object.variant.regular.name+" . . . . . . . . . . <br>"+variants;
 
+    if (typeof obj.variant.var1 === 'undefined') {
+      variants = "";
+    } else {
+      variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
+    }
+    popExplain.innerHTML = obj.variant.regular.name+variants;
+
+    if (typeof obj.variant.var1 === 'undefined') {
+      vPrice = "";
+    } else {
+      vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
+    }
   }
 
   function showPopString(text) {

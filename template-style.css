@@ -359,9 +359,9 @@ z-index: -10;
   position: absolute;
   font-size: 27pt;
   color: #d2d2d2;
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: 1px;
-  font-family: 'manrope', sans-serif;
+  font-family: Helvetica, Sans-Serif;
   margin-bottom: 50px;
   z-index: 1000;
 }
