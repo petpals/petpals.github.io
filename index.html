@@ -27,20 +27,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body id="body" style="overflow:hidden;">
-  <div class="container" style="overflow:hidden;" id="container">
-    <div class="section" style="overflow:hidden;" id="section-1">
-      <div class="top" style="overflow:hidden;">
-      <div class="logo" style="overflow:hidden;"></div>
-        <div class="text-section" style="overflow:hidden;">
-          <div class="header-text">Website Under Construction</div>
-          <br><br><br><br>
-          <a href="https://www.facebook.com/midcoastpetpals/" style="position:absolute;margin-left:-10px;margin-top:40px;"><div class="facebook"></div></a>
-          <div class="fContact" style="margin-left:50px;margin-top:100px"><a href="tel:833-933-0770">833-933-0770</a><br><a href="tel:207-542-8654">207-542-8654</a><br>contact@petpals.io</div>
+<body id="body" style="overflow:visible;">
 
-        </div>
+  <div class="container" id="container">
+
+  <div class="section" id="section-1">
+    <!-- style="background-repeat: no-repeat;background-size: contain;background-image:url('https://mail.google.com/mail/u/0?ui=2&ik=ba739f09b4&attid=0.1&permmsgid=msg-f:1628088443287442787&th=169821d02d111563&view=fimg&disp=thd&attbid=ANGjdJ-3rsMK-zUE-wRSeY-69X-pygHJlqSjHjcmiUOxK64H50gYEtE0PrJMNZZ8vRSIxPPsAh0ojeRH-oaCIsin4ene17hA2bVNrae_3VYiuz8mzzGiTYd_P8Yd5UQ&ats=2524608000000&sz=w1280-h666');"-->
+    <div class="top">
+
+      <!-- logo -->
+      <div class="logo"></div>
+
+
+      <div class="text-section">
+        <div class="header-text"> pet care at your place. </div>
+          <div class="body-text" id="desk"><br> We bring compassionate care for your pets right to <br>your door.</div>
+          <div class="body-text" id="mobile"><br> We bring compassionate care for your pets right to your door.</div>
+          <form class="create-account" id="create-account" method="POST">
+            <input type="email" class="email-input d" id="email-input" placeholder="Email" name="email"></input>
+            <div class="plus" id="d"><div class="plus-image"></div></div>
+            <input type="tel" class="pass-input d" placeholder="Phone" name="phone" id="pass-input"></input>
+            <input type="submit" class="submit" value="Get Started" id="saveForm"> <div class="phone"></div></input>
+          </form>
       </div>
+
+      <div class="subscription-top">
+        <div class="person-sitting" style="background-image:url('top-person-maintain.svg') !important;"></div>
+        <!--<div class="subscription-tile"><div class="white-top"><br>Dogs<br>Cats<br>Birds<br>Critters</div><div class="red-bottom"><br>$9.99/m</div></div>
+        <div class="subscription-text">sign up, <br>first month is free.</div>-->
+      </div>
+      <div class="blue-arrow" id="s1-da"></div>
+
     </div>
+  </div>
+
+
+  <!-- Footer conainer: contains the footer -->
+  <div class="footer-container section">
+    <div class="section-container">
+      <a href="https://www.facebook.com/midcoastpetpals/"><div class="facebook"></div></a>
+      <div class="fContact"><a href="tel:833-933-0770">833-933-0770</a><br><a href="tel:207-542-8654">207-542-8654</a><br>contact@petpals.io</div>
+      <div class="things">
+        <div class="bic"></div>
+        <div class="psi"></div>
+      </div>
+      <div id="copyright"></div>
     </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
