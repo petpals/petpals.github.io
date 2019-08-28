@@ -23,7 +23,7 @@ a {
 }
 
 .psi {
-  background-image: url('http://www.choicespetsitters.com/wp-content/uploads/2017/02/PSI-Logo-GARPS-Tagline-Color.jpg');
+  background-image: url('psi-logo.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   width:10vw;
@@ -31,7 +31,7 @@ a {
   float: right;
 }
 .bic {
-  background-image: url('http://s.cfluent.com/dog-trainers/pet-sitters/index/1/bic-logo.png');
+  background-image: url('bic-logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   width:10vw;
@@ -49,7 +49,7 @@ a {
 }
 
 .facebook {
-  background-image: url('https://i.pinimg.com/originals/41/28/2b/41282b58cf85ddaf5d28df96ed91de98.png');
+  background-image: url('fb.png');
   background-repeat: no-repeat;
   background-size: contain;
   width:4vw;

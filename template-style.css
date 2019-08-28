@@ -334,8 +334,11 @@ input[type="submit"]:hover {
   color:#d2d2d2;
   letter-spacing: 1px;
   font-family: Helvetica, Sans-Serif;
-  font-weight: normal;
+  font-weight: lighter;
   line-height: 22px;
+}
+#popSpace {
+  height:4vh;
 }
 #popPic {
 width:30vw;
@@ -350,6 +353,22 @@ z-index: -10;
 #popButton {
 
 }
+.visit {
+  text-align:center;
+  width:100%;
+  margin-left:0%;
+  height:20vw;
+  margin-top:640px;
+  position: absolute;
+  font-size: 12pt;
+  color: #d2d2d2;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-family: Helvetica, Sans-Serif;
+  margin-bottom: 50px;
+  z-index: 1000;
+  line-height: 30px;
+}
 #popExplain {
   text-align:left;
   width:60vw;
@@ -357,27 +376,29 @@ z-index: -10;
   height:20vw;
   margin-top:6vh;
   position: absolute;
-  font-size: 27pt;
+  font-size: 15pt;
   color: #d2d2d2;
   font-weight: normal;
   letter-spacing: 1px;
   font-family: Helvetica, Sans-Serif;
   margin-bottom: 50px;
   z-index: 1000;
+  line-height: 30px;
 }
 #popPrice {
-  text-align:left;
+  text-align:right;
   width:20vw;
-  margin-left:42%;
+  margin-left:35%;
   height:auto;
   margin-top:6vh;
   position: relative;
-  font-size: 27pt !important;
+  font-size: 15pt !important;
   color: #1c9bff;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'manrope', sans-serif;
   margin-bottom: 20px;
+  line-height: 30px;
 }
 #popContain {
   width:100%;

@@ -49,13 +49,17 @@ $(function() { //shorthand document.ready function
           slidesToShow: 3,
           slidesToScroll: 3,
           prevArrow: "<div class=\"left-arrow\"></div>",
-          nextArrow: "<div class=\"right-arrow\"></div>"
+          nextArrow: "<div class=\"right-arrow\"></div>",
+          autoplay: true,
+          autoplaySpeed: 3000,
         });
       } else {
         $('.service-slider').slick({
           infinite: true,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1600
         });
       }
 
@@ -65,7 +69,9 @@ $(function() { //shorthand document.ready function
           slidesToShow: 1,
           slidesToScroll: 1,
           prevArrow: "<div class=\"left-arrow\"></div>",
-          nextArrow: "<div class=\"right-arrow\"></div>"
+          nextArrow: "<div class=\"right-arrow\"></div>",
+          autoplay: true,
+          autoplaySpeed: 1600
         });
       } else {
         $('.quote-slider').slick({
@@ -74,7 +80,9 @@ $(function() { //shorthand document.ready function
           slidesToScroll: 1,
           prevArrow: "<div class=\"left-arrow\"></div>",
           nextArrow: "<div class=\"right-arrow\"></div>",
-          arrows:false
+          arrows:false,
+          autoplay: true,
+          autoplaySpeed: 1600
         });
       }
     });
@@ -199,6 +207,8 @@ $(function() { //shorthand document.ready function
     } else {
       vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
     }
+
+    popPrice.innerHTML = obj.price+vPrice;
   }
 
   function showPopString(text) {
@@ -243,6 +253,11 @@ $(function() { //shorthand document.ready function
     p3:'</div><div class=\"card-bot\"><div id="cSpacer"></div><div id="cPrice" style=\"width:auto;height:3.1vw;\"></div>',
     p4:'</div>'
   }
+
+
+  /* IMAGES */
+
+
   var imgPos1 = "background-repeat: no-repeat;background-size:";
   var imgPos2 = ";background-position:";
   var imgPos3 = ";";
@@ -263,7 +278,7 @@ $(function() { //shorthand document.ready function
     url:'serv2.svg\');',
     desktop: {size: "85%", pos: "85% -150%"},
     mobile: {size: "80%", pos: "85% -150%"},
-    popup: {right: "0", bottom: "-92px", scroll: "hidden"}
+    popup: {right: "0", bottom: "-105px", scroll: "hidden"}
   }
   var img4 = {
     url:'serv4.svg\');',
@@ -291,6 +306,14 @@ $(function() { //shorthand document.ready function
   }
   var imgList = [img6, img2, img3, img4, img5, img1, img7];
   var imgMod = imgList.length;
+
+  /*
+  //
+  //
+  //         SERVICES
+  //
+  //
+  */
 
   var ears = {
     name:"Ear Cleaning",
@@ -351,7 +374,7 @@ $(function() { //shorthand document.ready function
       regular: {name:"One Dog", price: "$25.00", space: " . . . . . . . . . . <br>"},
       var1: {name:"Two Dogs", price: "$35.00", space: " . . . . . . . . . ."},
       var2: {name:"Three Dogs", price: "$40.00", space: " . . . . . . . . "},
-      var3: {name:"More Dogs", price: "Contact us", space: "  . . . . . . "},
+      var3: {name:"<br><div style=\"font-weight:lighter;\">For more pets please contact us for specialized pricing</div>", price: "", space: "  . . . . . . "},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
     }
   }
@@ -388,7 +411,7 @@ $(function() { //shorthand document.ready function
   var teeth = {
     name:"Teeth Brushing",
     price:"$15.00*",
-    description:"More info coming soon!",
+    description:"Most dogs with bad breath usually have poor dental care. Having your dog's teeth cleaned regularly can help fight against many common dental health issues, like bad breath, plaque and tartar buildup, and periodontal disease.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
@@ -402,6 +425,7 @@ $(function() { //shorthand document.ready function
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
+      var1: {name:"This", price:""}
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
@@ -427,6 +451,14 @@ $(function() { //shorthand document.ready function
   }
 
   var serviceList = [walk, sit, bath, ears, nails, weight, teeth, groom, deliver, glands, consult, fleatick];
+
+  /*
+  //
+  //
+  //
+  //
+  //
+  */
 
   var idList = ['cImg1', 'cImg2', 'cImg3', 'cImg4',
    'cImg5', 'cImg6', 'cImg7', 'cImg8','cImg9',
