@@ -128,6 +128,8 @@ $(function() { //shorthand document.ready function
     var popExplain = document.getElementById('popExplain');
     var obj = serviceList[n];
     var image = imgList[n%imgMod];
+    var h = window.innerHeight;
+    popup.style.height = h;
 
     var variants = "";
     var vPrice = "";
