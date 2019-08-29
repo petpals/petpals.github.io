@@ -128,6 +128,8 @@ $(function() { //shorthand document.ready function
     var popExplain = document.getElementById('popExplain');
     var obj = serviceList[n];
     var image = imgList[n%imgMod];
+
+    /*
     var h = window.innerHeight;
     var w = window.innerWidth;
     popup.style.height = (h*0.8);
@@ -135,6 +137,7 @@ $(function() { //shorthand document.ready function
     whiteBar.style.bottom = (h/100)*5;
     whiteBar.style.left = (w/100)*5;
     whiteBar.style.borderRadius = popup.style.borderRadius;
+    */
 
     var variants = "";
     var vPrice = "";

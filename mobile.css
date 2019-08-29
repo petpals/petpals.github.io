@@ -450,5 +450,24 @@ margin-top: -15vw;
   margin-top:-50px;
   margin-left:136px;
 }
+#innerContainer {
+  display:none;
+}
+#topPop {
+  display:none;
+}
+#popSpace {
+  display:none;
+}
+#popExplain {
+  display:none;
+}
+#whiteBar {
+  display:none;
+}
+
+
+
+
 
 }
