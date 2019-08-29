@@ -134,6 +134,7 @@ $(function() { //shorthand document.ready function
     var whiteBar = document.getElementById('whiteBar');
     whiteBar.style.bottom = (h/100)*5;
     whiteBar.style.left = (w/100)*5;
+    whiteBar.style.borderRadius = popup.style.borderRadius;
 
     var variants = "";
     var vPrice = "";
