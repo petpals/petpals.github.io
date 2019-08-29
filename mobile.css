@@ -396,13 +396,13 @@ margin-top: -15vw;
   font-family: 'manrope', sans-serif;
 }
 #popPic {
-  width:32vw;
+  /*width:32vw;
   height:30vw;
   overflow: hidden;
   position: relative;
   margin-left: 60%;
   border-bottom-right-radius: 10px;
-  z-index: 1000;
+  z-index: 1000;*/
 }
 #popButton {
 
