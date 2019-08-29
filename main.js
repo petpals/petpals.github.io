@@ -436,7 +436,7 @@ $(function() { //shorthand document.ready function
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$20.00"},
-      var1: {name:"", price:""},
+      var1: {name:"Deskunking", price:"$15.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
