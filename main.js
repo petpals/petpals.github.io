@@ -129,6 +129,12 @@ $(function() { //shorthand document.ready function
     var obj = serviceList[n];
     var image = imgList[n%imgMod];
 
+    if ($(window).width() > 600) {
+      return
+    } else {
+      popup.style.height = "500px"
+    }
+
     /*
     var h = window.innerHeight;
     var w = window.innerWidth;
