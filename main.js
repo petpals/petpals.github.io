@@ -351,7 +351,7 @@ $(function() { //shorthand document.ready function
     description:"Have a question regarding your pet? Our pet care experts are ready to help!",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Regular", price: "$30.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
@@ -384,7 +384,8 @@ $(function() { //shorthand document.ready function
     description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time.",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Regular", price: "$35.00"},
+      var1: {name: "Extra pet", price: "$10.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
     }
   }
@@ -394,7 +395,7 @@ $(function() { //shorthand document.ready function
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Regular", price: "$25.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
@@ -404,17 +405,17 @@ $(function() { //shorthand document.ready function
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Regular", price: "$150.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
     }
   }
   var teeth = {
     name:"Teeth Brushing",
-    price:"$15.00*",
+    price:"$25.00*",
     description:"Most dogs with bad breath usually have poor dental care. Having your dog's teeth cleaned regularly can help fight against many common dental health issues, like bad breath, plaque and tartar buildup, and periodontal disease.",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Regular", price: "$25.00"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
@@ -424,8 +425,8 @@ $(function() { //shorthand document.ready function
     description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around.",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
-      var1: {name:"This", price:""}
+      regular: {name:"Regular", price: "$20.00"},
+      var1: {name:"", price:""},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
@@ -435,7 +436,10 @@ $(function() { //shorthand document.ready function
     description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming.",
     scroll: "hidden",
     variant: {
-      regular: {name:"Regular", price: "$10.00"},
+      regular: {name:"Full Shave", price: "$45.00*"},
+      var1: {name:"Belly Shave", price: "$45.00*"},
+      var2: {name: "Paw Trim", price: "$15.00*"},
+      var3: {name: "Sanitary Trim", price: "$20.00*"},
       visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
     }
   }
