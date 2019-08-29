@@ -132,7 +132,8 @@ $(function() { //shorthand document.ready function
     if ($(window).width() > 600) {
       return
     } else {
-      popup.style.height = "500px"
+      popup.style.height = "500px";
+      document.getElementById('innerContainer').style.height = "500px";
     }
 
     /*
