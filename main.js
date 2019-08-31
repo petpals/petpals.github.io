@@ -161,14 +161,26 @@ $(function() { //shorthand document.ready function
     if (typeof obj.variant.var1 === 'undefined') {
       variants = "";
     } else {
-      variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
+      if (typeof obj.variant.var2 === 'undefined') {
+        variants = "<br>"+obj.variant.var1.name;
+      } else if (typeof obj.variant.var3 === 'undefined') {
+        variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name;
+      } else {
+        variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
+      }
     }
     popExplain.innerHTML = obj.variant.regular.name+variants;
 
     if (typeof obj.variant.var1 === 'undefined') {
-      vPrice = "";
+      variants = "";
     } else {
-      vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
+      if (typeof obj.variant.var2 === 'undefined') {
+        vPrice = "<br>"+obj.variant.var1.price;
+      } else if (typeof obj.variant.var3 === 'undefined') {
+        vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price;
+      } else {
+        vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
+      }
     }
 
     popPrice.innerHTML = obj.price+vPrice;

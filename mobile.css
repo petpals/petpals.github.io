@@ -409,15 +409,16 @@ margin-top: -15vw;
 #popPrice {
   text-align:left;
   width:75px;
-  margin-left:2vw;
+  margin-left:200px;
   height:auto;
-  margin-top: 53px !important;
   position: relative;
   font-size: 33pt;
   color: #1c9bff;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: 'manrope', sans-serif;
+  margin-top:-125px;
+  margin-bottom: 125px;
 }
 #popContain {
   width:375px;
@@ -450,7 +451,7 @@ margin-top: -15vw;
   margin-left:136px;
 }
 #innerContainer {
-
+overflow-y:scroll;
 }
 #topPop {
 
@@ -459,7 +460,7 @@ margin-top: -15vw;
   display:none;
 }
 #popExplain {
-
+  position:relative;
 }
 #whiteBar {
   display:none;
@@ -467,8 +468,9 @@ margin-top: -15vw;
 #popButton {
 height:16vw;
 width:80%;
-left:20px;
+margin-left:-68px;
 font-size:15pt;
+position:relative;
 }
 
 
