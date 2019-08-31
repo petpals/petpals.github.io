@@ -368,6 +368,7 @@ margin-top: -15vw;
 #popup {
   border-radius: 10px;
   height:90%;
+  margin-top:100px;
 }
 
 #popText {
