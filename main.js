@@ -115,8 +115,7 @@ $(function() { //shorthand document.ready function
     document.getElementById('rating3').innerHTML = star.five;
   }
 
-  function showPop(number) {
-    var n = number-1;
+  function doStuff(n) {
     var overlay = document.getElementById('overlay');
     var popup = document.getElementById('popup');
     var popText = document.getElementById('popText');
@@ -186,16 +185,21 @@ $(function() { //shorthand document.ready function
     popPrice.innerHTML = obj.price+vPrice;
 
 
-    document.getElementById('body').style.overflow = 'hidden';
-    document.getElementById('container').style.overflow = 'hidden';
+    //document.getElementById('body').style.overflow = 'hidden';
+    //document.getElementById('container').style.overflow = 'hidden';
 
     section[0].style.display = "none";
     section[1].style.display = "none";
-    section[2].style.display = "none";
+    //section[2].style.display = "none";
     section[3].style.display = "none";
     section[4].style.display = "none";
     section[5].style.display = "none";
     section[6].style.display = "none";
+  }
+
+  function showPop(number) {
+    var n = number-1;
+    doStuff(n);
   }
 
   function switchPop(number) {
@@ -204,40 +208,7 @@ $(function() { //shorthand document.ready function
       n = 11;
     }
     n = n%serviceList.length;
-    var popText = document.getElementById('popText');
-    var popPara = document.getElementById('popParagraph');
-    var popPrice = document.getElementById('popPrice');
-    var popPic = document.getElementById('popPic');
-    var popContain = document.getElementById('popContain');
-    var popExplain = document.getElementById('popExplain');
-    var obj = serviceList[n];
-    var image = imgList[n%imgMod];
-
-    var vPrice = "";
-    var variants = "";
-
-    localStorage.setItem("currentPop", n);
-    popText.innerHTML = obj.name;
-    popPara.innerHTML = obj.description;
-    popPrice.innerHTML = obj.price;
-    popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
-    popContain.style.overflowY = image.popup.scroll;
-    popContain.scrollTop = 0;
-
-    if (typeof obj.variant.var1 === 'undefined') {
-      variants = "";
-    } else {
-      variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
-    }
-    popExplain.innerHTML = obj.variant.regular.name+variants;
-
-    if (typeof obj.variant.var1 === 'undefined') {
-      vPrice = "";
-    } else {
-      vPrice = "<br>"+obj.variant.var1.price+"<br>"+obj.variant.var2.price+"<br>"+obj.variant.var3.price;
-    }
-
-    popPrice.innerHTML = obj.price+vPrice;
+    doStuff(n);
   }
 
   function showPopString(text) {
