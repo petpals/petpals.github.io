@@ -125,12 +125,11 @@ $(function() { //shorthand document.ready function
     var popContain = document.getElementById('popContain');
     var section = document.getElementsByClassName('section');
     var popExplain = document.getElementById('popExplain');
+    var popInner = document.getElementById('innerContainer');
     var obj = serviceList[n];
     var image = imgList[n%imgMod];
 
-    if ($(window).width() > 600) {
-      return
-    } else {
+    if ($(window).width() < 600) {
       popup.style.height = "500px";
       document.getElementById('innerContainer').style.height = "500px";
     }
@@ -154,7 +153,8 @@ $(function() { //shorthand document.ready function
     popText.innerHTML = obj.name;
     popPara.innerHTML = obj.description;
     popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
-    popContain.style.overflowY = image.popup.scroll;
+    //popContain.style.overflowY = obj.scroll;
+    popInner.style.overflowY = obj.scroll;
     popContain.scrollTop = 0;
 
     if (typeof obj.variant.var1 === 'undefined') {
@@ -164,11 +164,13 @@ $(function() { //shorthand document.ready function
         variants = "<br>"+obj.variant.var1.name;
       } else if (typeof obj.variant.var3 === 'undefined') {
         variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name;
-      } else {
+      } else if (typeof obj.variant.var4 === 'undefined') {
         variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name;
+      } else {
+        variants = "<br>"+obj.variant.var1.name+"<br>"+obj.variant.var2.name+"<br>"+obj.variant.var3.name+"<br>"+obj.variant.var4.name;
       }
     }
-    popExplain.innerHTML = obj.variant.regular.name+variants;
+    popExplain.innerHTML = obj.variant.regular.name+variants+"<br><div style=\"font-size:12pt;font-family: Helvetica, Sans-Serif;font-weight:lighter;\">"+obj.variant.vf.name+"</div>";
 
     if (typeof obj.variant.var1 === 'undefined') {
       variants = "";
@@ -191,10 +193,15 @@ $(function() { //shorthand document.ready function
     section[0].style.display = "none";
     section[1].style.display = "none";
     //section[2].style.display = "none";
-    document.getElementById('visit').style.display = "none";
-    document.getElementById('s3-button').style.display = "none";
-    document.getElementById('s2-da').style.display = "none";
-    document.getElementById('section-3').style.height = "250px";
+    //document.getElementById('visit').style.display = "none";
+    if ($(window).width() < 600) {
+      document.getElementById('s3-button').style.display = "none";
+      document.getElementById('s2-da').style.display = "none";
+      document.getElementById('section-3').style.height = "250px";
+    } else {
+      var asdf = window.innerHeight - 150;
+      document.getElementById('section-3').style.height = asdf;
+    }
     section[3].style.display = "none";
     section[4].style.display = "none";
     section[5].style.display = "none";
@@ -233,10 +240,14 @@ $(function() { //shorthand document.ready function
     document.getElementsByClassName('section')[5].style.display = "initial";
     document.getElementsByClassName('section')[6].style.display = "initial";
 
-    document.getElementById('visit').style.display = "initial";
-    document.getElementById('s3-button').style.display = "initial";
-    document.getElementById('s2-da').style.display = "initial";
-    document.getElementById('section-3').style.height = "667px";
+    //document.getElementById('visit').style.display = "initial";
+    if ($(window).width() < 600) {
+      document.getElementById('s3-button').style.display = "initial";
+      document.getElementById('s2-da').style.display = "initial";
+      document.getElementById('section-3').style.height = "667px";
+    } else {
+      document.getElementById('section-3').style.height = "initial";
+    }
 
     document.getElementById('section-3').scrollIntoView();
     window.scrollBy(0, 40);
@@ -324,54 +335,60 @@ $(function() { //shorthand document.ready function
   //
   */
 
+  var exVisit = {
+    name:"Exclusive Visit",
+    price:"$25.00",
+    description:"<br>This service will require a $25.00 visit fee, charged once per visit.<br>It will not be applied again if you add more services to your visit."
+  }
+
   var ears = {
     name:"Ear Cleaning",
-    price:"$10.00*",
+    price:"$10.00",
     description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var weight = {
     name:"Weight Check",
-    price:"$10.00*",
+    price:"$10.00",
     description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var glands = {
     name:"Gland Expression",
-    price:"$25.00*",
+    price:"$25.00",
     description:"Most pets anal glands express themselves naturally. Some dogs need their anal glands manually expressed a few times per year. Some pets require gland expression every month (or even more often), if they have been having recurring issues. Our pet care providers are ready when your pet is showing any signs.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$25.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var consult = {
     name:"Consultation",
-    price:"$30.00*",
+    price:"$30.00",
     description:"Have a question regarding your pet? Our pet care experts are ready to help!",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$30.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var fleatick = {
     name:"Flea and Tick application",
-    price:"$10.00*",
+    price:"$10.00",
     description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var walk = {
@@ -384,28 +401,28 @@ $(function() { //shorthand document.ready function
       var1: {name:"Two Dogs", price: "$35.00", space: " . . . . . . . . . ."},
       var2: {name:"Three Dogs", price: "$40.00", space: " . . . . . . . . "},
       var3: {name:"<br><div style=\"font-weight:lighter;\">For more pets please contact us for specialized pricing</div>", price: "", space: "  . . . . . . "},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
+      vf: {name: ""}
     }
   }
   var sit = {
     name:"Pet Sitting",
     price:"$35.00",
     description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time.",
-    scroll: "hidden",
+    scroll: "scroll",
     variant: {
       regular: {name:"Regular", price: "$35.00"},
       var1: {name: "Extra pet", price: "$10.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
+      vf: {name: ""}
     }
   }
   var deliver = {
     name:"Delivery",
-    price:"$25.00*",
+    price:"$25.00",
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$25.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var fulltime = {
@@ -415,51 +432,51 @@ $(function() { //shorthand document.ready function
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$150.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "false"}
+      vf: {name: ""}
     }
   }
   var teeth = {
     name:"Teeth Brushing",
-    price:"$25.00*",
+    price:"$25.00",
     description:"Most dogs with bad breath usually have poor dental care. Having your dog's teeth cleaned regularly can help fight against many common dental health issues, like bad breath, plaque and tartar buildup, and periodontal disease.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$25.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var bath = {
     name:"Bath",
-    price:"$20.00*",
+    price:"$20.00",
     description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$20.00"},
       var1: {name:"Deskunking", price:"$15.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
   var groom = {
     name:"Grooming",
-    price:"$45.00*",
+    price:"$45.00",
     description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming.",
-    scroll: "hidden",
+    scroll: "scroll",
     variant: {
-      regular: {name:"Full Shave", price: "$45.00*"},
-      var1: {name:"Belly Shave", price: "$45.00*"},
-      var2: {name: "Paw Trim", price: "$15.00*"},
-      var3: {name: "Sanitary Trim", price: "$20.00*"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      regular: {name:"Full Shave", price: "$45.00"},
+      var1: {name:"Belly Shave", price: "$45.00"},
+      var2: {name: "Paw Trim", price: "$15.00"},
+      var3: {name: "Sanitary Trim", price: "$20.00"},
+      vf: {name: exVisit.description}
     }
   }
   var nails = {
     name:"Nail Trimming",
-    price:"$10.00*",
+    price:"$10.00",
     description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues.",
     scroll: "hidden",
     variant: {
       regular: {name:"Regular", price: "$10.00"},
-      visitFee: {name:"Exclusive Visit", price: "$25.00", applyed: "true"}
+      vf: {name: exVisit.description}
     }
   }
 
