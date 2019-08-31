@@ -191,8 +191,9 @@ $(function() { //shorthand document.ready function
     section[0].style.display = "none";
     section[1].style.display = "none";
     //section[2].style.display = "none";
-    section[2].style.height = "500px";
-    section[2].style.overflow = "hidden";
+    document.getElementById('visit').style.display = "none";
+    document.getElementById('s3-button').style.display = "none";
+    document.getElementById('s2-da').style.display = "none";
     section[3].style.display = "none";
     section[4].style.display = "none";
     section[5].style.display = "none";
