@@ -368,7 +368,7 @@ margin-top: -15vw;
 #popup {
   border-radius: 10px;
   height:90%;
-  margin-top:100px;
+  margin-top:70px;
 }
 
 #popText {
@@ -423,7 +423,7 @@ margin-top: -15vw;
 }
 #popContain {
   width:375px;
-  height:80vh;
+  height:100%;
   position: absolute;
   top:0;
   overflow-y:scroll;
