@@ -302,7 +302,8 @@ input[type="submit"]:hover {
   width: 2vw;
   height:2vw;
   font-size: 28pt;
-  position: fixed;
+  position: relative;
+  margin-bottom: -50px;
   margin-left: 1vw;
   margin-top: 1vw;
   z-index: 3000;

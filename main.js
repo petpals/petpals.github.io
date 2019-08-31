@@ -126,8 +126,10 @@ $(function() { //shorthand document.ready function
     var section = document.getElementsByClassName('section');
     var popExplain = document.getElementById('popExplain');
     var popInner = document.getElementById('innerContainer');
+    var topPop = document.getElementById('topPop');
     var obj = serviceList[n];
     var image = imgList[n%imgMod];
+
 
     if ($(window).width() < 600) {
       popup.style.height = "500px";
@@ -153,8 +155,13 @@ $(function() { //shorthand document.ready function
     popText.innerHTML = obj.name;
     popPara.innerHTML = obj.description;
     popPic.style = "background-size:contain;background-repeat:no-repeat;background-image:url(\'"+image.url+"right:"+image.popup.right+";bottom:"+image.popup.bottom+";";
-    //popContain.style.overflowY = obj.scroll;
-    popInner.style.overflowY = obj.scroll;
+    if ($(window).width() < 600) {
+      popContain.style.overflowY = "scroll";
+      popInner.style.overflowY = "scroll";
+    } else {
+      popContain.style.overflowY = "hidden";
+      popInner.style.overflowY = obj.scroll;
+    }
     popContain.scrollTop = 0;
 
     if (typeof obj.variant.var1 === 'undefined') {
@@ -206,6 +213,8 @@ $(function() { //shorthand document.ready function
     section[4].style.display = "none";
     section[5].style.display = "none";
     section[6].style.display = "none";
+
+    popInner.scrollBy(0, -500);
   }
 
   function showPop(number) {

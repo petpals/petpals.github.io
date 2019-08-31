@@ -462,6 +462,7 @@ overflow-y:scroll;
 }
 #popExplain {
   position:relative;
+  width:75vw;
 }
 #whiteBar {
   display:none;
@@ -470,6 +471,7 @@ overflow-y:scroll;
 height:16vw;
 width:80%;
 margin-left:-68px;
+margin-top:220px;
 font-size:15pt;
 position:relative;
 }
