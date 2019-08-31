@@ -236,7 +236,7 @@ $(function() { //shorthand document.ready function
     document.getElementById('visit').style.display = "initial";
     document.getElementById('s3-button').style.display = "initial";
     document.getElementById('s2-da').style.display = "initial";
-    document.getElementById('section-3').style.height = "initial";
+    document.getElementById('section-3').style.height = "667px";
 
     document.getElementById('section-3').scrollIntoView();
     window.scrollBy(0, 40);
