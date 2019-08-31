@@ -194,6 +194,7 @@ $(function() { //shorthand document.ready function
     document.getElementById('visit').style.display = "none";
     document.getElementById('s3-button').style.display = "none";
     document.getElementById('s2-da').style.display = "none";
+    section[2].style.height = "450px !important";
     section[3].style.display = "none";
     section[4].style.display = "none";
     section[5].style.display = "none";
