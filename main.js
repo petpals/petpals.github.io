@@ -191,7 +191,7 @@ $(function() { //shorthand document.ready function
     section[0].style.display = "none";
     section[1].style.display = "none";
     //section[2].style.display = "none";
-    section[2].style.height = window.innerHeight;
+    section[2].style.height = "500px";
     section[3].style.display = "none";
     section[4].style.display = "none";
     section[5].style.display = "none";
