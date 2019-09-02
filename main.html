@@ -24,6 +24,7 @@
     <!-- Set basic website info-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145426085-1"></script>
@@ -221,7 +222,9 @@
         </div>
         <div id="popPic"></div>
           <div id="whiteBar">
+            <div id="cardLeft" class="left-arrow" onclick="ArrowLeft()"></div>
             <div class="popButton" onclick="hideToTop()" id="popButton"><br>Book Now</div>
+            <div id="cardRight" class="right-arrow" onclick="ArrowRight()"></div>
           </div>
         </div>
       </div>
@@ -237,14 +240,3 @@
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
-
-<!--
-TODO
-move price over and make smaller
-put text next to it that says what it's for
-put in new image of lady
-make button work
-finish implimentation of arrow navigation
-
-
--->

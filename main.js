@@ -43,6 +43,8 @@ $(function() { //shorthand document.ready function
 });
     $(document).ready(function(){
 
+      /*$('.service-slider').slick('slickPause');*/
+
       if ($(window).width() > 600) {
         $('.service-slider').slick({
           infinite: true,
@@ -283,6 +285,26 @@ $(function() { //shorthand document.ready function
     document.getElementsByClassName('section')[6].style.display = "initial";
   }
 
+  var back = localStorage.getItem("currentPop");
+
+  function ArrowLeft() {
+    // left arrow
+    back = localStorage.getItem("currentPop");
+    back = parseInt(back);
+    back = back-1;
+    localStorage.setItem("currentPop", back);
+    switchPop(back);
+  }
+
+  function ArrowRight() {
+    back = localStorage.getItem("currentPop");
+    back = parseInt(back);
+    back = back+1;
+    localStorage.setItem("currentPop", back);
+    switchPop(back);
+  }
+
+
   //Service card code
   var serviceCard = {
     p1:'<div class=\"card-top\" style=\"background-image:url(\'',
@@ -303,13 +325,13 @@ $(function() { //shorthand document.ready function
     url:'serv3.svg\');',
     desktop: {size: "60%", pos: "80% 700%"},
     mobile: {size: "60%", pos: "90% -800%"},
-    popup: {right: "0", bottom: "-25", scroll: "hidden"}
+    popup: {right: "0", bottom: "-75", scroll: "hidden"}
   }
   var img2 = {
     url:'bitmap2.svg\');',
     desktop: {size: "80%", pos: "80% -305%"},
     mobile: {size: "80%", pos: "80% -175%"},
-    popup: {right: "0", bottom: "-20", scroll: "scroll"}
+    popup: {right: "0", bottom: "-35", scroll: "scroll"}
   }
   var img3 = {
     url:'serv2.svg\');',
@@ -319,9 +341,9 @@ $(function() { //shorthand document.ready function
   }
   var img4 = {
     url:'serv4.svg\');',
-    desktop: {size: "40%", pos: "85% 150%"},
+    desktop: {size: "40%", pos: "50% 150%"},
     mobile: {size:"40%", pos: "85% 160%"},
-    popup: {right: "0", bottom: "-20px", scroll: "hidden"}
+    popup: {right: "-40", bottom: "-20px", scroll: "hidden"}
   }
   var img5 = {
     url:'serv5.svg\');',
@@ -333,7 +355,7 @@ $(function() { //shorthand document.ready function
     url:'girl.svg\');',
     desktop: {size: "70%", pos: "100% -110%"},
     mobile: {size:"70%", pos:"100% -75%"},
-    popup: {right: "0", bottom: "-10", scroll: "hidden"}
+    popup: {right: "0", bottom: "-75", scroll: "hidden"}
   }
   var img7 = {
     url: 'serv6.svg\');',
@@ -475,11 +497,11 @@ $(function() { //shorthand document.ready function
   }
   var groom = {
     name:"Grooming",
-    price:"$45.00",
+    price:"$45.00 to $65.00",
     description:"Grooming is not just about maintaining your pets level of cleanliness, or just keeping them looking good. Grooming is also about maintaining both your pets physical health as well as their appearance.<br><br> We offer a variety of specific grooming services as well to fit your pets needs, such as full shaving, paw hair trimming, belly shaving (frequently booked for long haired cats) and Sanitary trimming.",
     scroll: "scroll",
     variant: {
-      regular: {name:"Full Shave", price: "$45.00"},
+      regular: {name:"Full Shave", price: "$45.00 to $65.00"},
       var1: {name:"Belly Shave", price: "$45.00"},
       var2: {name: "Paw Trim", price: "$15.00"},
       var3: {name: "Sanitary Trim", price: "$20.00"},
@@ -556,8 +578,12 @@ $(function() { //shorthand document.ready function
       pb.innerHTML = git;
       tb.innerHTML = git;
       s3h.innerHTML = "Our <br>Services";
-      s3h.style.lineHeight = "28px";
-      s3h.style.fontSize = "23.4pt";
+    }
+
+    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+
+    if (is_iPad == true){
+      window.location.assign("index.html");
     }
 
     document.onkeyup = function(event) {
