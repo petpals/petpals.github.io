@@ -431,6 +431,9 @@ margin-top: -15vw;
 #exit {
   width:6vw;
   height:6vw;
+  margin-left: 7px;
+  margin-top: 7px;
+  margin-bottom: 0px;
 }
 #cPrice {
 }
@@ -455,7 +458,8 @@ margin-top: -15vw;
 overflow-y:scroll;
 }
 #topPop {
-
+  margin-left: 2.5%;
+  width:95%;
 }
 #popSpace {
   display:none;
