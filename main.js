@@ -231,6 +231,14 @@ $(function() { //shorthand document.ready function
     doStuff(n);
   }
 
+  function popBook() {
+    if ($(window).width() < 600) {
+      window.location.assign("tel:833-933-0770");
+    } else {
+      hideToTop();
+    }
+  }
+
   function showPopString(text) {
     document.getElementById('popup').style.display = 'block';
     document.getElementById('popText').innerHTML = text;
