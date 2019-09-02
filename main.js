@@ -364,7 +364,7 @@ $(function() { //shorthand document.ready function
     description:"Regular ear cleanings are a great way to help keep your pets ears clear from disease, wax buildup, and infection. Routine cleaning and in-home examinations by one of our pet care professionals is a good way to detect potential infections or other ear issues early.",
     scroll: "hidden",
     variant: {
-      regular: {name:ears.name, price: "$10.00"},
+      regular: {name: "Ear Cleaning", price: "$10.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -374,7 +374,7 @@ $(function() { //shorthand document.ready function
     description:"In 2018, an estimated 60% of cats and 56% of dogs in the United States were overweight or obese. Dogs and cats with excess fat are at greater risk for developing diabetes, arthritis, high blood pressure, kidney disease, and many forms of cancer. We can help you prevent that by monitoring your pets weight and diet.",
     scroll: "hidden",
     variant: {
-      regular: {name:weight.name, price: "$10.00"},
+      regular: {name: "Weight Check", price: "$10.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -384,7 +384,7 @@ $(function() { //shorthand document.ready function
     description:"Most pets anal glands express themselves naturally. Some dogs need their anal glands manually expressed a few times per year. Some pets require gland expression every month (or even more often), if they have been having recurring issues. Our pet care providers are ready when your pet is showing any signs.",
     scroll: "hidden",
     variant: {
-      regular: {name:glands.name, price: "$25.00"},
+      regular: {name:"Gland Expression", price: "$25.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -394,7 +394,7 @@ $(function() { //shorthand document.ready function
     description:"Have a question regarding your pet? Our pet care experts are ready to help!",
     scroll: "hidden",
     variant: {
-      regular: {name:consult.name, price: "$30.00"},
+      regular: {name:"Consultation", price: "$30.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -404,7 +404,7 @@ $(function() { //shorthand document.ready function
     description:"Tick and flea preventatives can do more than just eliminate your pet's itchy fleas and prevent allergic reactions. Flea and tick medications also prevent tapeworms, ticks, and other insects from biting your pet, and prevent fleas from getting inside your home, on your furniture, and in your bedding.",
     scroll: "hidden",
     variant: {
-      regular: {name:fleatick.name, price: "$10.00"},
+      regular: {name:"Flea and Tick application", price: "$10.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -427,7 +427,7 @@ $(function() { //shorthand document.ready function
     description:"Professional pet sitters are just what the description implies – professional.  While having friends, family, or neighbors care for your pets may seem like a logical choice, our professional pet sitters do this for a living and have the experience necessary to care for your animals.<br><br> Our pet care providers are trained and experienced in working with all types of pet personalities and will know how to tailor your pet’s care based on their individual likes, dislikes, fears, and habits. They can spot and avoid potentially dangerous situations, and can react quickly and effectively when necessary. They are all trained and experienced in administering medications, and they know how to tell if your pet needs veterinary attention. We have many experienced pet sitters at PetPals, so there’s someone ready to take their place in case of emergencies, car troubles or illness. We’re ready to fulfill all of your care requests on time, each and every time.",
     scroll: "scroll",
     variant: {
-      regular: {name:sit.name, price: "$35.00"},
+      regular: {name:"Pet Sitting", price: "$35.00"},
       var1: {name: "Extra pet", price: "$10.00"},
       vf: {name: ""}
     }
@@ -438,7 +438,7 @@ $(function() { //shorthand document.ready function
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
-      regular: {name: deliver.name, price: "$25.00"},
+      regular: {name: "Delivery", price: "$25.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -448,7 +448,7 @@ $(function() { //shorthand document.ready function
     description:"More info coming soon!",
     scroll: "hidden",
     variant: {
-      regular: {name: fulltime.name, price: "$150.00"},
+      regular: {name: "24 Hour Care", price: "$150.00"},
       vf: {name: ""}
     }
   }
@@ -458,7 +458,7 @@ $(function() { //shorthand document.ready function
     description:"Most dogs with bad breath usually have poor dental care. Having your dog's teeth cleaned regularly can help fight against many common dental health issues, like bad breath, plaque and tartar buildup, and periodontal disease.",
     scroll: "hidden",
     variant: {
-      regular: {name: teeth.name, price: "$25.00"},
+      regular: {name: "Teeth Bruhing", price: "$25.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -468,7 +468,7 @@ $(function() { //shorthand document.ready function
     description:"While dogs and cats don’t require daily scrub downs, they do need regular baths–but just how regular depends on several factors, such as your pets environment and type of coat, we can help you decide what’s right. Bathing plays an important role in the health of your pets fur and skin, helping to keep them clean and free of dirt and parasites. And of course, there’s the added benefit of making your pet more pleasant to be around.",
     scroll: "hidden",
     variant: {
-      regular: {name: bath.name, price: "$20.00"},
+      regular: {name: "Bath", price: "$20.00"},
       var1: {name:"Deskunking", price:"$35.00"},
       vf: {name: exVisit.description}
     }
@@ -492,7 +492,7 @@ $(function() { //shorthand document.ready function
     description:"Trimming nails every few weeks is an important part of maintaining your pet's health. Not only does a quick trim protect you, your pet and your family, it can also save your sofa, curtains and other furniture. Nail-trimming is also a fast and effective alternative to declawing, which involves surgical amputation and can cause behavioral and health issues.",
     scroll: "hidden",
     variant: {
-      regular: {name: nails.name, price: "$10.00"},
+      regular: {name: "Nail Trimming", price: "$10.00"},
       vf: {name: exVisit.description}
     }
   }
@@ -548,8 +548,16 @@ $(function() { //shorthand document.ready function
     getReview();
 
     var pb = document.getElementById('popButton');
+    var tb = document.getElementById('saveForm');
+    var git = "<br>Get in touch";
+    var s3h = document.getElementById('s3h');
+
     if ($(window).width() < 600) {
-      pb.innerHTML = "<br>Get in touch";
+      pb.innerHTML = git;
+      tb.innerHTML = git;
+      s3h.innerHTML = "Our <br>Services";
+      s3h.style.lineHeight = "28px";
+      s3h.style.fontSize = "23.4pt";
     }
 
     document.onkeyup = function(event) {
