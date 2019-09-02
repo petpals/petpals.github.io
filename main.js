@@ -547,6 +547,11 @@ $(function() { //shorthand document.ready function
   $( document ).ready(function() {
     getReview();
 
+    var pb = document.getElementById('popButton');
+    if ($(window).width() < 600) {
+      pb.innerHTML = "<br>Get in touch";
+    }
+
     document.onkeyup = function(event) {
       if (event.key === "Escape"){
 
