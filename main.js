@@ -583,7 +583,7 @@ $(function() { //shorthand document.ready function
     var is_iPad = navigator.userAgent.match(/iPad/i) != null;
 
     if (is_iPad == true){
-      window.location.assign("index.html");
+      window.location.assign("construct.html");
     }
 
     document.onkeyup = function(event) {
