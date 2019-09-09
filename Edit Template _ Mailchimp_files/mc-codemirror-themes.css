@@ -1,0 +1,26 @@
+/* All available CodeMirror themes except 3024-day and xq-light. */
+@import '3024-night.css';
+@import 'ambiance.css';
+@import 'base16-dark.css';
+@import 'base16-light.css';
+@import 'blackboard.css';
+@import 'cobalt.css';
+@import 'eclipse.css';
+@import 'elegant.css';
+@import 'erlang-dark.css';
+@import 'lesser-dark.css';
+@import 'mbo.css';
+@import 'midnight.css';
+@import 'monokai.css';
+@import 'neat.css';
+@import 'neo.css';
+@import 'night.css';
+@import 'paraiso-dark.css';
+@import 'paraiso-light.css';
+@import 'rubyblue.css';
+@import 'solarized.css';
+@import 'the-matrix.css';
+@import 'tomorrow-night-eighties.css';
+@import 'twilight.css';
+@import 'vibrant-ink.css';
+@import 'xq-dark.css';

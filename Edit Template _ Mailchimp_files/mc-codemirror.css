@@ -1,0 +1,11 @@
+/* MC General Codemirror Changes */
+.CodeMirror{font-size: 13px; height:100%; }
+.CodeMirror-scroll {height:100%; overflow:visible; min-height:140px;}
+.CodeMirror-scrollbar {display: none; z-index: -5;}
+.CodeMirror-foldmarker {display:inline-block; height:14px; font-family:Arial; cursor:pointer; color:#000; line-height:10px; font-size:16px; margin:0 5px; padding:0 10px; background:yellow; border-radius:7px; }
+.CodeMirror pre {font-family: "Source Code Pro", Consolas, "Lucida Console", Courier, monospace; max-width:none; white-space: pre-wrap; word-break: break-all;}
+.CodeMirror pre.CodeMirror-placeholder {color:#999; white-space: pre !important;}
+
+/* Styles for patterns section */
+.patterns .CodeMirror{border: none; position: inherit;}
+.patterns .CodeMirror-scroll {min-height:inherit;}

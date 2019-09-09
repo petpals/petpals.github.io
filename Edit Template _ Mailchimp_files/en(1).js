@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("webfont","en",{fontSize:{label:"Size",voiceLabel:"Font Size",panelTitle:"Font Size"},label:"Font",panelTitle:"Standard web fonts",voiceLabel:"Font",webFontLabel:"Custom web fonts"});
