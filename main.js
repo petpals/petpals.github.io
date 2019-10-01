@@ -27,7 +27,8 @@ $(function() { //shorthand document.ready function
       var x = document.getElementById("email-input");
       if (window.getComputedStyle(x).display == "none") {
         console.log("Mobile");
-        window.location.assign("tel:833-933-0770");
+        //window.location.assign("tel:833-933-0770");
+        window.location.assign("cal.html");
       } else {
         var data = $("#create-account :input").serializeArray();
         console.log(data);
@@ -35,7 +36,8 @@ $(function() { //shorthand document.ready function
         window.sessionStorage.setItem("phone", data[1].value);
         //writeUserData(data[0], data[1]);
         if (data[0].value != "" && data[1].value != "") {
-          window.location.assign("form.html");
+          //window.location.assign("form.html");
+          window.location.assign("cal.html");
         }
       }
       return false;
@@ -48,7 +50,8 @@ $(function() { //shorthand document.ready function
       var x = document.getElementById("email-input");
       if (window.getComputedStyle(x).display == "none") {
         console.log("Mobile");
-        window.location.assign("tel:833-933-0770");
+        //window.location.assign("tel:833-933-0770");
+        window.location.assign("cal.html");
       } else {
         var data = $("#create-account :input").serializeArray();
         console.log(data);
@@ -56,7 +59,8 @@ $(function() { //shorthand document.ready function
         window.sessionStorage.setItem("phone", data[1].value);
         //writeUserData(data[0], data[1]);
         if (data[0].value != "" && data[1].value != "") {
-          window.location.assign("form.html");
+          //window.location.assign("form.html");
+          window.location.assign("cal.html");
         }
       }
       return false;
