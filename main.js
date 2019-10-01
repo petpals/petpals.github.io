@@ -41,6 +41,27 @@ $(function() { //shorthand document.ready function
       return false;
   });
 });
+
+$(function() { //shorthand document.ready function
+  $('#create2-account').on('submit', function(e) { //use on if jQuery 1.7+
+      e.preventDefault();  //prevent form from submitting
+      var x = document.getElementById("email-input");
+      if (window.getComputedStyle(x).display == "none") {
+        console.log("Mobile");
+        window.location.assign("tel:833-933-0770");
+      } else {
+        var data = $("#create-account :input").serializeArray();
+        console.log(data);
+        window.sessionStorage.setItem("email", data[0].value);
+        window.sessionStorage.setItem("phone", data[1].value);
+        //writeUserData(data[0], data[1]);
+        if (data[0].value != "" && data[1].value != "") {
+          window.location.assign("form.html");
+        }
+      }
+      return false;
+  });
+});
     $(document).ready(function(){
 
       /*$('.service-slider').slick('slickPause');*/
