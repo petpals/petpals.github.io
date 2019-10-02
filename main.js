@@ -70,7 +70,7 @@ $(function() { //shorthand document.ready function
 
       /*$('.service-slider').slick('slickPause');*/
 
-      if ($(window).width() > 600) {
+      if ($(window).width() > 1000) {
         $('.service-slider').slick({
           infinite: true,
           slidesToShow: 3,
@@ -605,11 +605,13 @@ $(function() { //shorthand document.ready function
       s3h.innerHTML = "Our <br>Services";
     }
 
-    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
 
-    if (is_iPad == true){
-      window.location.assign("construct.html");
-    }
+
+    //var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+
+    //if (is_iPad == true){
+  //    window.location.assign("construct.html");
+    //}
 
     document.onkeyup = function(event) {
       if (event.key === "Escape"){
