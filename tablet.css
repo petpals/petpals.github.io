@@ -311,6 +311,7 @@ grid-column: 2;
 #section-5 {
   height: 733px !important;
   padding-top:133px;
+  display: none;
 }
 
 .blue-arrow {
@@ -354,7 +355,7 @@ margin-top: -15vw;
   height:100px;
   position: absolute;
   margin-top:-40px;
-  margin-left:-245px;
+  margin-left:-50%;
 }
 .psi {
   width:100px;
@@ -449,8 +450,8 @@ margin-top: -15vw;
   background-image: url('https://i.pinimg.com/originals/41/28/2b/41282b58cf85ddaf5d28df96ed91de98.png');
   background-repeat: no-repeat;
   background-size: contain;
-  width:20vw;
-  height:20vw;
+  width:80px;
+  height:80px;
   position:absolute;
   margin-top:-50px;
   margin-left:136px;
