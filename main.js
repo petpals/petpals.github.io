@@ -98,7 +98,7 @@ $(function() { //shorthand document.ready function
           prevArrow: "<div class=\"left-arrow\"></div>",
           nextArrow: "<div class=\"right-arrow\"></div>",
           autoplay: true,
-          autoplaySpeed: 1600
+          autoplaySpeed: 2400
         });
       } else {
         $('.quote-slider').slick({
@@ -109,7 +109,7 @@ $(function() { //shorthand document.ready function
           nextArrow: "<div class=\"right-arrow\"></div>",
           arrows:false,
           autoplay: true,
-          autoplaySpeed: 1600
+          autoplaySpeed: 2400
         });
       }
     });
@@ -593,6 +593,8 @@ $(function() { //shorthand document.ready function
 
   $( document ).ready(function() {
     getReview();
+
+    console.log(navigator.userAgent);
 
     var pb = document.getElementById('popButton');
     var tb = document.getElementById('saveForm');
